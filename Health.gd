@@ -1,12 +1,9 @@
-extends Sprite3D
-
+extends Label
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$FireAnimation.play('fire_move')
-
+	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
-
+	self.text = str("HP: ") + str(get_parent().hp)

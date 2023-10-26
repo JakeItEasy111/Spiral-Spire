@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://bn7gwo5c7a71l"]
+[gd_scene load_steps=15 format=3 uid="uid://bn7gwo5c7a71l"]
 
 [ext_resource type="Script" path="res://CharacterBody3D.gd" id="1_ab6rj"]
 [ext_resource type="Texture2D" uid="uid://bv4ls8djh8h61" path="res://Assets/WM_BrickWork-50_1024.png" id="1_tdea1"]
+[ext_resource type="Script" path="res://Health.gd" id="3_8d24r"]
 [ext_resource type="Texture2D" uid="uid://c4ae1mg3052f7" path="res://Assets/Free Pixel Effects Pack/11_fire_spritesheet.png" id="3_mcbsd"]
 [ext_resource type="Script" path="res://BillboardTest.gd" id="4_teh5w"]
 
@@ -53,6 +54,8 @@ _data = {
 "fire_move": SubResource("Animation_lvwpn")
 }
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_mp0e7"]
+
 [node name="World" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -68,23 +71,31 @@ use_collision = true
 size = Vector3(20, 0.001, 32)
 material = SubResource("StandardMaterial3D_axr4a")
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+[node name="Player" type="CharacterBody3D" parent="."]
 script = ExtResource("1_ab6rj")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+[node name="PlayerMesh" type="MeshInstance3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10318, 0)
 mesh = SubResource("CapsuleMesh_uyk6n")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+[node name="PlayerCollision" type="CollisionShape3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.10318, 0)
 shape = SubResource("ConvexPolygonShape3D_jp68j")
 
-[node name="Head" type="Node3D" parent="CharacterBody3D"]
+[node name="Head" type="Node3D" parent="Player"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00387621, 1.59382, -0.00417328)
 
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Head"]
+[node name="Camera3D" type="Camera3D" parent="Player/Head"]
 
-[node name="BillboardTest" type="Sprite3D" parent="."]
+[node name="Health" type="Label" parent="Player"]
+offset_left = 1.0
+offset_top = 576.0
+offset_right = 161.0
+offset_bottom = 645.0
+theme_override_font_sizes/font_size = 50
+script = ExtResource("3_8d24r")
+
+[node name="Fire" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2, 0)
 cast_shadow = 0
 pixel_size = 0.05
@@ -96,8 +107,16 @@ vframes = 8
 frame = 1
 script = ExtResource("4_teh5w")
 
-[node name="FireAnimation" type="AnimationPlayer" parent="BillboardTest"]
+[node name="FireAnimation" type="AnimationPlayer" parent="Fire"]
 speed_scale = 1.5
 libraries = {
 "": SubResource("AnimationLibrary_l56ma")
 }
+
+[node name="Area3D" type="Area3D" parent="Fire"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fire/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.38419e-07, -0.3, -0.1)
+shape = SubResource("CylinderShape3D_mp0e7")
+
+[connection signal="body_entered" from="Fire/Area3D" to="Player" method="_on_area_3d_body_entered"]

@@ -1,12 +1,15 @@
-extends Sprite3D
+extends Button
 
+var next_scene = preload("res://world.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$FireAnimation.play('fire_move')
-
+	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
 
+#Signals
+func _on_pressed():
+		get_tree().change_scene_to_packed(next_scene)
