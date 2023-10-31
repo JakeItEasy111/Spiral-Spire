@@ -69,7 +69,7 @@ func set_hp(new_hp):
 	hp = new_hp
 	if hp <= 0:
 		emit_signal("death")
-		queue_free() #die 
+		queue_free()
 	return hp
 
 func _on_area_3d_body_entered(body): #for projectiles and area hazards 

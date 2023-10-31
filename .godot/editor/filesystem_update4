@@ -4,3 +4,5 @@ res://default_env.tres
 res://Levels/menu.tscn
 res://Levels/Button.gd
 res://Levels/world.tscn
+res://Levels/CharacterBody3D.gd
+res://Levels/world.gd
