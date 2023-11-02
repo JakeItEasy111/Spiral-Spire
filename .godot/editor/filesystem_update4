@@ -13,3 +13,4 @@ res://levels/menu/menu.tscn
 res://entity/enemy/test_enemy/test_enemy.tscn
 res://levels/main_level/world.tscn
 res://levels/menu/Button.gd
+res://levels/main_level/world.gd
