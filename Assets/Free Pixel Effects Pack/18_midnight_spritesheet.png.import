@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnrrfxj1qu2sy"
-path="res://.godot/imported/18_midnight_spritesheet.png-48a400f2f9091182b886569a31a25e5a.ctex"
+path="res://.godot/imported/18_midnight_spritesheet.png-3cfc3939dc6b4cf15c5dce766158b33f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Free Pixel Effects Pack/18_midnight_spritesheet.png"
-dest_files=["res://.godot/imported/18_midnight_spritesheet.png-48a400f2f9091182b886569a31a25e5a.ctex"]
+source_file="res://assets/Free Pixel Effects Pack/18_midnight_spritesheet.png"
+dest_files=["res://.godot/imported/18_midnight_spritesheet.png-3cfc3939dc6b4cf15c5dce766158b33f.ctex"]
 
 [params]
 

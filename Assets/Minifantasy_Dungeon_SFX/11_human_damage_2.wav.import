@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bcrls6pfqrk3l"
-path="res://.godot/imported/11_human_damage_2.wav-a0d7b66c1a3f8334ea94838166d0e4cb.sample"
+path="res://.godot/imported/11_human_damage_2.wav-aba2b86f7189ba85760ba4250ad99d2c.sample"
 
 [deps]
 
-source_file="res://Assets/Minifantasy_Dungeon_SFX/11_human_damage_2.wav"
-dest_files=["res://.godot/imported/11_human_damage_2.wav-a0d7b66c1a3f8334ea94838166d0e4cb.sample"]
+source_file="res://assets/Minifantasy_Dungeon_SFX/11_human_damage_2.wav"
+dest_files=["res://.godot/imported/11_human_damage_2.wav-aba2b86f7189ba85760ba4250ad99d2c.sample"]
 
 [params]
 

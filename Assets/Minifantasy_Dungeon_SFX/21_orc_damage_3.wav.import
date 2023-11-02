@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://456wqhhmi4vy"
-path="res://.godot/imported/21_orc_damage_3.wav-3cfc78b53a4b8832e34864be763f56c3.sample"
+path="res://.godot/imported/21_orc_damage_3.wav-33b8bab214fd6e38a2240abcfec77078.sample"
 
 [deps]
 
-source_file="res://Assets/Minifantasy_Dungeon_SFX/21_orc_damage_3.wav"
-dest_files=["res://.godot/imported/21_orc_damage_3.wav-3cfc78b53a4b8832e34864be763f56c3.sample"]
+source_file="res://assets/Minifantasy_Dungeon_SFX/21_orc_damage_3.wav"
+dest_files=["res://.godot/imported/21_orc_damage_3.wav-33b8bab214fd6e38a2240abcfec77078.sample"]
 
 [params]
 

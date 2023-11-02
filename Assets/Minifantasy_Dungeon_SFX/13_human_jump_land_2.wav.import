@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dqqa22cmvl02m"
-path="res://.godot/imported/13_human_jump_land_2.wav-0ba9c02fd265be2686f2f476cf5accc4.sample"
+path="res://.godot/imported/13_human_jump_land_2.wav-51e98e261cd3fd6028b0007b536788a6.sample"
 
 [deps]
 
-source_file="res://Assets/Minifantasy_Dungeon_SFX/13_human_jump_land_2.wav"
-dest_files=["res://.godot/imported/13_human_jump_land_2.wav-0ba9c02fd265be2686f2f476cf5accc4.sample"]
+source_file="res://assets/Minifantasy_Dungeon_SFX/13_human_jump_land_2.wav"
+dest_files=["res://.godot/imported/13_human_jump_land_2.wav-51e98e261cd3fd6028b0007b536788a6.sample"]
 
 [params]
 

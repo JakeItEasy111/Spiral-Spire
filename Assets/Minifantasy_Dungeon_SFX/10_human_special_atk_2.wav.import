@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d2wqbjs8petyw"
-path="res://.godot/imported/10_human_special_atk_2.wav-bb666de981e3f294231a907212728c0d.sample"
+path="res://.godot/imported/10_human_special_atk_2.wav-59975df2cdba22b2e41a9ee507623259.sample"
 
 [deps]
 
-source_file="res://Assets/Minifantasy_Dungeon_SFX/10_human_special_atk_2.wav"
-dest_files=["res://.godot/imported/10_human_special_atk_2.wav-bb666de981e3f294231a907212728c0d.sample"]
+source_file="res://assets/Minifantasy_Dungeon_SFX/10_human_special_atk_2.wav"
+dest_files=["res://.godot/imported/10_human_special_atk_2.wav-59975df2cdba22b2e41a9ee507623259.sample"]
 
 [params]
 

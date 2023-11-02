@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dp84qw8jl51b6"
-path="res://.godot/imported/13_vortex_spritesheet.png-02c85a28aac6f698aaf61e86601aede3.ctex"
+path="res://.godot/imported/13_vortex_spritesheet.png-cc1aa436fd4570f5b1c59459b67e83cb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Free Pixel Effects Pack/13_vortex_spritesheet.png"
-dest_files=["res://.godot/imported/13_vortex_spritesheet.png-02c85a28aac6f698aaf61e86601aede3.ctex"]
+source_file="res://assets/Free Pixel Effects Pack/13_vortex_spritesheet.png"
+dest_files=["res://.godot/imported/13_vortex_spritesheet.png-cc1aa436fd4570f5b1c59459b67e83cb.ctex"]
 
 [params]
 

@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://1s02egcblfep"
-path="res://.godot/imported/06_door_close_1.mp3-b139ca58967a172f7ebb8984ff0d1885.mp3str"
+path="res://.godot/imported/06_door_close_1.mp3-493c83439f38e043bd262d488eca587d.mp3str"
 
 [deps]
 
-source_file="res://Assets/Minifantasy_Dungeon_SFX/06_door_close_1.mp3"
-dest_files=["res://.godot/imported/06_door_close_1.mp3-b139ca58967a172f7ebb8984ff0d1885.mp3str"]
+source_file="res://assets/Minifantasy_Dungeon_SFX/06_door_close_1.mp3"
+dest_files=["res://.godot/imported/06_door_close_1.mp3-493c83439f38e043bd262d488eca587d.mp3str"]
 
 [params]
 

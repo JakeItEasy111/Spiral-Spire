@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cffah0kv24tpu"
-path="res://.godot/imported/16_human_walk_stone_3.wav-4d2e84aedb703483cfc981d6fc18dd37.sample"
+path="res://.godot/imported/16_human_walk_stone_3.wav-969297a430ea5dc99db56e7ba56c63aa.sample"
 
 [deps]
 
-source_file="res://Assets/Minifantasy_Dungeon_SFX/16_human_walk_stone_3.wav"
-dest_files=["res://.godot/imported/16_human_walk_stone_3.wav-4d2e84aedb703483cfc981d6fc18dd37.sample"]
+source_file="res://assets/Minifantasy_Dungeon_SFX/16_human_walk_stone_3.wav"
+dest_files=["res://.godot/imported/16_human_walk_stone_3.wav-969297a430ea5dc99db56e7ba56c63aa.sample"]
 
 [params]
 

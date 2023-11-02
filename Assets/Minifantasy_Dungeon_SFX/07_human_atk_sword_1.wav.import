@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c5gh6ce6j8kyp"
-path="res://.godot/imported/07_human_atk_sword_1.wav-38984f8e1cb5c8bf44d5b7a16ac567aa.sample"
+path="res://.godot/imported/07_human_atk_sword_1.wav-9503b6f99aca226467df43ef698b4b61.sample"
 
 [deps]
 
-source_file="res://Assets/Minifantasy_Dungeon_SFX/07_human_atk_sword_1.wav"
-dest_files=["res://.godot/imported/07_human_atk_sword_1.wav-38984f8e1cb5c8bf44d5b7a16ac567aa.sample"]
+source_file="res://assets/Minifantasy_Dungeon_SFX/07_human_atk_sword_1.wav"
+dest_files=["res://.godot/imported/07_human_atk_sword_1.wav-9503b6f99aca226467df43ef698b4b61.sample"]
 
 [params]
 

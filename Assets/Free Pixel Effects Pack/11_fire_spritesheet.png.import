@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4ae1mg3052f7"
-path.s3tc="res://.godot/imported/11_fire_spritesheet.png-fde249891bbeb6edb8999fd266b187c3.s3tc.ctex"
+path.s3tc="res://.godot/imported/11_fire_spritesheet.png-079fd205a9c149da51ae8aba8c409859.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/Free Pixel Effects Pack/11_fire_spritesheet.png"
-dest_files=["res://.godot/imported/11_fire_spritesheet.png-fde249891bbeb6edb8999fd266b187c3.s3tc.ctex"]
+source_file="res://assets/Free Pixel Effects Pack/11_fire_spritesheet.png"
+dest_files=["res://.godot/imported/11_fire_spritesheet.png-079fd205a9c149da51ae8aba8c409859.s3tc.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dcf1vboivqwtn"
-path="res://.godot/imported/5_magickahit_spritesheet.png-d94b712540ccf550c792a971199e2726.ctex"
+path="res://.godot/imported/5_magickahit_spritesheet.png-58ef17c4d8bcee8d42d024b38aa85637.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Free Pixel Effects Pack/5_magickahit_spritesheet.png"
-dest_files=["res://.godot/imported/5_magickahit_spritesheet.png-d94b712540ccf550c792a971199e2726.ctex"]
+source_file="res://assets/Free Pixel Effects Pack/5_magickahit_spritesheet.png"
+dest_files=["res://.godot/imported/5_magickahit_spritesheet.png-58ef17c4d8bcee8d42d024b38aa85637.ctex"]
 
 [params]
 

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdc56lh434xix"]
+
+[ext_resource type="PackedScene" uid="uid://bnyly0xy2l6ft" path="res://entity/entity_base.tscn" id="1_y01cf"]
+[ext_resource type="Script" path="res://entity/enemy/enemy_base.gd" id="2_bfl4e"]
+
+[node name="EnemyBase" groups=["enemies"] instance=ExtResource("1_y01cf")]
+script = ExtResource("2_bfl4e")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." index="2"]

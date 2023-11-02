@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cymmhusem8xhw"
-path="res://.godot/imported/23_orc_jump_land.wav-0d25a1de6fb3016f6431a298bc4677dd.sample"
+path="res://.godot/imported/23_orc_jump_land.wav-03058cd8aa7f72e44356bf3ece0bd994.sample"
 
 [deps]
 
-source_file="res://Assets/Minifantasy_Dungeon_SFX/23_orc_jump_land.wav"
-dest_files=["res://.godot/imported/23_orc_jump_land.wav-0d25a1de6fb3016f6431a298bc4677dd.sample"]
+source_file="res://assets/Minifantasy_Dungeon_SFX/23_orc_jump_land.wav"
+dest_files=["res://.godot/imported/23_orc_jump_land.wav-03058cd8aa7f72e44356bf3ece0bd994.sample"]
 
 [params]
 

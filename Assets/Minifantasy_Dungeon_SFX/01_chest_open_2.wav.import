@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ibnutkafke21"
-path="res://.godot/imported/01_chest_open_2.wav-4cfac6874e8a7e90f7f8b3cfa11c85ee.sample"
+path="res://.godot/imported/01_chest_open_2.wav-5094e207139565e5ddfdb2398fe8bdce.sample"
 
 [deps]
 
-source_file="res://Assets/Minifantasy_Dungeon_SFX/01_chest_open_2.wav"
-dest_files=["res://.godot/imported/01_chest_open_2.wav-4cfac6874e8a7e90f7f8b3cfa11c85ee.sample"]
+source_file="res://assets/Minifantasy_Dungeon_SFX/01_chest_open_2.wav"
+dest_files=["res://.godot/imported/01_chest_open_2.wav-5094e207139565e5ddfdb2398fe8bdce.sample"]
 
 [params]
 

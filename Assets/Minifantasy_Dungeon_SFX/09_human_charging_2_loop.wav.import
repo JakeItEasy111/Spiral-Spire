@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://7opcctcgoyje"
-path="res://.godot/imported/09_human_charging_2_loop.wav-9dd84bf0e4628b7463a69619456217c3.sample"
+path="res://.godot/imported/09_human_charging_2_loop.wav-902059b93d23b82a2d79e2b428989b49.sample"
 
 [deps]
 
-source_file="res://Assets/Minifantasy_Dungeon_SFX/09_human_charging_2_loop.wav"
-dest_files=["res://.godot/imported/09_human_charging_2_loop.wav-9dd84bf0e4628b7463a69619456217c3.sample"]
+source_file="res://assets/Minifantasy_Dungeon_SFX/09_human_charging_2_loop.wav"
+dest_files=["res://.godot/imported/09_human_charging_2_loop.wav-902059b93d23b82a2d79e2b428989b49.sample"]
 
 [params]
 

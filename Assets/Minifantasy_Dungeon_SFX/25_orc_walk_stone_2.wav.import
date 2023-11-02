@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b8ktuocmnkhqs"
-path="res://.godot/imported/25_orc_walk_stone_2.wav-84d16a1578fd4cf80ef7bbeee8b6449f.sample"
+path="res://.godot/imported/25_orc_walk_stone_2.wav-40352f156517f83609f5f89f9ac1b81e.sample"
 
 [deps]
 
-source_file="res://Assets/Minifantasy_Dungeon_SFX/25_orc_walk_stone_2.wav"
-dest_files=["res://.godot/imported/25_orc_walk_stone_2.wav-84d16a1578fd4cf80ef7bbeee8b6449f.sample"]
+source_file="res://assets/Minifantasy_Dungeon_SFX/25_orc_walk_stone_2.wav"
+dest_files=["res://.godot/imported/25_orc_walk_stone_2.wav-40352f156517f83609f5f89f9ac1b81e.sample"]
 
 [params]
 

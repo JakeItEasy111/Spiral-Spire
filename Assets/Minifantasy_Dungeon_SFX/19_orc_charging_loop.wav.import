@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://crkqeo4u77mg1"
-path="res://.godot/imported/19_orc_charging_loop.wav-cedb9dc2ee93a0f3fff0454f952222f7.sample"
+path="res://.godot/imported/19_orc_charging_loop.wav-fb01ed8275b59d21565f8762c98c0482.sample"
 
 [deps]
 
-source_file="res://Assets/Minifantasy_Dungeon_SFX/19_orc_charging_loop.wav"
-dest_files=["res://.godot/imported/19_orc_charging_loop.wav-cedb9dc2ee93a0f3fff0454f952222f7.sample"]
+source_file="res://assets/Minifantasy_Dungeon_SFX/19_orc_charging_loop.wav"
+dest_files=["res://.godot/imported/19_orc_charging_loop.wav-fb01ed8275b59d21565f8762c98c0482.sample"]
 
 [params]
 

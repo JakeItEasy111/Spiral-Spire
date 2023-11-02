@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b1x65e6lghai6"
-path="res://.godot/imported/27_sword_miss_1.wav-11b63ce22d6feaaf3674d9ece4277e69.sample"
+path="res://.godot/imported/27_sword_miss_1.wav-7c76eff80df361a22701dff38a81f688.sample"
 
 [deps]
 
-source_file="res://Assets/Minifantasy_Dungeon_SFX/27_sword_miss_1.wav"
-dest_files=["res://.godot/imported/27_sword_miss_1.wav-11b63ce22d6feaaf3674d9ece4277e69.sample"]
+source_file="res://assets/Minifantasy_Dungeon_SFX/27_sword_miss_1.wav"
+dest_files=["res://.godot/imported/27_sword_miss_1.wav-7c76eff80df361a22701dff38a81f688.sample"]
 
 [params]
 

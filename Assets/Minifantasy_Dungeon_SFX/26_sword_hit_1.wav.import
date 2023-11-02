@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cdt42ev2q1el8"
-path="res://.godot/imported/26_sword_hit_1.wav-c1e77a1ad9f9168466cfd187b1339497.sample"
+path="res://.godot/imported/26_sword_hit_1.wav-bde04b11ffe0bd1e9d5e167af37f1a72.sample"
 
 [deps]
 
-source_file="res://Assets/Minifantasy_Dungeon_SFX/26_sword_hit_1.wav"
-dest_files=["res://.godot/imported/26_sword_hit_1.wav-c1e77a1ad9f9168466cfd187b1339497.sample"]
+source_file="res://assets/Minifantasy_Dungeon_SFX/26_sword_hit_1.wav"
+dest_files=["res://.godot/imported/26_sword_hit_1.wav-bde04b11ffe0bd1e9d5e167af37f1a72.sample"]
 
 [params]
 

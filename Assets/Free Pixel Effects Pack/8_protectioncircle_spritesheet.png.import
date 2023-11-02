@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://miyi6oxp0baf"
-path="res://.godot/imported/8_protectioncircle_spritesheet.png-c96d608c3b6aa80b61ee2ca00183b275.ctex"
+path="res://.godot/imported/8_protectioncircle_spritesheet.png-f5e2d4daa89025a379d3d64a2c2b0a2d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Free Pixel Effects Pack/8_protectioncircle_spritesheet.png"
-dest_files=["res://.godot/imported/8_protectioncircle_spritesheet.png-c96d608c3b6aa80b61ee2ca00183b275.ctex"]
+source_file="res://assets/Free Pixel Effects Pack/8_protectioncircle_spritesheet.png"
+dest_files=["res://.godot/imported/8_protectioncircle_spritesheet.png-f5e2d4daa89025a379d3d64a2c2b0a2d.ctex"]
 
 [params]
 

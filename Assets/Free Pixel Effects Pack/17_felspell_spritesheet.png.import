@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dkcqv771hf55j"
-path="res://.godot/imported/17_felspell_spritesheet.png-dfc198b63756b75e554be92bd572cf5e.ctex"
+path="res://.godot/imported/17_felspell_spritesheet.png-9b3f1f3cc44b8c9f4d993a12dd648e7b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Free Pixel Effects Pack/17_felspell_spritesheet.png"
-dest_files=["res://.godot/imported/17_felspell_spritesheet.png-dfc198b63756b75e554be92bd572cf5e.ctex"]
+source_file="res://assets/Free Pixel Effects Pack/17_felspell_spritesheet.png"
+dest_files=["res://.godot/imported/17_felspell_spritesheet.png-9b3f1f3cc44b8c9f4d993a12dd648e7b.ctex"]
 
 [params]
 

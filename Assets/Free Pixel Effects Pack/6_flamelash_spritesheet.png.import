@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5kt7jlk1t0m2"
-path="res://.godot/imported/6_flamelash_spritesheet.png-5a5137f603e5e8ef96c888242dc559be.ctex"
+path="res://.godot/imported/6_flamelash_spritesheet.png-43eac5c1981c2f8e8b12e6829d03d424.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Free Pixel Effects Pack/6_flamelash_spritesheet.png"
-dest_files=["res://.godot/imported/6_flamelash_spritesheet.png-5a5137f603e5e8ef96c888242dc559be.ctex"]
+source_file="res://assets/Free Pixel Effects Pack/6_flamelash_spritesheet.png"
+dest_files=["res://.godot/imported/6_flamelash_spritesheet.png-43eac5c1981c2f8e8b12e6829d03d424.ctex"]
 
 [params]
 
