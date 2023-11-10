@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://bqsxtwiigm17h"]
 
 [ext_resource type="Script" path="res://levels/main_level/world.gd" id="1_ox0py"]
-[ext_resource type="Texture2D" uid="uid://c4ae1mg3052f7" path="res://assets/Free Pixel Effects Pack/11_fire_spritesheet.png" id="3_e4aqj"]
+[ext_resource type="Texture2D" uid="uid://c4ae1mg3052f7" path="res://assets/sprites/Free Pixel Effects Pack/11_fire_spritesheet.png" id="2_ndlc7"]
 [ext_resource type="Script" path="res://levels/main_level/fireAnimation.tres.gd" id="4_6kbyj"]
 [ext_resource type="PackedScene" uid="uid://bpm05pdgfeeja" path="res://entity/player/player.tscn" id="5_a0c0x"]
 [ext_resource type="PackedScene" uid="uid://b8p77rewu34ul" path="res://levels/dungeons/devroom.tscn" id="6_jlux8"]
@@ -24,9 +24,8 @@ glow_enabled = true
 fog_light_color = Color(0, 0, 0, 1)
 fog_light_energy = 4.0
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.25
-volumetric_fog_albedo = Color(0.0470588, 0.129412, 0.262745, 1)
-volumetric_fog_emission = Color(0.117647, 0.117647, 0.117647, 1)
+volumetric_fog_density = 0.2
+volumetric_fog_albedo = Color(0.101961, 0.101961, 0.101961, 1)
 volumetric_fog_ambient_inject = 0.65
 
 [sub_resource type="Animation" id="Animation_lvwpn"]
@@ -66,7 +65,7 @@ cast_shadow = 0
 pixel_size = 0.05
 billboard = 1
 texture_filter = 0
-texture = ExtResource("3_e4aqj")
+texture = ExtResource("2_ndlc7")
 hframes = 8
 vframes = 8
 frame = 1

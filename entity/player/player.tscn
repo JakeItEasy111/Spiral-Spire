@@ -19,11 +19,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CapsuleShape3D_vql4k")
 
 [node name="Health" type="Label" parent="." index="2"]
-offset_left = 1.0
-offset_top = 576.0
-offset_right = 161.0
-offset_bottom = 645.0
-theme_override_font_sizes/font_size = 50
+offset_left = 6.0
+offset_top = 235.0
+offset_right = 134.0
+offset_bottom = 270.0
+theme_override_font_sizes/font_size = 25
 
 [node name="Head" type="Node3D" parent="." index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00387621, 1.59382, -0.00417328)

@@ -1,4 +1,5 @@
-res://levels/dungeons/devroom.tscn
-res://levels/main_level/world.tscn
 res://levels/menu/menu.tscn
+res://assets/tileset/tileset.tres
 res://entity/player/player.tscn
+res://levels/main_level/world.tscn
+res://entity/player/Player.gd

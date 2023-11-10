@@ -5,10 +5,10 @@
 [node name="Menu" type="Node2D"]
 
 [node name="Button" type="Button" parent="."]
-offset_left = 417.0
-offset_top = 334.0
-offset_right = 696.0
-offset_bottom = 428.0
+offset_left = 152.0
+offset_top = 129.0
+offset_right = 325.0
+offset_bottom = 187.0
 theme_override_font_sizes/font_size = 36
 text = "Play"
 script = ExtResource("1_w4nfs")

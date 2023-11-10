@@ -2,7 +2,7 @@ extends "res://entity/entity_base.gd"
 
 #extended movement variables 
 const JUMP_VELOCITY = 4.5
-const SENSITIVITY = 0.003
+const SENSITIVITY = 0.007
 
 #viewbob variables
 const BOB_FREQ = 2.0
