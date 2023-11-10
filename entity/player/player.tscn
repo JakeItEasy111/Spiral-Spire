@@ -29,3 +29,9 @@ theme_override_font_sizes/font_size = 50
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00387621, 1.59382, -0.00417328)
 
 [node name="Camera3D" type="Camera3D" parent="Head" index="0"]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Head" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0, 0)
+light_color = Color(0.839216, 0.568627, 0.160784, 1)
+light_volumetric_fog_energy = 2.0
+light_size = 1.0
