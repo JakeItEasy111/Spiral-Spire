@@ -1,10 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://bqsxtwiigm17h"]
+[gd_scene load_steps=13 format=3 uid="uid://bqsxtwiigm17h"]
 
 [ext_resource type="Script" path="res://levels/main_level/world.gd" id="1_ox0py"]
-[ext_resource type="Texture2D" uid="uid://bv4ls8djh8h61" path="res://assets/WM_BrickWork-50_1024.png" id="2_0soaw"]
 [ext_resource type="Texture2D" uid="uid://c4ae1mg3052f7" path="res://assets/Free Pixel Effects Pack/11_fire_spritesheet.png" id="3_e4aqj"]
 [ext_resource type="Script" path="res://levels/main_level/fireAnimation.tres.gd" id="4_6kbyj"]
 [ext_resource type="PackedScene" uid="uid://bpm05pdgfeeja" path="res://entity/player/player.tscn" id="5_a0c0x"]
+[ext_resource type="PackedScene" uid="uid://b8p77rewu34ul" path="res://levels/dungeons/devroom.tscn" id="6_jlux8"]
 [ext_resource type="PackedScene" uid="uid://bi1f8ern5d0yv" path="res://entity/enemy/test_enemy/test_enemy.tscn" id="6_p6ytn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gp45i"]
@@ -19,19 +19,15 @@ sky_material = SubResource("ProceduralSkyMaterial_gp45i")
 background_mode = 2
 sky = SubResource("Sky_c4dh2")
 tonemap_mode = 2
+ssil_enabled = true
 glow_enabled = true
-fog_light_color = Color(0.184314, 0.203922, 0.235294, 1)
-volumetric_fog_density = 0.4
-volumetric_fog_albedo = Color(0.266667, 0.176471, 0.223529, 1)
+fog_light_color = Color(0, 0, 0, 1)
+fog_light_energy = 4.0
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.25
+volumetric_fog_albedo = Color(0.0470588, 0.129412, 0.262745, 1)
 volumetric_fog_emission = Color(0.117647, 0.117647, 0.117647, 1)
-
-[sub_resource type="NavigationMesh" id="NavigationMesh_8qxw6"]
-vertices = PackedVector3Array(-16, 0.583306, 7.75, -16, 0.583306, 15.5, -8, 0.583306, 15.5, 8, 0.583306, 15.5, 16, 0.583306, 15.5, 16, 0.583306, 7.75, 16, 0.583306, -7.75, 16, 0.583306, -15.5, 8, 0.583306, -15.5, -8, 0.583306, -15.5, -16, 0.583306, -15.5, -16, 0.583306, -7.75, -16, 0.583306, 0, -16, 0.583306, 7.75, -8, 0.583306, 15.5, 8, 0.583306, 15.5, 16, 0.583306, 7.75, 16, 0.583306, 0, 0, 0.583306, 15.5, 16, 0.583306, 0, 16, 0.583306, -7.75, 8, 0.583306, -15.5, -8, 0.583306, -15.5, -16, 0.583306, -7.75, -16, 0.583306, 0, 0, 0.583306, -15.5, 0, 0.583306, -15.5, -16, 0.583306, 0, -8, 0.583306, 15.5, 0, 0.583306, 15.5, 16, 0.583306, 0, 8, 0.583306, -15.5)
-polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Array(8, 7, 6), PackedInt32Array(11, 10, 9), PackedInt32Array(14, 13, 12), PackedInt32Array(16, 15, 17), PackedInt32Array(17, 15, 18), PackedInt32Array(21, 20, 19), PackedInt32Array(23, 22, 24), PackedInt32Array(24, 22, 25), PackedInt32Array(31, 30, 26), PackedInt32Array(26, 30, 29), PackedInt32Array(26, 29, 28), PackedInt32Array(26, 28, 27)]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_axr4a"]
-albedo_texture = ExtResource("2_0soaw")
-texture_filter = 0
+volumetric_fog_ambient_inject = 0.65
 
 [sub_resource type="Animation" id="Animation_lvwpn"]
 resource_name = "fire_move"
@@ -61,24 +57,11 @@ radius = 0.75
 [node name="World" type="Node3D"]
 script = ExtResource("1_ox0py")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
-shadow_enabled = true
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_7m8yv")
 
-[node name="TestNavMesh" type="NavigationRegion3D" parent="."]
-navigation_mesh = SubResource("NavigationMesh_8qxw6")
-
-[node name="CSGBox3D" type="CSGBox3D" parent="TestNavMesh"]
-transform = Transform3D(1.65, 0, 0, 0, -0.283886, 0, 0, 0, 1, 0, 0.083448, 0)
-use_collision = true
-size = Vector3(20, 0.001, 32)
-material = SubResource("StandardMaterial3D_axr4a")
-
 [node name="TestFire" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 2, 0)
 cast_shadow = 0
 pixel_size = 0.05
 billboard = 1
@@ -101,9 +84,17 @@ libraries = {
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.38419e-07, -0.3, 0)
 shape = SubResource("CylinderShape3D_mp0e7")
 
+[node name="OmniLight3D" type="OmniLight3D" parent="TestFire"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7, 0)
+light_color = Color(0.901961, 0.607843, 0.294118, 1)
+light_energy = 1.283
+light_size = 1.0
+
 [node name="Player" parent="." instance=ExtResource("5_a0c0x")]
 
 [node name="TestEnemy" parent="." instance=ExtResource("6_p6ytn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, 6.1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1.1, 13.1)
+
+[node name="devroom" parent="." instance=ExtResource("6_jlux8")]
 
 [connection signal="body_entered" from="TestFire/Area3D" to="Player" method="_on_area_3d_body_entered"]
