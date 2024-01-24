@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://c6qsjprnjeljn"]
+[gd_scene load_steps=3 format=3 uid="uid://c6qsjprnjeljn"]
 
+[ext_resource type="FontFile" uid="uid://cjyopdofstljf" path="res://assets/fonts/rubber-biscuit/RUBBBB__.TTF" id="1_d6bds"]
 [ext_resource type="Script" path="res://levels/menu/Button.gd" id="1_w4nfs"]
 
 [node name="Menu" type="Node2D"]
@@ -9,6 +10,7 @@ offset_left = 152.0
 offset_top = 129.0
 offset_right = 325.0
 offset_bottom = 187.0
+theme_override_fonts/font = ExtResource("1_d6bds")
 theme_override_font_sizes/font_size = 36
 text = "Play"
 script = ExtResource("1_w4nfs")

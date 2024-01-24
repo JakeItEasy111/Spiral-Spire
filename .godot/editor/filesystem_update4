@@ -1,3 +1,6 @@
 res://levels/menu/menu.tscn
 res://assets/tilesets/tileset.tres
 res://levels/main_level/world.tscn
+res://entity/player/player.tscn
+res://assets/models/[EXECUTIONER SWORD]/executionersword.tscn
+res://entity/player/Player.gd

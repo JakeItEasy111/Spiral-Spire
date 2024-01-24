@@ -12,19 +12,23 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 @onready var head = $Head
 @onready var camera = $Head/Camera3D
+@onready var subviewport_camera = %Subviewport_camera
 @onready var health_label = $Health
 	
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	SPEED = 5.0
 	set_health_label() 
-
+	
 func _unhandled_input(event): #mouse rotation
 	if event is InputEventMouseMotion:
 		head.rotate_y(-event.relative.x * SENSITIVITY) #rotates around y axis
 		camera.rotate_x(-event.relative.y * SENSITIVITY) #rotates around x axis
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80)) #limits camera 
 		
+func _process(delta):
+	subviewport_camera.set_global_transform(camera.get_global_transform())
+	
 func _physics_process(delta):
 	# Adds gravity.
 	if not is_on_floor():
