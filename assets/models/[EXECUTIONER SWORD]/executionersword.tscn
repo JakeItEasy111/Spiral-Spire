@@ -10,6 +10,7 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_68oej"]
 resource_name = "m_6be67983-4e59-3a18-5385-9b4f848d43b1"
 albedo_texture = ExtResource("1_y0upn")
+texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_rjnhj"]
 _surfaces = [{
@@ -42,6 +43,7 @@ shadow_mesh = SubResource("ArrayMesh_rjnhj")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ncnrw"]
 resource_name = "m_96ea21d6-1ed2-8890-caf8-5ce08b4353c6"
 albedo_texture = ExtResource("2_bvud6")
+texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_x0agj"]
 _surfaces = [{
@@ -102,6 +104,7 @@ shadow_mesh = SubResource("ArrayMesh_ghewo")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6d36f"]
 resource_name = "m_ce964847-c823-a108-56c9-aa117770ed71"
 albedo_texture = ExtResource("3_dey02")
+texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_231wu"]
 _surfaces = [{
@@ -162,6 +165,7 @@ shadow_mesh = SubResource("ArrayMesh_sdcun")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yvky4"]
 resource_name = "m_a1d0d3a4-3cac-edfc-716d-2bc1c49bab4e"
 albedo_texture = ExtResource("4_vg6sj")
+texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ltj6o"]
 _surfaces = [{
@@ -224,6 +228,7 @@ shadow_mesh = SubResource("ArrayMesh_mwube")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mbiq6"]
 resource_name = "m_451b7f82-a17f-becc-692c-4c59bcf6db8f"
 albedo_texture = ExtResource("5_554rs")
+texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_674id"]
 _surfaces = [{
@@ -284,6 +289,7 @@ shadow_mesh = SubResource("ArrayMesh_ql8f4")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5215t"]
 resource_name = "m_cfebba6b-ca5f-d3b0-7825-b723c6e28b07"
 albedo_texture = ExtResource("6_vubvm")
+texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ihlcg"]
 _surfaces = [{

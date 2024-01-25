@@ -10,6 +10,7 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vql4k"]
 
 [node name="Player" instance=ExtResource("1_5030y")]
+visible = false
 script = ExtResource("2_objnu")
 
 [node name="MeshInstance3D" parent="." index="0"]
@@ -24,23 +25,25 @@ shape = SubResource("CapsuleShape3D_vql4k")
 [node name="Head" type="Node3D" parent="." index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00387621, 1.59382, -0.00417328)
 
-[node name="Camera3D" type="Camera3D" parent="Head" index="0"]
-cull_mask = 1048063
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Head" index="1"]
+[node name="SpotLight3D" type="SpotLight3D" parent="Head" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0, 0)
 light_color = Color(0.839216, 0.568627, 0.160784, 1)
 light_volumetric_fog_energy = 2.0
 light_size = 1.0
 
-[node name="executionersword" parent="Head" index="2" instance=ExtResource("3_rluav")]
-transform = Transform3D(0.0866025, -0.012941, 0.0482963, 0, 0.0965926, 0.0258819, -0.05, -0.0224144, 0.0836516, 0.8, 0, -1.1)
+[node name="executionersword" parent="Head" index="1" instance=ExtResource("3_rluav")]
+transform = Transform3D(0.0866025, -0.00868241, 0.0492404, 0, 0.0984808, 0.0173648, -0.05, -0.0150384, 0.0852868, 0.895, -0.045, -1)
 layers = 512
+
+[node name="Player_camera" type="Camera3D" parent="Head" index="2"]
+unique_name_in_owner = true
+cull_mask = 1048063
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="3"]
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer" index="0"]
 z_index = 1
+texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -52,7 +55,7 @@ stretch = true
 transparent_bg = true
 handle_input_locally = false
 positional_shadow_atlas_size = 4096
-size = Vector2i(480, 270)
+size = Vector2i(1920, 1080)
 render_target_update_mode = 4
 
 [node name="Subviewport_camera" type="Camera3D" parent="CanvasLayer/SubViewportContainer/SubViewport" index="0"]
@@ -60,10 +63,13 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
 cull_mask = 512
 
-[node name="Health" type="Label" parent="." index="4"]
-offset_left = 6.0
-offset_top = 235.0
-offset_right = 134.0
-offset_bottom = 270.0
-theme_override_fonts/font = ExtResource("4_w3pbu")
-theme_override_font_sizes/font_size = 25
+[node name="Health" type="RichTextLabel" parent="." index="4"]
+offset_left = 77.0
+offset_top = 910.0
+offset_right = 427.0
+offset_bottom = 1054.0
+theme_override_fonts/normal_font = ExtResource("4_w3pbu")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+fit_content = true
+scroll_active = false

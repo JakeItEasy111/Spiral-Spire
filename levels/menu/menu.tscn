@@ -6,12 +6,12 @@
 [node name="Menu" type="Node2D"]
 
 [node name="Button" type="Button" parent="."]
-offset_left = 152.0
-offset_top = 129.0
-offset_right = 325.0
-offset_bottom = 187.0
+offset_left = 804.0
+offset_top = 327.0
+offset_right = 1218.0
+offset_bottom = 470.0
 theme_override_fonts/font = ExtResource("1_d6bds")
-theme_override_font_sizes/font_size = 36
+theme_override_font_sizes/font_size = 75
 text = "Play"
 script = ExtResource("1_w4nfs")
 

@@ -1,7 +1,8 @@
-CanvasLayer
+RichTextLabel
 Camera3D
-SubViewportContainer
 SubViewport
+SubViewportContainer
+CanvasLayer
 MeshInstance3D
 SpotLight3D
 NavigationRegion3D

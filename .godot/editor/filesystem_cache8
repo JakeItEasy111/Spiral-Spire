@@ -1,7 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1706122588
+::res://::1706187787
 icon.svg::CompressedTexture2D::4677634300119052370::1697629183::1698767084::1::::<><>::
-project_time_traker.json::JSON::-1::1706122104::0::1::::<><>::
+project_time_traker.json::JSON::-1::1706122922::0::1::::<><>::
 ::res://addons/::1698767034
 project_time_traker.json::JSON::-1::1698767030::0::1::::<><>::
 ::res://addons/FloorArchitect/::1698767083
@@ -39,7 +39,7 @@ TrackerSectionColor.gd::GDScript::-1::1698058752::0::1::::<>ColorRect<>::
 TrackerSectionColor.tscn::PackedScene::3012946172539550966::1698058752::0::1::::<><>::res://addons/project-time-tracker/TrackerSectionColor.gd
 ::res://assets/::1706122588
 ::res://assets/fonts/::1706122599
-::res://assets/fonts/alagard/::1706122599
+::res://assets/fonts/alagard/::1706122600
 alagard.ttf::FontFile::1779944131574306833::1706122599::1706122600::1::::<><>::
 ::res://assets/fonts/rubber-biscuit/::1706122588
 express.txt::TextFile::-1::1706122584::0::1::::<><>::
@@ -152,22 +152,22 @@ tileset_atlas_n.png::CompressedTexture2D::8905455170486301738::1699622766::16996
 ::res://entity/::1698924744
 entity_base.gd::GDScript::-1::1698923755::0::1::::<>CharacterBody3D<>::
 entity_base.tscn::PackedScene::3349132812800360065::1698924744::0::1::::<><>::res://entity/entity_base.gd
-::res://entity/enemy/::1699984887
-enemy_base.gd::GDScript::-1::1699984887::0::1::::<>CharacterBody3D<>::
+::res://entity/enemy/::1706122922
+enemy_base.gd::GDScript::-1::1706122922::0::1::::<>CharacterBody3D<>::
 enemy_base.tscn::PackedScene::4989414113129158411::1698926871::0::1::::<><>::uid://bnyly0xy2l6ft
 ::res://entity/enemy/test_enemy/::1699985292
 TestEnemy.gd::GDScript::-1::1699985292::0::1::::<>CharacterBody3D<>::
 test_enemy.tscn::PackedScene::3001968007551582081::1698927166::0::1::::<><>::uid://cdc56lh434xix
-::res://entity/player/::1706122104
+::res://entity/player/::1706122890
 Player.gd::GDScript::-1::1706122098::0::1::::<>CharacterBody3D<>::
-player.tscn::PackedScene::3465598162712734386::1706122104::0::1::::<><>::uid://bnyly0xy2l6ft::::res://entity/entity_base.tscn<>res://entity/player/Player.gd<>uid://b2j84cqc0nvhe::::res://assets/models/[EXECUTIONER SWORD]/executionersword.tscn
+player.tscn::PackedScene::3465598162712734386::1706122890::0::1::::<><>::uid://bnyly0xy2l6ft::::res://entity/entity_base.tscn<>res://entity/player/Player.gd<>uid://b2j84cqc0nvhe::::res://assets/models/[EXECUTIONER SWORD]/executionersword.tscn<>uid://0mhojjt0rey0::::res://assets/fonts/alagard/alagard.ttf
 ::res://levels/::1699624626
 ::res://levels/dungeons/::1699637272
 devroom.tscn::PackedScene::4735619179336160775::1699637272::0::1::::<><>::uid://dogrwlqwoutbp
-::res://levels/main_level/::1706122104
+::res://levels/main_level/::1706122890
 fireAnimation.tres.gd::GDScript::-1::1698924712::0::1::::<>Sprite3D<>::
 world.gd::GDScript::-1::1699983504::0::1::::<>Node3D<>::
-world.tscn::PackedScene::3548032570636659567::1706122104::0::1::::<><>::res://levels/main_level/world.gd<>uid://c4ae1mg3052f7::::res://assets/sprites/Free Pixel Effects Pack/11_fire_spritesheet.png<>res://levels/main_level/fireAnimation.tres.gd<>uid://bpm05pdgfeeja::::res://entity/player/player.tscn<>uid://b8p77rewu34ul::::res://levels/dungeons/devroom.tscn<>uid://bi1f8ern5d0yv::::res://entity/enemy/test_enemy/test_enemy.tscn
-::res://levels/menu/::1706122104
+world.tscn::PackedScene::3548032570636659567::1706122890::0::1::::<><>::res://levels/main_level/world.gd<>uid://c4ae1mg3052f7::::res://assets/sprites/Free Pixel Effects Pack/11_fire_spritesheet.png<>res://levels/main_level/fireAnimation.tres.gd<>uid://bpm05pdgfeeja::::res://entity/player/player.tscn<>uid://b8p77rewu34ul::::res://levels/dungeons/devroom.tscn<>uid://bi1f8ern5d0yv::::res://entity/enemy/test_enemy/test_enemy.tscn
+::res://levels/menu/::1706122890
 Button.gd::GDScript::-1::1698927124::0::1::::<>Button<>::
-menu.tscn::PackedScene::6982835356959887867::1706122104::0::1::::<><>::res://levels/menu/Button.gd
+menu.tscn::PackedScene::6982835356959887867::1706122890::0::1::::<><>::uid://cjyopdofstljf::::res://assets/fonts/rubber-biscuit/RUBBBB__.TTF<>res://levels/menu/Button.gd

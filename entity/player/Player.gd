@@ -1,8 +1,8 @@
 extends "res://entity/entity_base.gd"
 
 #extended movement variables 
-const JUMP_VELOCITY = 4.5
-const SENSITIVITY = 0.007
+const JUMP_VELOCITY = 5
+const SENSITIVITY = 0.003
 
 #viewbob variables
 const BOB_FREQ = 2.0
@@ -11,7 +11,7 @@ var t_bob = 0.0
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 @onready var head = $Head
-@onready var camera = $Head/Camera3D
+@onready var camera = %Player_camera
 @onready var subviewport_camera = %Subviewport_camera
 @onready var health_label = $Health
 	
@@ -60,11 +60,13 @@ func _headbob(time) -> Vector3:
 	return pos 
 
 func set_health_label(): #change to bar, add to base?
-	health_label.text = "HP: " + str(hp)
+	health_label.text = str(hp)
 	
 func take_damage(dmg):
 	super.take_damage(dmg)
-	health_label.text = "HP: " + str(hp)
+	health_label.text = str(hp)
+	if (hp <= 25):
+		health_label.text = "[shake rate=20.0 level=15 connected=1]" + str(hp) + "[/shake]"
 
 func _on_area_3d_body_entered(body): #for projectiles and area hazards 
 	take_damage(15) #if area.is_in_group("groupName") for changing damage based on type 
