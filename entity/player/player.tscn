@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bpm05pdgfeeja"]
+[gd_scene load_steps=12 format=3 uid="uid://bpm05pdgfeeja"]
 
 [ext_resource type="PackedScene" uid="uid://bnyly0xy2l6ft" path="res://entity/entity_base.tscn" id="1_5030y"]
 [ext_resource type="Script" path="res://entity/player/Player.gd" id="2_objnu"]
@@ -9,8 +9,226 @@
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vql4k"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_aeup4"]
+size = Vector3(1, 1, 2)
+
+[sub_resource type="Animation" id="Animation_blv54"]
+resource_name = "Attack"
+length = 0.4
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/executionersword:rotation:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-0.174533, -0.25, 0, 0.25, 0, -0.523599, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/executionersword:rotation:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.523599, -0.25, 0, 0.25, 0, 2.07694, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Head/executionersword:rotation:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -2.05949, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Head/executionersword:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.895, -0.25, 0, 0.25, 0, -0.03, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Head/executionersword:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.045, -0.25, 0, 0.25, 0, -0.722, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Head/executionersword:position:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-1, -0.25, 0, 0.25, 0, -1.14, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.4)
+}
+
+[sub_resource type="Animation" id="Animation_8jv5x"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/executionersword:rotation:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.174533, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/executionersword:rotation:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.523599, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Head/executionersword:rotation:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Head/executionersword:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.895, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Head/executionersword:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.045, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Head/executionersword:position:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_t7e50"]
+resource_name = "Return"
+length = 0.6
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/executionersword:rotation:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-0.523599, -0.25, 0, 0.25, 0, -0.174533, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/executionersword:rotation:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(2.07694, -0.25, 0, 0.25, 0, 0.523599, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Head/executionersword:rotation:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-2.05949, -0.25, 0, 0.25, 0, -0.436332, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Head/executionersword:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-0.03, -0.25, 0, 0.25, 0, 0.895, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Head/executionersword:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-0.722, -0.25, 0, 0.25, 0, 0.045, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Head/executionersword:position:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-1.14, -0.25, 0, 0.25, 0, -1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.6)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1t14b"]
+_data = {
+"Attack": SubResource("Animation_blv54"),
+"RESET": SubResource("Animation_8jv5x"),
+"Return": SubResource("Animation_t7e50")
+}
+
 [node name="Player" instance=ExtResource("1_5030y")]
-visible = false
 script = ExtResource("2_objnu")
 
 [node name="MeshInstance3D" parent="." index="0"]
@@ -25,19 +243,19 @@ shape = SubResource("CapsuleShape3D_vql4k")
 [node name="Head" type="Node3D" parent="." index="2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00387621, 1.59382, -0.00417328)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Head" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 0, 0)
-light_color = Color(0.839216, 0.568627, 0.160784, 1)
-light_volumetric_fog_energy = 2.0
-light_size = 1.0
-
-[node name="executionersword" parent="Head" index="1" instance=ExtResource("3_rluav")]
-transform = Transform3D(0.0866025, -0.00868241, 0.0492404, 0, 0.0984808, 0.0173648, -0.05, -0.0150384, 0.0852868, 0.895, -0.045, -1)
+[node name="executionersword" parent="Head" index="0" instance=ExtResource("3_rluav")]
+transform = Transform3D(0.0866025, -0.00868242, 0.0492404, 0, 0.0984808, 0.0173648, -0.05, -0.0150384, 0.0852868, 0.895, -0.045, -1)
 layers = 512
 
-[node name="Player_camera" type="Camera3D" parent="Head" index="2"]
+[node name="Player_camera" type="Camera3D" parent="Head" index="1"]
 unique_name_in_owner = true
 cull_mask = 1048063
+
+[node name="Hitbox" type="Area3D" parent="Head/Player_camera" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Head/Player_camera/Hitbox" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+shape = SubResource("BoxShape3D_aeup4")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="3"]
 
@@ -50,12 +268,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 stretch = true
+stretch_shrink = 6
 
 [node name="SubViewport" type="SubViewport" parent="CanvasLayer/SubViewportContainer" index="0"]
 transparent_bg = true
 handle_input_locally = false
 positional_shadow_atlas_size = 4096
-size = Vector2i(1920, 1080)
+size = Vector2i(320, 180)
 render_target_update_mode = 4
 
 [node name="Subviewport_camera" type="Camera3D" parent="CanvasLayer/SubViewportContainer/SubViewport" index="0"]
@@ -73,3 +292,8 @@ theme_override_font_sizes/normal_font_size = 100
 bbcode_enabled = true
 fit_content = true
 scroll_active = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="5"]
+libraries = {
+"": SubResource("AnimationLibrary_1t14b")
+}

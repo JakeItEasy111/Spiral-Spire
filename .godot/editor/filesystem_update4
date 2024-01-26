@@ -1,7 +1,8 @@
-res://levels/menu/menu.tscn
-res://assets/tilesets/tileset.tres
 res://levels/main_level/world.tscn
+res://assets/tilesets/tileset.tres
+res://levels/menu/menu.tscn
 res://entity/player/player.tscn
 res://entity/player/Player.gd
-res://assets/models/[EXECUTIONER SWORD]/executionersword.tscn
-res://entity/enemy/enemy_base.gd
+res://entity/enemy/test_enemy/test_enemy.tscn
+res://entity/entity_base.tscn
+res://entity/enemy/test_enemy/TestEnemy.gd

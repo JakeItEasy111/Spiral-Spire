@@ -60,9 +60,9 @@ script = ExtResource("1_ox0py")
 environment = SubResource("Environment_7m8yv")
 
 [node name="TestFire" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 2, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 3, -2)
 cast_shadow = 0
-pixel_size = 0.05
+pixel_size = 0.035
 billboard = 1
 texture_filter = 0
 texture = ExtResource("2_ndlc7")
