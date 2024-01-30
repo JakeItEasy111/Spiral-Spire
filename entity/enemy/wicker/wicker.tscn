@@ -1,0 +1,215 @@
+[gd_scene load_steps=31 format=3 uid="uid://ufg1mq2jww56"]
+
+[ext_resource type="Script" path="res://entity/enemy/wicker/wicker.gd" id="1_hb0cj"]
+[ext_resource type="PackedScene" uid="uid://bjiw8sv2e3s6q" path="res://assets/models/Wicker/wicker.blend" id="2_vxpwv"]
+[ext_resource type="Texture2D" uid="uid://s1wwidb58yg1" path="res://assets/sprites/fireSpriteSheet.png" id="3_ij4dl"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_yh55x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e012m"]
+atlas = ExtResource("3_ij4dl")
+region = Rect2(0, 0, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ls2gn"]
+atlas = ExtResource("3_ij4dl")
+region = Rect2(153, 0, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xs0xo"]
+atlas = ExtResource("3_ij4dl")
+region = Rect2(306, 0, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kine"]
+atlas = ExtResource("3_ij4dl")
+region = Rect2(459, 0, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5b0n"]
+atlas = ExtResource("3_ij4dl")
+region = Rect2(612, 0, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vjxd"]
+atlas = ExtResource("3_ij4dl")
+region = Rect2(0, 153, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqr85"]
+atlas = ExtResource("3_ij4dl")
+region = Rect2(153, 153, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_up6wm"]
+atlas = ExtResource("3_ij4dl")
+region = Rect2(306, 153, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vg3bq"]
+atlas = ExtResource("3_ij4dl")
+region = Rect2(459, 153, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0v7h2"]
+atlas = ExtResource("3_ij4dl")
+region = Rect2(612, 153, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5cim"]
+atlas = ExtResource("3_ij4dl")
+region = Rect2(0, 306, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0vy8"]
+atlas = ExtResource("3_ij4dl")
+region = Rect2(153, 306, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5g1nc"]
+atlas = ExtResource("3_ij4dl")
+region = Rect2(306, 306, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tt3o6"]
+atlas = ExtResource("3_ij4dl")
+region = Rect2(459, 306, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpcu2"]
+atlas = ExtResource("3_ij4dl")
+region = Rect2(612, 306, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bajgk"]
+atlas = ExtResource("3_ij4dl")
+region = Rect2(0, 459, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17fwo"]
+atlas = ExtResource("3_ij4dl")
+region = Rect2(153, 459, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6s6rl"]
+atlas = ExtResource("3_ij4dl")
+region = Rect2(306, 459, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o10f7"]
+atlas = ExtResource("3_ij4dl")
+region = Rect2(459, 459, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_whxhm"]
+atlas = ExtResource("3_ij4dl")
+region = Rect2(612, 459, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pnmkx"]
+atlas = ExtResource("3_ij4dl")
+region = Rect2(0, 612, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_66pcc"]
+atlas = ExtResource("3_ij4dl")
+region = Rect2(153, 612, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prcw8"]
+atlas = ExtResource("3_ij4dl")
+region = Rect2(306, 612, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0pva"]
+atlas = ExtResource("3_ij4dl")
+region = Rect2(459, 612, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkq34"]
+atlas = ExtResource("3_ij4dl")
+region = Rect2(612, 612, 153, 153)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_niwbd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e012m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ls2gn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xs0xo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0kine")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5b0n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vjxd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqr85")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_up6wm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vg3bq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0v7h2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5cim")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f0vy8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5g1nc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tt3o6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpcu2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bajgk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_17fwo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6s6rl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o10f7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_whxhm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pnmkx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_66pcc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prcw8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w0pva")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kkq34")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="wicker" type="CharacterBody3D"]
+script = ExtResource("1_hb0cj")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+
+[node name="wicker" parent="MeshInstance3D" instance=ExtResource("2_vxpwv")]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_yh55x")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 2.1, 0)
+billboard = 1
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_niwbd")
+frame_progress = 0.221625
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9, 0)
+light_color = Color(0.941176, 0.760784, 0.2, 1)

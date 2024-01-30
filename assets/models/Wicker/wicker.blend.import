@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://irxytabb04sy"
-path="res://.godot/imported/wicker.blend-dab3154a148f23d4131e56f743c79af9.scn"
+uid="uid://bjiw8sv2e3s6q"
+path="res://.godot/imported/wicker.blend-30332816cd2c5f6ef403c352f9c3ce2d.scn"
 
 [deps]
 
-source_file="res://assets/models/wicker.blend"
-dest_files=["res://.godot/imported/wicker.blend-dab3154a148f23d4131e56f743c79af9.scn"]
+source_file="res://assets/models/Wicker/wicker.blend"
+dest_files=["res://.godot/imported/wicker.blend-30332816cd2c5f6ef403c352f9c3ce2d.scn"]
 
 [params]
 

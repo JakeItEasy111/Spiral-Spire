@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4th8s6mhcafi"
-path="res://.godot/imported/note_small.png-7d1fced1263f427b63308ebbdc360065.ctex"
+uid="uid://v43i8rutde21"
+path="res://.godot/imported/wicker_diffuse_2.png-7f9261a6eac4f2456ed7cc9d5a8ec158.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/note_small.png"
-dest_files=["res://.godot/imported/note_small.png-7d1fced1263f427b63308ebbdc360065.ctex"]
+source_file="res://assets/models/Wicker/textures/wicker_diffuse_2.png"
+dest_files=["res://.godot/imported/wicker_diffuse_2.png-7f9261a6eac4f2456ed7cc9d5a8ec158.ctex"]
 
 [params]
 

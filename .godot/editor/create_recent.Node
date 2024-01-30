@@ -1,4 +1,10 @@
+AnimatedSprite3D
+OmniLight3D
+PointLight2D
+NavigationAgent3D
 CollisionShape3D
+MeshInstance3D
+CharacterBody3D
 Area3D
 AnimationPlayer
 RichTextLabel
@@ -6,7 +12,6 @@ Camera3D
 SubViewport
 SubViewportContainer
 CanvasLayer
-MeshInstance3D
 SpotLight3D
 NavigationRegion3D
 GridMap
@@ -15,16 +20,11 @@ CanvasModulate
 ShaderGlobalsOverride
 AudioStreamPlayer3D
 GPUParticles3D
-OmniLight3D
-PointLight2D
-NavigationAgent3D
-CharacterBody3D
 CollisionPolygon3D
 CollisionShape2D
 Label
 Button
 AudioStreamPlayer
-AnimatedSprite3D
 Sprite3D
 Node3D
 CSGBox3D
