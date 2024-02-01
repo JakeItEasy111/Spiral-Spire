@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqsxtwiigm17h"]
+[gd_scene load_steps=9 format=3 uid="uid://bqsxtwiigm17h"]
 
 [ext_resource type="Script" path="res://levels/main_level/world.gd" id="1_ox0py"]
+[ext_resource type="PackedScene" uid="uid://ql0l8j2ni6xb" path="res://objects/torch/torch.tscn" id="5_2lj5i"]
 [ext_resource type="PackedScene" uid="uid://bpm05pdgfeeja" path="res://entity/player/player.tscn" id="5_a0c0x"]
 [ext_resource type="PackedScene" uid="uid://b8p77rewu34ul" path="res://levels/dungeons/devroom.tscn" id="6_jlux8"]
 [ext_resource type="PackedScene" uid="uid://88jssic5a3c2" path="res://entity/enemy/wicker/wicker_enemy.tscn" id="7_4rrae"]
@@ -39,3 +40,6 @@ environment = SubResource("Environment_7m8yv")
 [node name="WickerEnemy" parent="." instance=ExtResource("7_4rrae")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 13)
 SPEED = 2.0
+
+[node name="torch" parent="." instance=ExtResource("5_2lj5i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1.3, -1.3)

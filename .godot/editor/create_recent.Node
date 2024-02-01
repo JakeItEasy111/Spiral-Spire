@@ -1,9 +1,11 @@
-AnimatedSprite3D
+AudioStreamPlayer3D
 OmniLight3D
-PointLight2D
-NavigationAgent3D
+LightOccluder2D
+AnimatedSprite3D
 CollisionShape3D
 MeshInstance3D
+PointLight2D
+NavigationAgent3D
 CharacterBody3D
 Area3D
 AnimationPlayer
@@ -18,7 +20,6 @@ GridMap
 Node
 CanvasModulate
 ShaderGlobalsOverride
-AudioStreamPlayer3D
 GPUParticles3D
 CollisionPolygon3D
 CollisionShape2D
