@@ -1,7 +1,9 @@
 res://assets/tilesets/tileset.tres
-res://entity/enemy/wicker/wicker.tscn
-res://entity/enemy/wicker/wicker.gd
-res://entity/enemy/test_enemy/test_enemy.tscn
+res://WickerEnemy.gd
+res://entity/enemy/wicker/wicker_enemy.tscn
 res://levels/main_level/world.tscn
 res://levels/menu/menu.tscn
 res://entity/player/player.tscn
+res://entity/enemy/enemy_base.tscn
+res://entity/enemy/test_enemy/test_enemy.tscn
+res://entity/enemy/wicker/WickerEnemy.gd
