@@ -2,10 +2,27 @@ extends "res://entity/enemy/enemy_base.gd"
 
 const ATTACK_RANGE = 2.5
 
-@onready var anim = $AnimatedSprite3D
+@onready var fire_anim = $AnimatedSprite3D 
+@onready var anim_tree = $MeshInstance3D/wicker/AnimationTree
+@onready var state_machine
 
 func _ready():
-	anim.play("default")
+	fire_anim.play("default")
+	state_machine = anim_tree.get("parameters/playback")
+
+func _process(delta):
+	match state_machine.get_current_node():
+		"wicker_walk":
+			pass
+		"wicker_attack":
+			pass
 	
-func target_in_range():
+	#animations
+	anim_tree.set("parameters/conditions/attack", _target_in_range())
+	anim_tree.set("parameters/conditions/run", !_target_in_range())
+
+	
+func _target_in_range():
 	return global_position.distance_to(player.global_position) < ATTACK_RANGE
+
+ 

@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://b20du5ue5tika"]
+
+[ext_resource type="PackedScene" uid="uid://dk2mli3vfnyjo" path="res://assets/models/Wicker/wicker.blend" id="1_q8aa5"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_mhg6e"]
+animation = &"wicker_attack"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ll3m5"]
+animation = &"wicker_walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jrn85"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_blmgu"]
+advance_mode = 2
+advance_condition = &"attack"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_wyjmt"]
+switch_mode = 2
+advance_mode = 2
+advance_condition = &"run"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_swssc"]
+states/Start/position = Vector2(141, 100)
+states/wicker_attack/node = SubResource("AnimationNodeAnimation_mhg6e")
+states/wicker_attack/position = Vector2(474, 100)
+states/wicker_walk/node = SubResource("AnimationNodeAnimation_ll3m5")
+states/wicker_walk/position = Vector2(286, 100)
+transitions = ["Start", "wicker_walk", SubResource("AnimationNodeStateMachineTransition_jrn85"), "wicker_walk", "wicker_attack", SubResource("AnimationNodeStateMachineTransition_blmgu"), "wicker_attack", "wicker_walk", SubResource("AnimationNodeStateMachineTransition_wyjmt")]
+
+[node name="wicker" instance=ExtResource("1_q8aa5")]
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/0/position = Vector3(0.000164391, -0.266532, -0.0415273)
+bones/5/rotation = Quaternion(0.608125, 0.520015, -0.580745, 0.150012)
+bones/6/rotation = Quaternion(0.728735, -0.0657239, 0.378468, 0.566911)
+bones/7/rotation = Quaternion(0.372671, -0.830101, 0.357364, 0.210569)
+bones/8/rotation = Quaternion(0.780799, 0.04911, -0.396385, 0.480438)
+bones/9/rotation = Quaternion(0.508889, 0.433211, 0.293035, 0.683733)
+bones/10/rotation = Quaternion(0.215602, 0.122808, 0.847566, 0.469112)
+bones/13/position = Vector3(0.992389, -0.793123, -0.621785)
+bones/14/position = Vector3(-1.44242, -0.209307, -0.940025)
+bones/15/position = Vector3(0.00230579, -0.336324, 1.57386)
+
+[node name="Emitter" parent="Armature/Skeleton3D" index="0"]
+transform = Transform3D(0.282408, 0, -2.24437e-08, 0, 0, 0, 2.24437e-08, 0, 0.282408, 0.000164391, 2.94212, -0.0415273)
+bone_idx = 2
+
+[node name="Cylinder" parent="Armature/Skeleton3D" index="1"]
+transform = Transform3D(1.03092, -7.70427e-09, 2.78846e-08, 6.56221e-09, 1.21033, 4.72777e-07, -2.78847e-08, -5.55057e-07, 1.03092, 0.000164384, 0.85682, -0.0415278)
+bone_idx = 11
+
+[node name="Wicker" parent="Armature/Skeleton3D" index="2"]
+transform = Transform3D(0.0633268, -2.29441e-09, 1.71289e-09, 4.03102e-10, 0.360448, 2.90417e-08, -1.71289e-09, -1.65301e-07, 0.0633268, 0.000164377, 1.98133, -0.0415284)
+bone_idx = 12
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="3"]
+tree_root = SubResource("AnimationNodeStateMachine_swssc")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/conditions/attack = false
+parameters/conditions/run = false
