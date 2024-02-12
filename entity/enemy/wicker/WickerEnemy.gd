@@ -7,15 +7,16 @@ const ATTACK_RANGE = 2.5
 @onready var state_machine
 
 func _ready():
+	SPEED = 3 
 	fire_anim.play("default")
 	state_machine = anim_tree.get("parameters/playback")
 
 func _process(delta):
 	match state_machine.get_current_node():
 		"wicker_walk":
-			pass
+			SPEED = 3
 		"wicker_attack":
-			pass
+			SPEED = 0
 	
 	#animations
 	anim_tree.set("parameters/conditions/attack", _target_in_range())
