@@ -1,6 +1,190 @@
-[gd_scene load_steps=8 format=3 uid="uid://b20du5ue5tika"]
+[gd_scene load_steps=35 format=3 uid="uid://b20du5ue5tika"]
 
 [ext_resource type="PackedScene" uid="uid://dk2mli3vfnyjo" path="res://assets/models/Wicker/wicker.blend" id="1_q8aa5"]
+[ext_resource type="Texture2D" uid="uid://s1wwidb58yg1" path="res://assets/sprites/fireSpriteSheet.png" id="2_djsv6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e012m"]
+atlas = ExtResource("2_djsv6")
+region = Rect2(0, 0, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ls2gn"]
+atlas = ExtResource("2_djsv6")
+region = Rect2(153, 0, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xs0xo"]
+atlas = ExtResource("2_djsv6")
+region = Rect2(306, 0, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kine"]
+atlas = ExtResource("2_djsv6")
+region = Rect2(459, 0, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5b0n"]
+atlas = ExtResource("2_djsv6")
+region = Rect2(612, 0, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vjxd"]
+atlas = ExtResource("2_djsv6")
+region = Rect2(0, 153, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqr85"]
+atlas = ExtResource("2_djsv6")
+region = Rect2(153, 153, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_up6wm"]
+atlas = ExtResource("2_djsv6")
+region = Rect2(306, 153, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vg3bq"]
+atlas = ExtResource("2_djsv6")
+region = Rect2(459, 153, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0v7h2"]
+atlas = ExtResource("2_djsv6")
+region = Rect2(612, 153, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5cim"]
+atlas = ExtResource("2_djsv6")
+region = Rect2(0, 306, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0vy8"]
+atlas = ExtResource("2_djsv6")
+region = Rect2(153, 306, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5g1nc"]
+atlas = ExtResource("2_djsv6")
+region = Rect2(306, 306, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tt3o6"]
+atlas = ExtResource("2_djsv6")
+region = Rect2(459, 306, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpcu2"]
+atlas = ExtResource("2_djsv6")
+region = Rect2(612, 306, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bajgk"]
+atlas = ExtResource("2_djsv6")
+region = Rect2(0, 459, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17fwo"]
+atlas = ExtResource("2_djsv6")
+region = Rect2(153, 459, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6s6rl"]
+atlas = ExtResource("2_djsv6")
+region = Rect2(306, 459, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o10f7"]
+atlas = ExtResource("2_djsv6")
+region = Rect2(459, 459, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_whxhm"]
+atlas = ExtResource("2_djsv6")
+region = Rect2(612, 459, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pnmkx"]
+atlas = ExtResource("2_djsv6")
+region = Rect2(0, 612, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_66pcc"]
+atlas = ExtResource("2_djsv6")
+region = Rect2(153, 612, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prcw8"]
+atlas = ExtResource("2_djsv6")
+region = Rect2(306, 612, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0pva"]
+atlas = ExtResource("2_djsv6")
+region = Rect2(459, 612, 153, 153)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kkq34"]
+atlas = ExtResource("2_djsv6")
+region = Rect2(612, 612, 153, 153)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n2ed4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e012m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ls2gn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xs0xo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0kine")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5b0n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vjxd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqr85")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_up6wm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vg3bq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0v7h2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y5cim")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f0vy8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5g1nc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tt3o6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpcu2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bajgk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_17fwo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6s6rl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o10f7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_whxhm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pnmkx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_66pcc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prcw8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w0pva")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kkq34")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_mhg6e"]
 animation = &"wicker_attack"
@@ -32,29 +216,41 @@ transitions = ["Start", "wicker_walk", SubResource("AnimationNodeStateMachineTra
 
 [node name="wicker" instance=ExtResource("1_q8aa5")]
 
+[node name="Camera" parent="." index="0"]
+visible = false
+
 [node name="Skeleton3D" parent="Armature" index="0"]
-bones/0/position = Vector3(-0.00109589, 0.00642833, -0.000336184)
-bones/5/rotation = Quaternion(0.627251, 0.490035, -0.591289, 0.129615)
-bones/6/rotation = Quaternion(0.626277, -0.0736172, 0.318225, 0.707877)
-bones/7/rotation = Quaternion(0.651434, -0.430473, 0.613751, 0.116777)
-bones/8/rotation = Quaternion(0.619685, 0.0752372, -0.315806, 0.714561)
-bones/9/rotation = Quaternion(0.779441, 0.244214, 0.43952, 0.373703)
-bones/10/rotation = Quaternion(0.171595, 0.182231, 0.673844, 0.695184)
-bones/13/position = Vector3(1.11227, -0.720304, -0.697676)
-bones/14/position = Vector3(-0.985942, -0.801943, -0.617061)
-bones/15/position = Vector3(-0.00429813, -0.801943, 1.16311)
+bones/0/position = Vector3(-0.00341733, -0.210161, -0.0395608)
+bones/5/rotation = Quaternion(0.613574, 0.509839, -0.584849, 0.146776)
+bones/6/rotation = Quaternion(0.71284, -0.0679239, 0.369685, 0.592097)
+bones/7/rotation = Quaternion(0.525532, -0.663312, 0.502465, 0.177095)
+bones/8/rotation = Quaternion(0.755702, 0.0573815, -0.387925, 0.524535)
+bones/9/rotation = Quaternion(0.464347, 0.451237, 0.268978, 0.713035)
+bones/10/rotation = Quaternion(0.211834, 0.130247, 0.831713, 0.496402)
+bones/13/position = Vector3(1.00048, -0.782052, -0.627716)
+bones/14/position = Vector3(-1.20022, -0.523753, -0.768664)
+bones/15/position = Vector3(0.00434106, -0.192826, 1.70045)
 
 [node name="Emitter" parent="Armature/Skeleton3D" index="0"]
-transform = Transform3D(0.282408, 0, -2.24437e-08, 0, 0, 0, 2.24437e-08, 0, 0.282408, -0.00109589, 3.21508, -0.000336184)
+transform = Transform3D(0.282408, 0, -2.24437e-08, 0, 0, 0, 2.24437e-08, 0, 0.282408, -0.00341733, 2.99849, -0.0395608)
 bone_idx = 2
 
 [node name="Cylinder" parent="Armature/Skeleton3D" index="1"]
-transform = Transform3D(1.03092, -7.70427e-09, 2.78846e-08, 6.56221e-09, 1.21033, 4.72777e-07, -2.78847e-08, -5.55057e-07, 1.03092, -0.0010959, 1.12978, -0.000336699)
+transform = Transform3D(1.03092, -7.70427e-09, 2.78846e-08, 6.56221e-09, 1.21033, 4.72777e-07, -2.78847e-08, -5.55057e-07, 1.03092, -0.00341733, 0.913191, -0.0395613)
 bone_idx = 11
 
 [node name="Wicker" parent="Armature/Skeleton3D" index="2"]
-transform = Transform3D(0.0633268, -2.29441e-09, 1.71289e-09, 4.03102e-10, 0.360448, 2.90417e-08, -1.71289e-09, -1.65301e-07, 0.0633268, -0.0010959, 2.25429, -0.000337215)
+transform = Transform3D(0.0633268, -2.29441e-09, 1.71289e-09, 4.03102e-10, 0.360448, 2.90417e-08, -1.71289e-09, -1.65301e-07, 0.0633268, -0.00341734, 2.0377, -0.0395619)
 bone_idx = 12
+
+[node name="Wicker" parent="Armature/Skeleton3D/Wicker" index="0"]
+transform = Transform3D(1, 3.10276e-15, -3.55271e-15, -4.11264e-17, 1, -7.10543e-15, 0, 2.27374e-13, 1, 0.413554, -0.41125, 0.293779)
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Armature/Skeleton3D/Wicker" index="1"]
+transform = Transform3D(78.9555, 5.02585e-07, -3.26819e-05, -8.83009e-08, 13.8716, -7.63383e-06, 2.72349e-05, 3.6209e-05, 94.7466, -0.0109603, 4.63637, 0.253589)
+billboard = 2
+texture_filter = 0
+sprite_frames = SubResource("SpriteFrames_n2ed4")
 
 [node name="AnimationTree" type="AnimationTree" parent="." index="3"]
 tree_root = SubResource("AnimationNodeStateMachine_swssc")
