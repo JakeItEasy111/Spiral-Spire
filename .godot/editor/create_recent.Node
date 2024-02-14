@@ -1,9 +1,10 @@
+CollisionShape3D
+RayCast3D
 AnimationTree
 AudioStreamPlayer3D
 OmniLight3D
 LightOccluder2D
 AnimatedSprite3D
-CollisionShape3D
 MeshInstance3D
 PointLight2D
 NavigationAgent3D
@@ -29,4 +30,3 @@ Button
 AudioStreamPlayer
 Sprite3D
 Node3D
-CSGBox3D

@@ -53,12 +53,13 @@ func _physics_process(delta):
 		velocity.x = 0.0
 		velocity.z = 0.0
 
-	#Head bob 
+	#Headbob 
 	t_bob += delta * velocity.length() * float(is_on_floor())
 	camera.transform.origin = _headbob(t_bob)
-	move_and_slide()
 	
-	#melee
+	_rotate_step_up_separation_ray()
+	move_and_slide()
+	_snap_down_to_stairs_check()
 	melee()
 
 func _headbob(time) -> Vector3:
@@ -67,6 +68,34 @@ func _headbob(time) -> Vector3:
 	pos.x = cos(time * BOB_FREQ / 2) * BOB_AMP
 	return pos 
 
+#stair handling
+var _was_on_floor_last_frame = false
+var _snapped_to_stairs_last_frame = false 
+func _snap_down_to_stairs_check():
+	var did_snap = false 
+	if not is_on_floor() and velocity.y <= 0 and (_was_on_floor_last_frame or _snapped_to_stairs_last_frame) and $StairsBelowRayCast3D.is_colliding():
+		var body_test_result = PhysicsTestMotionResult3D.new()
+		var params = PhysicsTestMotionParameters3D.new()
+		var max_step_down = -0.5
+		params.from = self.global_transform
+		params.motion = Vector3(0, max_step_down, 0)
+		if PhysicsServer3D.body_test_motion(self.get_rid(), params, body_test_result):
+			var translate_y = body_test_result.get_travel().y
+			self.position.y += translate_y
+			apply_floor_snap()
+			did_snap = true
+		
+	_was_on_floor_last_frame = is_on_floor() 
+	_snapped_to_stairs_last_frame = did_snap
+
+@onready var _initial_separation_ray_dist = abs($StepUpSeparationRay_F.position.z)
+func _rotate_step_up_separation_ray():
+	var xz_vel = velocity * Vector3(1, 0, 1)
+	var xz_f_ray_pos = xz_vel.normalized() * _initial_separation_ray_dist
+	$StepUpSeparationRay_F.global_position.x = self.global_position.x + xz_f_ray_pos.x
+	$StepUpSeparationRay_F.global_position.z = self.global_position.z + xz_f_ray_pos.z
+	
+#attack handling
 func melee(): 
 	if Input.is_action_just_pressed("fire"):
 		if not melee_anim.is_playing():
@@ -77,6 +106,7 @@ func melee():
 				if body.is_in_group("enemies"):
 					body.hp -= melee_damage 
 					
+#health handling
 func set_health_label(): #change to bar, add to base?
 	health_label.text = str(hp)
 	

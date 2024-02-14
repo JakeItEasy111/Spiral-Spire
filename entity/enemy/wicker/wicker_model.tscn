@@ -33,27 +33,27 @@ transitions = ["Start", "wicker_walk", SubResource("AnimationNodeStateMachineTra
 [node name="wicker" instance=ExtResource("1_q8aa5")]
 
 [node name="Skeleton3D" parent="Armature" index="0"]
-bones/0/position = Vector3(-0.0057868, 0.0339445, -0.00195519)
-bones/5/rotation = Quaternion(0.543416, 0.645822, -0.511472, 0.161275)
-bones/6/rotation = Quaternion(0.653783, -0.0668218, 0.328376, 0.678433)
-bones/7/rotation = Quaternion(0.65585, -0.418999, 0.617567, 0.113628)
-bones/8/rotation = Quaternion(0.606507, 0.0765479, -0.308897, 0.72861)
-bones/9/rotation = Quaternion(0.783738, 0.239675, 0.442097, 0.364499)
-bones/10/rotation = Quaternion(0.168204, 0.186438, 0.658575, 0.709385)
-bones/13/position = Vector3(1.41732, -0.438761, -0.903414)
+bones/0/position = Vector3(-0.00109589, 0.00642833, -0.000336184)
+bones/5/rotation = Quaternion(0.627251, 0.490035, -0.591289, 0.129615)
+bones/6/rotation = Quaternion(0.626277, -0.0736172, 0.318225, 0.707877)
+bones/7/rotation = Quaternion(0.651434, -0.430473, 0.613751, 0.116777)
+bones/8/rotation = Quaternion(0.619685, 0.0752372, -0.315806, 0.714561)
+bones/9/rotation = Quaternion(0.779441, 0.244214, 0.43952, 0.373703)
+bones/10/rotation = Quaternion(0.171595, 0.182231, 0.673844, 0.695184)
+bones/13/position = Vector3(1.11227, -0.720304, -0.697676)
 bones/14/position = Vector3(-0.985942, -0.801943, -0.617061)
 bones/15/position = Vector3(-0.00429813, -0.801943, 1.16311)
 
 [node name="Emitter" parent="Armature/Skeleton3D" index="0"]
-transform = Transform3D(0.282408, 0, -2.24437e-08, 0, 0, 0, 2.24437e-08, 0, 0.282408, -0.0057868, 3.24259, -0.00195519)
+transform = Transform3D(0.282408, 0, -2.24437e-08, 0, 0, 0, 2.24437e-08, 0, 0.282408, -0.00109589, 3.21508, -0.000336184)
 bone_idx = 2
 
 [node name="Cylinder" parent="Armature/Skeleton3D" index="1"]
-transform = Transform3D(1.03092, -7.70427e-09, 2.78846e-08, 6.56221e-09, 1.21033, 4.72777e-07, -2.78847e-08, -5.55057e-07, 1.03092, -0.0057868, 1.1573, -0.00195571)
+transform = Transform3D(1.03092, -7.70427e-09, 2.78846e-08, 6.56221e-09, 1.21033, 4.72777e-07, -2.78847e-08, -5.55057e-07, 1.03092, -0.0010959, 1.12978, -0.000336699)
 bone_idx = 11
 
 [node name="Wicker" parent="Armature/Skeleton3D" index="2"]
-transform = Transform3D(0.0633268, -2.29441e-09, 1.71289e-09, 4.03102e-10, 0.360448, 2.90417e-08, -1.71289e-09, -1.65301e-07, 0.0633268, -0.00578681, 2.28181, -0.00195623)
+transform = Transform3D(0.0633268, -2.29441e-09, 1.71289e-09, 4.03102e-10, 0.360448, 2.90417e-08, -1.71289e-09, -1.65301e-07, 0.0633268, -0.0010959, 2.25429, -0.000337215)
 bone_idx = 12
 
 [node name="AnimationTree" type="AnimationTree" parent="." index="3"]
