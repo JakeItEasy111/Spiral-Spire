@@ -1,6 +1,7 @@
-res://levels/menu/menu.tscn
-res://assets/tilesets/tileset-new.tres
 res://levels/dungeons/devroom.tscn
+res://assets/tilesets/tileset-new.tres
+res://levels/menu/menu.tscn
 res://entity/player/player.tscn
 res://entity/enemy/wicker/wicker_model.tscn
 res://assets/tilesets/tileset_new.tscn
+res://levels/main_level/world.tscn
