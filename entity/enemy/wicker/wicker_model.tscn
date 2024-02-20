@@ -220,27 +220,27 @@ transitions = ["Start", "wicker_walk", SubResource("AnimationNodeStateMachineTra
 visible = false
 
 [node name="Skeleton3D" parent="Armature" index="0"]
-bones/0/position = Vector3(-0.00248806, -0.224787, -0.0400848)
-bones/5/rotation = Quaternion(0.612167, 0.512503, -0.583779, 0.147625)
-bones/6/rotation = Quaternion(0.717058, -0.067357, 0.372007, 0.585579)
-bones/7/rotation = Quaternion(0.493973, -0.705712, 0.472633, 0.185958)
-bones/8/rotation = Quaternion(0.762816, 0.0553269, -0.390644, 0.512297)
-bones/9/rotation = Quaternion(0.473321, 0.447773, 0.273803, 0.707459)
-bones/10/rotation = Quaternion(0.21276, 0.128439, 0.835651, 0.489821)
-bones/13/position = Vector3(0.998353, -0.784965, -0.626155)
-bones/14/position = Vector3(-1.25426, -0.453587, -0.806901)
-bones/15/position = Vector3(0.00389249, -0.224453, 1.67255)
+bones/0/position = Vector3(-0.0074228, -0.147121, -0.0370899)
+bones/5/rotation = Quaternion(0.619595, 0.498039, -0.589588, 0.14299)
+bones/6/rotation = Quaternion(0.693687, -0.0703505, 0.359259, 0.620308)
+bones/7/rotation = Quaternion(0.584035, -0.570514, 0.555931, 0.156069)
+bones/8/rotation = Quaternion(0.716006, 0.0648246, -0.36826, 0.589506)
+bones/9/rotation = Quaternion(0.468272, 0.450186, 0.271623, 0.710123)
+bones/10/rotation = Quaternion(0.20889, 0.136305, 0.81843, 0.517648)
+bones/13/position = Vector3(1.01012, -0.768866, -0.63478)
+bones/14/position = Vector3(-1.10244, -0.650698, -0.699483)
+bones/15/position = Vector3(0.00505298, -0.142633, 1.74472)
 
 [node name="Emitter" parent="Armature/Skeleton3D" index="0"]
-transform = Transform3D(0.282408, 0, -2.24437e-08, 0, 0, 0, 2.24437e-08, 0, 0.282408, -0.00248806, 2.98386, -0.0400848)
+transform = Transform3D(0.282408, 0, -2.24437e-08, 0, 0, 0, 2.24437e-08, 0, 0.282408, -0.0074228, 3.06153, -0.0370899)
 bone_idx = 2
 
 [node name="Cylinder" parent="Armature/Skeleton3D" index="1"]
-transform = Transform3D(1.03092, -7.70427e-09, 2.78846e-08, 6.56221e-09, 1.21033, 4.72777e-07, -2.78847e-08, -5.55057e-07, 1.03092, -0.00248807, 0.898565, -0.0400853)
+transform = Transform3D(1.03092, -7.70427e-09, 2.78846e-08, 6.56221e-09, 1.21033, 4.72777e-07, -2.78847e-08, -5.55057e-07, 1.03092, -0.00742281, 0.976231, -0.0370904)
 bone_idx = 11
 
 [node name="Wicker" parent="Armature/Skeleton3D" index="2"]
-transform = Transform3D(0.0633268, -2.29441e-09, 1.71289e-09, 4.03102e-10, 0.360448, 2.90417e-08, -1.71289e-09, -1.65301e-07, 0.0633268, -0.00248807, 2.02308, -0.0400858)
+transform = Transform3D(0.0633268, -2.29441e-09, 1.71289e-09, 4.03102e-10, 0.360448, 2.90417e-08, -1.71289e-09, -1.65301e-07, 0.0633268, -0.00742282, 2.10074, -0.0370909)
 bone_idx = 12
 
 [node name="Wicker" parent="Armature/Skeleton3D/Wicker" index="0"]
