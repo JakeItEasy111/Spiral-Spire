@@ -38,7 +38,7 @@ environment = SubResource("Environment_7m8yv")
 [node name="devroom" parent="." instance=ExtResource("6_jlux8")]
 
 [node name="WickerEnemy" parent="." instance=ExtResource("7_4rrae")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.1, 13)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, -0.1, 7.3)
 SPEED = 2.0
 
 [node name="torch" parent="." instance=ExtResource("5_2lj5i")]
