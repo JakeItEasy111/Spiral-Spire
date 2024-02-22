@@ -240,7 +240,7 @@ transform = Transform3D(1.03092, -7.70427e-09, 2.78846e-08, 6.56221e-09, 1.21033
 bone_idx = 11
 
 [node name="Wicker" parent="Armature/Skeleton3D" index="2"]
-transform = Transform3D(0.0633268, -2.29441e-09, 1.71289e-09, 4.03102e-10, 0.360448, 2.90417e-08, -1.71289e-09, -1.65301e-07, 0.0633268, -0.00742282, 2.10074, -0.0370909)
+transform = Transform3D(0.0633268, -2.29441e-09, 1.71289e-09, 4.03102e-10, 0.360448, 2.90417e-08, -1.71289e-09, -1.65301e-07, 0.0633268, -0.00742281, 2.10074, -0.0370909)
 bone_idx = 12
 
 [node name="Wicker" parent="Armature/Skeleton3D/Wicker" index="0"]

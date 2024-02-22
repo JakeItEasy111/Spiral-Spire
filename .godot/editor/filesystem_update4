@@ -1,5 +1,5 @@
-res://assets/tilesets/tileset_new.tscn
 res://assets/tilesets/tileset-new.tres
+res://assets/tilesets/tileset_new.tscn
 res://levels/dungeons/devroom.tscn
 res://levels/menu/menu.tscn
 res://entity/player/player.tscn
