@@ -2,9 +2,11 @@ extends "res://entity/enemy/enemy_base.gd"
 
 const ATTACK_RANGE = 2.5
 
-@onready var fire_anim = $MeshInstance3D/wicker/Armature/Skeleton3D/Wicker/AnimatedSprite3D
-@onready var anim_tree = $MeshInstance3D/wicker/AnimationTree
-@onready var emitter = $MeshInstance3D/wicker/Armature/Skeleton3D/Emitter
+#@onready var fire_anim = $MeshInstance3D/wicker/Armature/Skeleton3D/Wicker/AnimatedSprite3D
+#@onready var anim_tree = $MeshInstance3D/wicker/AnimationTree
+#@onready var anim_player = $MeshInstance3D/wicker/AnimationPlayer
+@onready var fire_anim = $MeshInstance3D/Armature/Skeleton3D/Wicker/AnimatedSprite3D
+@onready var anim_tree = $MeshInstance3D/AnimationTree
 @onready var state_machine
 var time : float 
 
@@ -24,9 +26,11 @@ func _process(delta):
 	anim_tree.set("parameters/conditions/attack", _target_in_range())
 	anim_tree.set("parameters/conditions/run", !_target_in_range())
 	
-	
-	
 func _target_in_range():
 	return global_position.distance_to(player.global_position) < ATTACK_RANGE
 
+func _hit_finished():
+	if global_position.distance_to(player.global_position) < ATTACK_RANGE + 1.0:
+		var dir = global_position.direction_to(player.global_position)
+		player.hit(25, dir)
  

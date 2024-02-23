@@ -15,10 +15,15 @@ var melee_damage = 25
 @onready var melee_anim = $AnimationPlayer
 @onready var hitbox = $Head/Player_camera/Hitbox
 
+#camera variables 
 @onready var head = $Head
 @onready var camera = %Player_camera
 @onready var subviewport_camera = %Subviewport_camera
 @onready var health_label = $Health
+
+#signals
+signal player_hit
+
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -116,5 +121,10 @@ func take_damage(dmg):
 	if (hp <= 25):
 		health_label.text = "[shake rate=20.0 level=" + str(50 - hp) + " connected=1]" + str(hp) + "[/shake]"
 
+func hit(dmg, dir):
+		take_damage(dmg)
+		emit_signal("player_hit") #used for on-hit effect on UI, details 14:25 in 3D enemy tutorial
+		velocity += dir * 8.0
+	
 func _on_area_3d_body_entered(body): #for projectiles and area hazards 
 	take_damage(10)  #if area.is_in_group("groupName") for changing damage based on type 
