@@ -82,6 +82,23 @@ tracks/5/keys = {
 "points": PackedFloat32Array(-1, -0.25, 0, 0.25, 0, -1.14, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 0.4)
 }
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"meleeHit"
+}, {
+"args": [],
+"method": &"meleeHit"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_8jv5x"]
 length = 0.001
@@ -299,6 +316,11 @@ fit_content = true
 scroll_active = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="5"]
+libraries = {
+"": SubResource("AnimationLibrary_1t14b")
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimationPlayer" index="0"]
 libraries = {
 "": SubResource("AnimationLibrary_1t14b")
 }

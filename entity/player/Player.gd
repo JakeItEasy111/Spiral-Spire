@@ -8,7 +8,7 @@ const SENSITIVITY = 0.003
 const BOB_FREQ = 2.0
 const BOB_AMP = 0.06
 var t_bob = 0.0
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") + 2
 
 #sword variables
 var melee_damage = 25
@@ -106,11 +106,13 @@ func melee():
 		if not melee_anim.is_playing():
 			melee_anim.play("Attack")
 			melee_anim.queue("Return")
-		if melee_anim.current_animation == "Attack":
-			for body in hitbox.get_overlapping_bodies():
-				if body.is_in_group("enemies"):
-					body.hp -= melee_damage 
-					
+
+func meleeHit():
+	for body in hitbox.get_overlapping_bodies():
+		if body.is_in_group("enemies"):
+			body.hp -= melee_damage 
+			body.velocity += global_position.direction_to(body.global_position) * 8.0
+		
 #health handling
 func set_health_label(): #change to bar, add to base?
 	health_label.text = str(hp)
@@ -123,7 +125,7 @@ func take_damage(dmg):
 
 func hit(dmg, dir):
 		take_damage(dmg)
-		emit_signal("player_hit") #used for on-hit effect on UI, details 14:25 in 3D enemy tutorial
+		emit_signal("player_hit") #surprise tool that will help us later! used for on hit screen effects
 		velocity += dir * 8.0
 	
 func _on_area_3d_body_entered(body): #for projectiles and area hazards 
