@@ -1,7 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1708745191
+::res://::1708917450
 icon.svg::CompressedTexture2D::4677634300119052370::1698955326::1708727286::1::::<><>::
-project_time_traker.json::JSON::-1::1708745178::0::1::::<><>::
+project_time_traker.json::JSON::-1::1708795765::0::1::::<><>::
 ::res://addons/::1698955326
 project_time_traker.json::JSON::-1::1698955326::0::1::::<><>::
 ::res://addons/FloorArchitect/::1698955326
@@ -98,8 +98,8 @@ wicker_diffuse_2.png::CompressedTexture2D::880959388091349617::1708726814::17087
 ::res://assets/models/Torch/::1708726814
 ::res://assets/models/Torch/textures/::1708726814
 torchTexture.png::CompressedTexture2D::1574889982417242666::1708726814::1708726814::1::::<><>::
-::res://assets/models/Wicker/::1708744852
-wicker_attack.res::Animation::7917637398868081784::1708744852::0::1::::<><>::
+::res://assets/models/Wicker/::1708745575
+wicker_attack.res::Animation::7917637398868081784::1708745575::0::1::::<><>::
 ::res://assets/models/Wicker/textures/::1708726814
 wicker-diffuse-3.png::CompressedTexture2D::2652206448649287084::1706673341::1706673341::1::::<><>::
 wicker_diffuse_2.png::CompressedTexture2D::4128023259982648187::1706673341::1708726814::1::::<><>::
@@ -142,8 +142,8 @@ torchfire_spritesheet.png::CompressedTexture2D::6808607772357573430::1708726814:
 20_magicbubbles_spritesheet.png::CompressedTexture2D::7441699325864354841::1699648704::1699648704::1::::<><>::
 cover.png::CompressedTexture2D::6638020618397066740::1699648704::1699648704::1::::<><>::
 README.txt::TextFile::-1::1699648704::0::1::::<><>::
-::res://assets/tilesets/::1708741855
-tileset-new.tres::MeshLibrary::1442529822099686811::1708741855::0::1::::<><>::uid://t4lkdtx4uhbx::::res://assets/tilesets/tileset_new_tileset_atlas.png<>uid://dfn1e2w1bvhuf::::res://assets/tilesets/tileset_new_tileset_atlas_n.png<>uid://hest5fqvyuke::::res://assets/tilesets/tileset_new_tileset_brick.png<>uid://bto37aaa0g0w7::::res://assets/tilesets/tileset_new_tileset_brick_n.png<>uid://cewa4d8xr1xj4::::res://assets/tilesets/tileset_new_tileset_floor.png<>uid://q2kbxxace8aq::::res://assets/tilesets/tileset_new_tileset_floor_n.png
+::res://assets/tilesets/::1708795358
+tileset-new.tres::MeshLibrary::1442529822099686811::1708795358::0::1::::<><>::uid://t4lkdtx4uhbx::::res://assets/tilesets/tileset_new_tileset_atlas.png<>uid://dfn1e2w1bvhuf::::res://assets/tilesets/tileset_new_tileset_atlas_n.png<>uid://hest5fqvyuke::::res://assets/tilesets/tileset_new_tileset_brick.png<>uid://bto37aaa0g0w7::::res://assets/tilesets/tileset_new_tileset_brick_n.png<>uid://cewa4d8xr1xj4::::res://assets/tilesets/tileset_new_tileset_floor.png<>uid://q2kbxxace8aq::::res://assets/tilesets/tileset_new_tileset_floor_n.png
 tileset_atlas.png::CompressedTexture2D::3077538023506591721::1699648704::1699648704::1::::<><>::
 tileset_atlas_n.png::CompressedTexture2D::8905455170486301738::1699648704::1699648704::1::::<><>::
 tileset_brick.png::CompressedTexture2D::465614127217338853::1708726814::1708726814::1::::<><>::
@@ -167,22 +167,22 @@ enemy_base.tscn::PackedScene::4989414113129158411::1706748266::0::1::::<><>::uid
 ::res://entity/enemy/test_enemy/::1706748267
 TestEnemy.gd::GDScript::-1::1706673342::0::1::::<>CharacterBody3D<>::
 test_enemy.tscn::PackedScene::3001968007551582081::1706748267::0::1::::<><>::uid://cdc56lh434xix
-::res://entity/enemy/wicker/::1708745149
-WickerEnemy.gd::GDScript::-1::1708743897::0::1::::<>CharacterBody3D<>::
-wicker_enemy.tscn::PackedScene::2384935861073958895::1708745149::0::1::::<><>::uid://cdc56lh434xix::::res://entity/enemy/enemy_base.tscn<>res://entity/enemy/wicker/WickerEnemy.gd<>uid://bd10pnluc05w7::::res://assets/models/Wicker/textures/wicker-diffuse-3.png<>uid://s1wwidb58yg1::::res://assets/sprites/fireSpriteSheet.png<>uid://dk2mli3vfnyjo::::res://assets/models/Wicker/wicker_attack.res<>uid://touee2kqcxhf::::res://assets/sprites/Free Pixel Effects Pack/9_brightfire_spritesheet.png
+::res://entity/enemy/wicker/::1708795764
+WickerEnemy.gd::GDScript::-1::1708745315::0::1::::<>CharacterBody3D<>::
+wicker_enemy.tscn::PackedScene::2384935861073958895::1708795764::0::1::::<><>::uid://cdc56lh434xix::::res://entity/enemy/enemy_base.tscn<>res://entity/enemy/wicker/WickerEnemy.gd<>uid://bd10pnluc05w7::::res://assets/models/Wicker/textures/wicker-diffuse-3.png<>uid://s1wwidb58yg1::::res://assets/sprites/fireSpriteSheet.png<>uid://dk2mli3vfnyjo::::res://assets/models/Wicker/wicker_attack.res<>uid://touee2kqcxhf::::res://assets/sprites/Free Pixel Effects Pack/9_brightfire_spritesheet.png
 wicker_model.tscn::PackedScene::4333348379447047916::1708726814::0::1::::<><>::uid://dk2mli3vfnyjo
-::res://entity/player/::1708745172
-Player.gd::GDScript::-1::1708745128::0::1::::<>CharacterBody3D<>::
-player.tscn::PackedScene::3465598162712734386::1708745172::0::1::::<><>::uid://bnyly0xy2l6ft::::res://entity/entity_base.tscn<>res://entity/player/Player.gd<>uid://b2j84cqc0nvhe::::res://assets/models/[EXECUTIONER SWORD]/executionersword.tscn<>uid://0mhojjt0rey0::::res://assets/fonts/alagard/alagard.ttf
+::res://entity/player/::1708795696
+Player.gd::GDScript::-1::1708745405::0::1::::<>CharacterBody3D<>::
+player.tscn::PackedScene::3465598162712734386::1708795696::0::1::::<><>::uid://bnyly0xy2l6ft::::res://entity/entity_base.tscn<>res://entity/player/Player.gd<>uid://b2j84cqc0nvhe::::res://assets/models/[EXECUTIONER SWORD]/executionersword.tscn<>uid://0mhojjt0rey0::::res://assets/fonts/alagard/alagard.ttf
 ::res://levels/::1699648704
-::res://levels/dungeons/::1708745149
-devroom.tscn::PackedScene::4735619179336160775::1708745149::0::1::::<><>::uid://us1ixi1tpfp8::::res://assets/tilesets/tileset-new.tres
-::res://levels/main_level/::1708745149
+::res://levels/dungeons/::1708795697
+devroom.tscn::PackedScene::4735619179336160775::1708795697::0::1::::<><>::uid://us1ixi1tpfp8::::res://assets/tilesets/tileset-new.tres
+::res://levels/main_level/::1708795698
 world.gd::GDScript::-1::1708744302::0::1::::<>Node3D<>::
-world.tscn::PackedScene::3548032570636659567::1708745149::0::1::::<><>::res://levels/main_level/world.gd<>uid://ql0l8j2ni6xb::::res://objects/torch/torch.tscn<>uid://bpm05pdgfeeja::::res://entity/player/player.tscn<>uid://b8p77rewu34ul::::res://levels/dungeons/devroom.tscn<>uid://88jssic5a3c2::::res://entity/enemy/wicker/wicker_enemy.tscn
-::res://levels/menu/::1708745148
+world.tscn::PackedScene::3548032570636659567::1708795698::0::1::::<><>::res://levels/main_level/world.gd<>uid://ql0l8j2ni6xb::::res://objects/torch/torch.tscn<>uid://bpm05pdgfeeja::::res://entity/player/player.tscn<>uid://b8p77rewu34ul::::res://levels/dungeons/devroom.tscn<>uid://88jssic5a3c2::::res://entity/enemy/wicker/wicker_enemy.tscn
+::res://levels/menu/::1708795696
 Button.gd::GDScript::-1::1698955326::0::1::::<>Button<>::
-menu.tscn::PackedScene::6982835356959887867::1708745148::0::1::::<><>::uid://cjyopdofstljf::::res://assets/fonts/rubber-biscuit/RUBBBB__.TTF<>res://levels/menu/Button.gd
+menu.tscn::PackedScene::6982835356959887867::1708795696::0::1::::<><>::uid://cjyopdofstljf::::res://assets/fonts/rubber-biscuit/RUBBBB__.TTF<>res://levels/menu/Button.gd
 ::res://objects/::1708726814
 ::res://objects/torch/::1708726814
 torch.gd::GDScript::-1::1708726814::0::1::::<>Node3D<>::

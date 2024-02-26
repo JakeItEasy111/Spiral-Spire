@@ -1,9 +1,10 @@
 extends "res://entity/enemy/enemy_base.gd"
 
-const ATTACK_RANGE = 2.0
+const ATTACK_RANGE = 2.5
 
 @onready var fire_anim = $MeshInstance3D/Armature/Skeleton3D/Wicker/AnimatedSprite3D
 @onready var anim_tree = $MeshInstance3D/AnimationTree
+@onready var anim_player = $MeshInstance3D/AnimationPlayer
 @onready var particle = $GPUParticles3D
 @onready var state_machine
 var time : float 
@@ -21,6 +22,10 @@ func _process(delta):
 		"wicker_attack":		
 			SPEED = 0
 			particle.emitting = true
+			if (_target_in_range()):
+				anim_player.get_animation("wicker_attack").loop_mode =  (Animation.LOOP_LINEAR)
+			else:
+				anim_player.get_animation("wicker_attack").loop_mode =  (Animation.LOOP_NONE)
 			
 	#animations
 	anim_tree.set("parameters/conditions/attack", _target_in_range())
