@@ -1,3 +1,4 @@
+MeshInstance3D
 GPUParticles3D
 GridMap
 CollisionShape3D
@@ -7,7 +8,6 @@ AudioStreamPlayer3D
 OmniLight3D
 LightOccluder2D
 AnimatedSprite3D
-MeshInstance3D
 PointLight2D
 NavigationAgent3D
 CharacterBody3D

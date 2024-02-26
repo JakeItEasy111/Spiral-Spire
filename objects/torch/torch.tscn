@@ -449,7 +449,7 @@ script = ExtResource("1_541s6")
 transform = Transform3D(-4.28926e-08, -3.66219e-10, -0.95, -0.245878, 0.91763, 1.07477e-08, 0.917629, 0.245878, -4.15258e-08, 0, 0, -0.2)
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, -0.066, 1.35, 0)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.066, 1.25, 0)
 billboard = 2
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_lf74k")

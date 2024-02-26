@@ -1,8 +1,9 @@
-res://entity/enemy/wicker/wicker_enemy.tscn
-res://assets/tilesets/tileset-new.tres
-res://assets/models/Wicker/wicker_attack.res
 res://levels/menu/menu.tscn
+res://assets/tilesets/tileset-new.tres
 res://entity/player/player.tscn
 res://levels/dungeons/devroom.tscn
+res://entity/enemy/wicker/wicker_enemy.tscn
 res://levels/main_level/world.tscn
-res://entity/enemy/wicker/WickerEnemy.gd
+res://entity/player/pixel_shader.gdshader
+res://objects/torch/torch.tscn
+res://entity/enemy/wicker/burn_shader.gdshader
