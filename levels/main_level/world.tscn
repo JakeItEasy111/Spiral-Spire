@@ -44,4 +44,7 @@ SPEED = 2.0
 [node name="torch" parent="." instance=ExtResource("5_2lj5i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1.1, -1.3)
 
+[node name="WickerEnemy2" parent="." instance=ExtResource("7_4rrae")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7, 0, 11)
+
 [connection signal="player_hit" from="Player" to="." method="_on_player_player_hit"]

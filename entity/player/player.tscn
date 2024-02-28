@@ -3,8 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://bnyly0xy2l6ft" path="res://entity/entity_base.tscn" id="1_5030y"]
 [ext_resource type="Script" path="res://entity/player/Player.gd" id="2_objnu"]
 [ext_resource type="PackedScene" uid="uid://b2j84cqc0nvhe" path="res://assets/models/[EXECUTIONER SWORD]/executionersword.tscn" id="3_rluav"]
-[ext_resource type="Shader" path="res://entity/player/pixel_shader.gdshader" id="4_t8psi"]
 [ext_resource type="FontFile" uid="uid://0mhojjt0rey0" path="res://assets/fonts/alagard/alagard.ttf" id="4_w3pbu"]
+[ext_resource type="Shader" uid="uid://b1ydtksksvlja" path="res://entity/player/pixelation.tres" id="6_2xjnj"]
+[ext_resource type="Texture2D" uid="uid://b7v47oi3pw6yg" path="res://icon.svg" id="7_i6el5"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_o8nu8"]
 
@@ -13,14 +14,6 @@ radius = 0.4
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_aeup4"]
 size = Vector3(1, 1, 2)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_y3xor"]
-render_priority = -1
-shader = ExtResource("4_t8psi")
-
-[sub_resource type="QuadMesh" id="QuadMesh_801h0"]
-material = SubResource("ShaderMaterial_y3xor")
-size = Vector2(2, 2)
 
 [sub_resource type="Animation" id="Animation_blv54"]
 resource_name = "Attack"
@@ -255,6 +248,10 @@ _data = {
 [sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_woocj"]
 length = 0.5
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bxykc"]
+shader = ExtResource("6_2xjnj")
+shader_parameter/Pixelisation = 256.0
+
 [node name="Player" instance=ExtResource("1_5030y")]
 script = ExtResource("2_objnu")
 
@@ -271,7 +268,7 @@ shape = SubResource("CapsuleShape3D_vql4k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00387621, 1.59382, -0.00417328)
 
 [node name="executionersword" parent="Head" index="0" instance=ExtResource("3_rluav")]
-transform = Transform3D(0.0793412, 0.0357821, 0.0492404, -0.0492404, 0.0852869, 0.0173648, -0.0357821, -0.0380236, 0.0852868, 0.895, -0.045, -1)
+transform = Transform3D(0.0793412, 0.0357821, 0.0492404, -0.0492404, 0.0852869, 0.0173648, -0.0357821, -0.0380237, 0.0852868, 0.895, -0.045, -1)
 layers = 512
 
 [node name="Player_camera" type="Camera3D" parent="Head" index="1"]
@@ -283,12 +280,6 @@ cull_mask = 1048063
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Head/Player_camera/Hitbox" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 shape = SubResource("BoxShape3D_aeup4")
-
-[node name="PixelShaderMesh" type="MeshInstance3D" parent="Head/Player_camera" index="1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00387621, 0.00618005, -0.0958267)
-extra_cull_margin = 16384.0
-mesh = SubResource("QuadMesh_801h0")
-skeleton = NodePath("../../..")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." index="3"]
 
@@ -317,6 +308,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
 cull_mask = 512
 
 [node name="Health" type="RichTextLabel" parent="." index="4"]
+z_index = 100
 offset_left = 77.0
 offset_top = 910.0
 offset_right = 427.0
@@ -343,3 +335,9 @@ target_position = Vector3(0, -0.5, 0)
 [node name="StepUpSeparationRay_F" type="CollisionShape3D" parent="." index="7"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.5, -0.55)
 shape = SubResource("SeparationRayShape3D_woocj")
+
+[node name="pixelShader" type="Sprite2D" parent="." index="8"]
+material = SubResource("ShaderMaterial_bxykc")
+scale = Vector2(15, 8.4375)
+texture = ExtResource("7_i6el5")
+centered = false
