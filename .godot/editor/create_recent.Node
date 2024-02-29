@@ -1,3 +1,5 @@
+CharacterBody3D
+RigidBody3D
 Node3D
 Sprite2D
 SubViewport
@@ -14,7 +16,6 @@ LightOccluder2D
 AnimatedSprite3D
 PointLight2D
 NavigationAgent3D
-CharacterBody3D
 Area3D
 AnimationPlayer
 RichTextLabel
@@ -29,4 +30,3 @@ CollisionPolygon3D
 CollisionShape2D
 Label
 Button
-AudioStreamPlayer

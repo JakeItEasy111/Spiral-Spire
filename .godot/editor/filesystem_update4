@@ -1,5 +1,4 @@
 res://levels/menu/menu.tscn
-res://entity/enemy/enemy_base.gd
 res://entity/player/pixelation.tres
 res://assets/tilesets/tileset-new.tres
 res://entity/player/pixel_shader.gdshader
@@ -7,3 +6,8 @@ res://entity/enemy/wicker/wicker_enemy.tscn
 res://levels/main_level/world.tscn
 res://objects/torch/torch.tscn
 res://assets/tilesets/tileset_new.tscn
+res://levels/main_level/world.gd
+res://entity/player/Player.gd
+res://entity/entity_base.tscn
+res://entity/enemy/enemy_base.tscn
+res://entity/player/player.tscn

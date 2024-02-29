@@ -7,7 +7,6 @@ const ATTACK_RANGE = 2.5
 @onready var anim_player = $MeshInstance3D/AnimationPlayer
 @onready var particle = $GPUParticles3D
 @onready var state_machine
-var time : float 
 
 func _ready():
 	SPEED = 3 
@@ -37,5 +36,5 @@ func _target_in_range():
 func _hit_finished():
 	if global_position.distance_to(player.global_position) < ATTACK_RANGE + 1.0:
 		var dir = global_position.direction_to(player.global_position)
-		player.hit(25, dir)
- 
+		player.hit(dir, 25)
+  

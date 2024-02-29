@@ -10,12 +10,12 @@ const BOB_AMP = 0.06
 var t_bob = 0.0
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") + 2
 
-#sword variables
+# sword variables
 var melee_damage = 25
 @onready var melee_anim = $AnimationPlayer
 @onready var hitbox = $Head/Player_camera/Hitbox
 
-#camera variables 
+# nodes  
 @onready var head = $Head
 @onready var camera = %Player_camera
 @onready var subviewport_camera = %Subviewport_camera
@@ -52,7 +52,7 @@ func _physics_process(delta):
 	var input_dir = Input.get_vector("left", "right", "forward", "backward") #input maps set to keys 
 	var direction = (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
-		velocity.x = direction.x * SPEED
+		velocity.x = direction.x * SPEED 
 		velocity.z = direction.z * SPEED
 	else: #not moving 
 		velocity.x = 0.0
@@ -61,6 +61,8 @@ func _physics_process(delta):
 	#Headbob 
 	t_bob += delta * velocity.length() * float(is_on_floor())
 	camera.transform.origin = _headbob(t_bob)
+	
+	print(velocity)
 	
 	_rotate_step_up_separation_ray()
 	move_and_slide()
@@ -123,11 +125,7 @@ func take_damage(dmg):
 	if (hp <= 25):
 		health_label.text = "[shake rate=20.0 level=" + str(50 - hp) + " connected=1]" + str(hp) + "[/shake]"
 
-func hit(dmg, dir):
-		velocity += dir * 8.0
+func hit(dir, dmg):
 		take_damage(dmg)
-		emit_signal("player_hit") #surprise tool that will help us later! used for on hit screen effects
-		
-	
-func _on_area_3d_body_entered(body): #for projectiles and area hazards 
-	take_damage(10)  #if area.is_in_group("groupName") for changing damage based on type 
+		emit_signal("player_hit") #surprise tool that will help us later! for screen fx 
+		velocity += dir * 8.0 
