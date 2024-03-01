@@ -14,7 +14,7 @@ func _physics_process(delta):
 func set_hp(new_hp):
 	hp = new_hp
 	if hp <= 0:
-		queue_free()
+		die()
 	return hp
 
 func take_damage(dmg):

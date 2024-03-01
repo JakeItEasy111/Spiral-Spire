@@ -8,7 +8,7 @@ const SENSITIVITY = 0.003
 const BOB_FREQ = 2.0
 const BOB_AMP = 0.06
 var t_bob = 0.0
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") + 2
+var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 # sword variables
 var melee_damage = 25
@@ -55,14 +55,12 @@ func _physics_process(delta):
 		velocity.x = direction.x * SPEED 
 		velocity.z = direction.z * SPEED
 	else: #not moving 
-		velocity.x = 0.0
-		velocity.z = 0.0
+		velocity.x = lerp(velocity.x, direction.x * SPEED, delta * 7.0)
+		velocity.z =  lerp(velocity.z, direction.z * SPEED, delta * 7.0)
 
 	#Headbob 
 	t_bob += delta * velocity.length() * float(is_on_floor())
 	camera.transform.origin = _headbob(t_bob)
-	
-	print(velocity)
 	
 	_rotate_step_up_separation_ray()
 	move_and_slide()
@@ -112,9 +110,9 @@ func melee():
 func meleeHit():
 	for body in hitbox.get_overlapping_bodies():
 		if body.is_in_group("enemies"):
-			body.hp -= melee_damage 
-			body.velocity += global_position.direction_to(body.global_position) * 8.0
-		
+			body.take_damage(melee_damage)
+			body.apply_knockback(body.global_transform.origin - global_transform.origin)
+			
 #health handling
 func set_health_label(): #change to bar, add to base?
 	health_label.text = str(hp)
@@ -124,8 +122,8 @@ func take_damage(dmg):
 	health_label.text = str(hp)
 	if (hp <= 25):
 		health_label.text = "[shake rate=20.0 level=" + str(50 - hp) + " connected=1]" + str(hp) + "[/shake]"
-
+	
 func hit(dir, dmg):
 		take_damage(dmg)
 		emit_signal("player_hit") #surprise tool that will help us later! for screen fx 
-		velocity += dir * 8.0 
+		velocity += dir * 4.0
