@@ -1,3 +1,4 @@
+GridMap
 Timer
 CharacterBody3D
 RigidBody3D
@@ -7,7 +8,6 @@ SubViewport
 SubViewportContainer
 MeshInstance3D
 GPUParticles3D
-GridMap
 CollisionShape3D
 RayCast3D
 AnimationTree
@@ -30,4 +30,3 @@ ShaderGlobalsOverride
 CollisionPolygon3D
 CollisionShape2D
 Label
-Button
