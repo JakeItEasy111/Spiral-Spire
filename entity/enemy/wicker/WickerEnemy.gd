@@ -40,6 +40,11 @@ func _hit_finished():
 		
 func hitflash(): #WIP 
 	var tween = get_tree().create_tween()
-	var material = $MeshInstance3D/Armature/Skeleton3D/Cylinder/Cylinder.get_active_material(0)
-	tween.tween_property(material, "emission", Color.WHITE, 0.1)
-	tween.tween_property(material, "emission", Color.BLACK, 0.1)
+	var body = $MeshInstance3D/Armature/Skeleton3D/Cylinder/Cylinder.get_active_material(0)
+	var legs = $MeshInstance3D/Armature/Skeleton3D/Wicker/Wicker.get_active_material(0)
+	tween.tween_property(fire_anim, "transparency", 1.0, 0.05)
+	tween.tween_property(body, "emission", Color.WHITE, 0.05)
+	tween.tween_property(legs, "emission", Color.WHITE, 0.05)
+	tween.tween_property(fire_anim, "transparency", 0, 0.05)
+	tween.tween_property(legs, "emission", Color.BLACK, 0.05)
+	tween.tween_property(body, "emission", Color.BLACK, 0.05)
