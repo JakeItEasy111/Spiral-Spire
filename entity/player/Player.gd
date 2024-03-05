@@ -111,6 +111,7 @@ func meleeHit():
 	for body in hitbox.get_overlapping_bodies():
 		if body.is_in_group("enemies"):
 			body.take_damage(melee_damage)
+			body.hitflash() 
 			body.apply_knockback(body.global_transform.origin - global_transform.origin)
 			
 #health handling

@@ -2,11 +2,11 @@ extends "res://entity/enemy/enemy_base.gd"
 
 const ATTACK_RANGE = 2.5
 
-@onready var fire_anim = $MeshInstance3D/Armature/Skeleton3D/Wicker/AnimatedSprite3D
 @onready var anim_tree = $MeshInstance3D/AnimationTree
 @onready var anim_player = $MeshInstance3D/AnimationPlayer
 @onready var particle = $GPUParticles3D
 @onready var state_machine
+@onready var fire_anim = $MeshInstance3D/Armature/Skeleton3D/Wicker/AnimatedSprite3D
 
 func _ready():
 	SPEED = 3 
@@ -37,3 +37,9 @@ func _hit_finished():
 	if global_position.distance_to(player.global_position) < ATTACK_RANGE + 1.0:
 		var dir = player.global_transform.origin - global_transform.origin
 		player.hit(dir, 20)
+		
+func hitflash(): #WIP 
+	var tween = get_tree().create_tween()
+	var material = $MeshInstance3D/Armature/Skeleton3D/Cylinder/Cylinder.get_active_material(0)
+	tween.tween_property(material, "emission", Color.WHITE, 0.1)
+	tween.tween_property(material, "emission", Color.BLACK, 0.1)
