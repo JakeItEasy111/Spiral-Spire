@@ -1,10 +1,11 @@
-res://levels/menu/menu.tscn
 res://entity/player/pixelation.tres
 res://assets/tilesets/tileset-new.tres
 res://assets/tilesets/props/prop_library.tres
+res://levels/dungeons/devroom.tscn
+res://levels/menu/menu.tscn
 res://levels/main_level/world.tscn
 res://entity/player/player.tscn
 res://entity/enemy/wicker/wicker_enemy.tscn
-res://levels/dungeons/devroom.tscn
-res://assets/tilesets/props/prop_tileset.tscn
 res://objects/torch/torch.tscn
+res://assets/tilesets/props/prop_tileset.tscn
+res://assets/tilesets/tileset_new.tscn

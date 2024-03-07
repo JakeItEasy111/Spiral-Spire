@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ql0l8j2ni6xb" path="res://objects/torch/torch.tscn" id="5_2lj5i"]
 [ext_resource type="PackedScene" uid="uid://bpm05pdgfeeja" path="res://entity/player/player.tscn" id="5_a0c0x"]
 [ext_resource type="PackedScene" uid="uid://b8p77rewu34ul" path="res://levels/dungeons/devroom.tscn" id="6_jlux8"]
-[ext_resource type="Texture2D" uid="uid://bxbgr3mp2o2mn" path="res://assets/models/textures/home depo.jpg" id="6_vppup"]
+[ext_resource type="Texture2D" uid="uid://bxbgr3mp2o2mn" path="res://assets/sprites/home depo.jpg" id="6_pp7g2"]
 [ext_resource type="PackedScene" uid="uid://88jssic5a3c2" path="res://entity/enemy/wicker/wicker_enemy.tscn" id="7_4rrae"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gp45i"]
@@ -29,7 +29,7 @@ volumetric_fog_albedo = Color(0.101961, 0.101961, 0.101961, 1)
 volumetric_fog_ambient_inject = 0.65
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2fghu"]
-albedo_texture = ExtResource("6_vppup")
+albedo_texture = ExtResource("6_pp7g2")
 grow_amount = 2.35
 proximity_fade_distance = 0.5
 

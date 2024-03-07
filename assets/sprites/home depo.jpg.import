@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bxbgr3mp2o2mn"
-path.s3tc="res://.godot/imported/home depo.jpg-ae26f11f0351d654722219eee788c7c7.s3tc.ctex"
+path.s3tc="res://.godot/imported/home depo.jpg-e07c5fcdd35e9649d618fbaadcd4e6dc.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/models/textures/home depo.jpg"
-dest_files=["res://.godot/imported/home depo.jpg-ae26f11f0351d654722219eee788c7c7.s3tc.ctex"]
+source_file="res://assets/sprites/home depo.jpg"
+dest_files=["res://.godot/imported/home depo.jpg-e07c5fcdd35e9649d618fbaadcd4e6dc.s3tc.ctex"]
 
 [params]
 
