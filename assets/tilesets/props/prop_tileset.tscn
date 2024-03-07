@@ -3,3 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://bwr2yohsqqq3d" path="res://assets/tilesets/props/prop_tileset.glb" id="1_shlil"]
 
 [node name="prop_tileset" instance=ExtResource("1_shlil")]
+
+[node name="table" parent="." index="0"]
+transform = Transform3D(0.667, 0, 0, 0, 0.667, 0, 0, 0, 0.667, 0, 0, 0)
+
+[node name="chair" parent="." index="1"]
+transform = Transform3D(0.666, 0, 0, 0, 0.666, 0, 0, 0, 0.666, 0, 0, -2)
+
+[node name="barrel" parent="." index="2"]
+transform = Transform3D(-0.556685, 0, 0.367411, 0, 0.667, 0, -0.367411, 0, -0.556685, 0, 0, 3)

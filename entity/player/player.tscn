@@ -1,11 +1,19 @@
-[gd_scene load_steps=16 format=3 uid="uid://bpm05pdgfeeja"]
+[gd_scene load_steps=24 format=3 uid="uid://bpm05pdgfeeja"]
 
 [ext_resource type="PackedScene" uid="uid://bnyly0xy2l6ft" path="res://entity/entity_base.tscn" id="1_5030y"]
 [ext_resource type="Script" path="res://entity/player/Player.gd" id="2_objnu"]
 [ext_resource type="PackedScene" uid="uid://b2j84cqc0nvhe" path="res://assets/models/[EXECUTIONER SWORD]/executionersword.tscn" id="3_rluav"]
 [ext_resource type="FontFile" uid="uid://0mhojjt0rey0" path="res://assets/fonts/alagard/alagard.ttf" id="4_w3pbu"]
 [ext_resource type="Shader" uid="uid://b1ydtksksvlja" path="res://entity/player/pixelation.tres" id="6_2xjnj"]
+[ext_resource type="Script" path="res://entity/player/FootstepManager.gd" id="7_bt6as"]
 [ext_resource type="Texture2D" uid="uid://b7v47oi3pw6yg" path="res://icon.svg" id="7_i6el5"]
+[ext_resource type="AudioStream" uid="uid://bflre2rdpgw1m" path="res://assets/sounds/sfx/footsteps/footstep_1.mp3" id="8_vshi7"]
+[ext_resource type="AudioStream" uid="uid://n8nbk2phqxvw" path="res://assets/sounds/sfx/footsteps/footstep_2.mp3" id="9_osqyc"]
+[ext_resource type="AudioStream" uid="uid://dko3y7ygujb5f" path="res://assets/sounds/sfx/footsteps/footstep_3.mp3" id="10_bjqbn"]
+[ext_resource type="AudioStream" uid="uid://couatgxbbhcnw" path="res://assets/sounds/sfx/footsteps/footstep_4.mp3" id="11_8w0hm"]
+[ext_resource type="AudioStream" uid="uid://ds5nbwn5dhluo" path="res://assets/sounds/sfx/ambience/bitcrushed_drone.mp3" id="14_v6ih8"]
+[ext_resource type="AudioStream" uid="uid://ynsm3dbjxnpa" path="res://assets/sounds/sfx/footsteps/footstep_7.mp3" id="14_v6wat"]
+[ext_resource type="AudioStream" uid="uid://bt3p48aknuy6r" path="res://assets/sounds/sfx/footsteps/footstep_8.mp3" id="15_bmmt7"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_o8nu8"]
 
@@ -254,6 +262,7 @@ shader_parameter/Pixelisation = 256.0
 
 [node name="Player" instance=ExtResource("1_5030y")]
 script = ExtResource("2_objnu")
+hp = 100
 
 [node name="MeshInstance3D" parent="." index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -281,9 +290,9 @@ cull_mask = 1048063
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 shape = SubResource("BoxShape3D_aeup4")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." index="3"]
+[node name="SwordOverlay" type="CanvasLayer" parent="." index="3"]
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="CanvasLayer" index="0"]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="SwordOverlay" index="0"]
 z_index = 1
 texture_filter = 1
 anchors_preset = 15
@@ -295,14 +304,14 @@ stretch = true
 stretch_shrink = 6
 metadata/_edit_use_anchors_ = true
 
-[node name="SubViewport" type="SubViewport" parent="CanvasLayer/SubViewportContainer" index="0"]
+[node name="SubViewport" type="SubViewport" parent="SwordOverlay/SubViewportContainer" index="0"]
 transparent_bg = true
 handle_input_locally = false
 positional_shadow_atlas_size = 4096
 size = Vector2i(320, 180)
 render_target_update_mode = 4
 
-[node name="Subviewport_camera" type="Camera3D" parent="CanvasLayer/SubViewportContainer/SubViewport" index="0"]
+[node name="Subviewport_camera" type="Camera3D" parent="SwordOverlay/SubViewportContainer/SubViewport" index="0"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
 cull_mask = 512
@@ -319,12 +328,12 @@ bbcode_enabled = true
 fit_content = true
 scroll_active = false
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="5"]
+[node name="SwordAnimPlayer" type="AnimationPlayer" parent="." index="5"]
 libraries = {
 "": SubResource("AnimationLibrary_1t14b")
 }
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimationPlayer" index="0"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SwordAnimPlayer" index="0"]
 libraries = {
 "": SubResource("AnimationLibrary_1t14b")
 }
@@ -341,3 +350,18 @@ material = SubResource("ShaderMaterial_bxykc")
 scale = Vector2(15, 8.4375)
 texture = ExtResource("7_i6el5")
 centered = false
+
+[node name="GroundPosition" type="Marker3D" parent="." index="9"]
+
+[node name="FootstepManager" type="Node3D" parent="." index="10" node_paths=PackedStringArray("ground_pos", "player")]
+script = ExtResource("7_bt6as")
+footstep_sounds = Array[AudioStreamMP3]([ExtResource("8_vshi7"), ExtResource("9_osqyc"), ExtResource("10_bjqbn"), ExtResource("11_8w0hm"), ExtResource("14_v6wat"), ExtResource("15_bmmt7")])
+ground_pos = NodePath("../GroundPosition")
+player = NodePath("..")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+stream = ExtResource("14_v6ih8")
+max_db = 0.0
+
+[connection signal="step" from="." to="FootstepManager" method="_ready"]

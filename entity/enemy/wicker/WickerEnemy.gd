@@ -7,10 +7,13 @@ const ATTACK_RANGE = 2.5
 @onready var particle = $GPUParticles3D
 @onready var state_machine
 @onready var fire_anim = $MeshInstance3D/Armature/Skeleton3D/Wicker/AnimatedSprite3D
+@onready var ambient_audio = $AmbientSFX
+@onready var attack_audio = $AttackSFX
 
 func _ready():
-	SPEED = 3 
 	fire_anim.play("default")
+	ambient_audio.pitch_scale = randf_range(0.8, 1.2)
+	ambient_audio.play() 
 	state_machine = anim_tree.get("parameters/playback")
 
 func _process(delta):
@@ -18,7 +21,7 @@ func _process(delta):
 		"wicker_walk":
 			SPEED = 3
 			particle.emitting = false
-		"wicker_attack":		
+		"wicker_attack":
 			SPEED = 0
 			particle.emitting = true
 			if (_target_in_range()):
@@ -32,11 +35,15 @@ func _process(delta):
 	
 func _target_in_range():
 	return global_position.distance_to(player.global_position) < ATTACK_RANGE
-
+	
 func _hit_finished():
 	if global_position.distance_to(player.global_position) < ATTACK_RANGE + 1.0:
 		var dir = player.global_transform.origin - global_transform.origin
 		player.hit(dir, 20)
+
+func _play_attack_sfx():
+	attack_audio.pitch_scale = randf_range(0.8, 1.2)
+	attack_audio.play()
 		
 func hitflash(): #WIP 
 	var tween = get_tree().create_tween()

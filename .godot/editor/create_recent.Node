@@ -1,17 +1,18 @@
+MeshInstance3D
+AudioStreamPlayer3D
+Node3D
+Marker3D
 GridMap
 Timer
 CharacterBody3D
 RigidBody3D
-Node3D
 Sprite2D
 SubViewport
 SubViewportContainer
-MeshInstance3D
 GPUParticles3D
 CollisionShape3D
 RayCast3D
 AnimationTree
-AudioStreamPlayer3D
 OmniLight3D
 LightOccluder2D
 AnimatedSprite3D
@@ -29,4 +30,3 @@ CanvasModulate
 ShaderGlobalsOverride
 CollisionPolygon3D
 CollisionShape2D
-Label

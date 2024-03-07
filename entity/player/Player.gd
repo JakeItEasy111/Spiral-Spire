@@ -1,6 +1,7 @@
 extends "res://entity/entity_base.gd"
 
 #extended movement variables 
+var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 const JUMP_VELOCITY = 5
 const SENSITIVITY = 0.003
 
@@ -8,11 +9,13 @@ const SENSITIVITY = 0.003
 const BOB_FREQ = 2.0
 const BOB_AMP = 0.06
 var t_bob = 0.0
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+
+#footstep variables
+var can_play : bool = true
 
 # sword variables
 var melee_damage = 25
-@onready var melee_anim = $AnimationPlayer
+@onready var melee_anim = $SwordAnimPlayer
 @onready var hitbox = $Head/Player_camera/Hitbox
 
 # nodes  
@@ -21,11 +24,14 @@ var melee_damage = 25
 @onready var subviewport_camera = %Subviewport_camera
 @onready var health_label = $Health
 
+@onready var ambient = $AudioStreamPlayer3D #temporary location, to be removed
+
 #signals
 signal player_hit
-
+signal step 
 
 func _ready():
+	ambient.play() #to be removed
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	SPEED = 5.0
 	set_health_label() 
@@ -71,6 +77,16 @@ func _headbob(time) -> Vector3:
 	var pos = Vector3.ZERO
 	pos.y = sin(time * BOB_FREQ) * BOB_AMP
 	pos.x = cos(time * BOB_FREQ / 2) * BOB_AMP
+	
+	#synced footsteps
+	var low_pos = BOB_AMP - 0.05
+	if pos.y > -low_pos:
+		can_play = true; 
+		
+	if pos.y < -low_pos and can_play:
+		can_play = false
+		emit_signal("step")
+		
 	return pos 
 
 #stair handling

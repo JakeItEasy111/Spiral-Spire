@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bqsxtwiigm17h"]
+[gd_scene load_steps=12 format=3 uid="uid://bqsxtwiigm17h"]
 
 [ext_resource type="Script" path="res://levels/main_level/world.gd" id="1_ox0py"]
 [ext_resource type="PackedScene" uid="uid://ql0l8j2ni6xb" path="res://objects/torch/torch.tscn" id="5_2lj5i"]
 [ext_resource type="PackedScene" uid="uid://bpm05pdgfeeja" path="res://entity/player/player.tscn" id="5_a0c0x"]
 [ext_resource type="PackedScene" uid="uid://b8p77rewu34ul" path="res://levels/dungeons/devroom.tscn" id="6_jlux8"]
+[ext_resource type="Texture2D" uid="uid://bxbgr3mp2o2mn" path="res://assets/models/textures/home depo.jpg" id="6_vppup"]
 [ext_resource type="PackedScene" uid="uid://88jssic5a3c2" path="res://entity/enemy/wicker/wicker_enemy.tscn" id="7_4rrae"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gp45i"]
@@ -27,6 +28,16 @@ volumetric_fog_density = 0.3
 volumetric_fog_albedo = Color(0.101961, 0.101961, 0.101961, 1)
 volumetric_fog_ambient_inject = 0.65
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2fghu"]
+albedo_texture = ExtResource("6_vppup")
+grow_amount = 2.35
+proximity_fade_distance = 0.5
+
+[sub_resource type="QuadMesh" id="QuadMesh_6gal3"]
+material = SubResource("StandardMaterial3D_2fghu")
+size = Vector2(3, 4)
+orientation = 0
+
 [node name="World" type="Node3D"]
 script = ExtResource("1_ox0py")
 
@@ -46,5 +57,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1.1, -1.3)
 
 [node name="WickerEnemy2" parent="." instance=ExtResource("7_4rrae")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7, 0, 11)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2.1, -14)
+mesh = SubResource("QuadMesh_6gal3")
 
 [connection signal="player_hit" from="Player" to="." method="_on_player_player_hit"]

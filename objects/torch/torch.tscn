@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://objects/torch/torch.gd" id="1_541s6"]
 [ext_resource type="PackedScene" uid="uid://cf5pelgcm2f01" path="res://assets/models/Torch/torch.blend" id="1_h3y1y"]
 [ext_resource type="Texture2D" uid="uid://c4ae1mg3052f7" path="res://assets/sprites/torchfire_spritesheet.png" id="2_p358v"]
-[ext_resource type="AudioStream" uid="uid://dnk5vvx7b5usd" path="res://assets/sounds/sfx/torch-burn.mp3" id="3_ybuhs"]
+[ext_resource type="AudioStream" uid="uid://beiji3ek3fr0a" path="res://assets/sounds/sfx/fire/bitcrushed_fire.mp3" id="4_m4a5e"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x5lfq"]
 atlas = ExtResource("2_p358v")
@@ -460,7 +460,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.676865, 0.162452)
 light_color = Color(0.901961, 0.607843, 0.294118, 1)
 light_energy = 2.0
 
-[node name="burningSfx" type="AudioStreamPlayer3D" parent="."]
+[node name="BurningSFX" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, -0.1)
-stream = ExtResource("3_ybuhs")
+stream = ExtResource("4_m4a5e")
 volume_db = -25.0
