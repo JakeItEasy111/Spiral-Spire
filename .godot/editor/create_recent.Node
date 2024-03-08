@@ -1,3 +1,6 @@
+AnimationPlayer
+AnimationTree
+RayCast3D
 MeshInstance3D
 AudioStreamPlayer3D
 Node3D
@@ -11,15 +14,12 @@ SubViewport
 SubViewportContainer
 GPUParticles3D
 CollisionShape3D
-RayCast3D
-AnimationTree
 OmniLight3D
 LightOccluder2D
 AnimatedSprite3D
 PointLight2D
 NavigationAgent3D
 Area3D
-AnimationPlayer
 RichTextLabel
 Camera3D
 CanvasLayer

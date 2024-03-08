@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bqsxtwiigm17h"]
+[gd_scene load_steps=13 format=3 uid="uid://bqsxtwiigm17h"]
 
 [ext_resource type="Script" path="res://levels/main_level/world.gd" id="1_ox0py"]
 [ext_resource type="PackedScene" uid="uid://ql0l8j2ni6xb" path="res://objects/torch/torch.tscn" id="5_2lj5i"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b8p77rewu34ul" path="res://levels/dungeons/devroom.tscn" id="6_jlux8"]
 [ext_resource type="Texture2D" uid="uid://bxbgr3mp2o2mn" path="res://assets/sprites/home depo.jpg" id="6_pp7g2"]
 [ext_resource type="PackedScene" uid="uid://88jssic5a3c2" path="res://entity/enemy/wicker/wicker_enemy.tscn" id="7_4rrae"]
+[ext_resource type="PackedScene" uid="uid://b8kxtpqpyap6m" path="res://assets/models/Doors/door.tscn" id="7_64wem"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gp45i"]
 sky_top_color = Color(0.384314, 0.454902, 0.54902, 1)
@@ -61,5 +62,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7, 0, 11)
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2.1, -14)
 mesh = SubResource("QuadMesh_6gal3")
+
+[node name="door" parent="." instance=ExtResource("7_64wem")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12, 0, -3)
 
 [connection signal="player_hit" from="Player" to="." method="_on_player_player_hit"]

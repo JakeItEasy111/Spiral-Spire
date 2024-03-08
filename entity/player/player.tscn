@@ -290,6 +290,10 @@ cull_mask = 1048063
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 shape = SubResource("BoxShape3D_aeup4")
 
+[node name="InteractRay" type="RayCast3D" parent="Head/Player_camera" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00387621, 0.00618005, 0.00417328)
+target_position = Vector3(0, 0, -2)
+
 [node name="SwordOverlay" type="CanvasLayer" parent="." index="3"]
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="SwordOverlay" index="0"]
@@ -359,7 +363,7 @@ footstep_sounds = Array[AudioStreamMP3]([ExtResource("8_vshi7"), ExtResource("9_
 ground_pos = NodePath("../GroundPosition")
 player = NodePath("..")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="11"]
+[node name="AmbiencePlayer" type="AudioStreamPlayer3D" parent="." index="11"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 stream = ExtResource("14_v6ih8")
 max_db = 0.0

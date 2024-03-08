@@ -22,13 +22,18 @@ var melee_damage = 25
 @onready var head = $Head
 @onready var camera = %Player_camera
 @onready var subviewport_camera = %Subviewport_camera
+@onready var interact_ray = $Head/Player_camera/InteractRay
+
+#ui
 @onready var health_label = $Health
 
-@onready var ambient = $AudioStreamPlayer3D #temporary location, to be removed
+#temporary
+@onready var ambient = $AmbiencePlayer #temporary location, to be removed
 
 #signals
 signal player_hit
 signal step 
+signal interact 
 
 func _ready():
 	ambient.play() #to be removed
@@ -46,6 +51,7 @@ func _process(delta):
 	subviewport_camera.set_global_transform(camera.get_global_transform())
 	
 func _physics_process(delta):
+	
 	# Adds gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta 
@@ -72,6 +78,7 @@ func _physics_process(delta):
 	move_and_slide()
 	_snap_down_to_stairs_check()
 	melee()
+	tryInteract()
 
 func _headbob(time) -> Vector3:
 	var pos = Vector3.ZERO
@@ -130,6 +137,9 @@ func meleeHit():
 			body.hitflash() 
 			body.apply_knockback(body.global_transform.origin - global_transform.origin)
 			
+func tryInteract():
+	if interact_ray.is_colliding() and Input.is_action_just_pressed("interact") and interact_ray.get_collider().is_in_group("interactable"):
+		print("interacting")
 #health handling
 func set_health_label(): #change to bar, add to base?
 	health_label.text = str(hp)
