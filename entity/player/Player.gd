@@ -22,18 +22,14 @@ var melee_damage = 25
 @onready var head = $Head
 @onready var camera = %Player_camera
 @onready var subviewport_camera = %Subviewport_camera
-@onready var interact_ray = $Head/Player_camera/InteractRay
-
-#ui
 @onready var health_label = $Health
 
-#temporary
+#temp
 @onready var ambient = $AmbiencePlayer #temporary location, to be removed
 
 #signals
 signal player_hit
 signal step 
-signal interact 
 
 func _ready():
 	ambient.play() #to be removed
@@ -78,7 +74,6 @@ func _physics_process(delta):
 	move_and_slide()
 	_snap_down_to_stairs_check()
 	melee()
-	tryInteract()
 
 func _headbob(time) -> Vector3:
 	var pos = Vector3.ZERO
@@ -137,20 +132,14 @@ func meleeHit():
 			body.hitflash() 
 			body.apply_knockback(body.global_transform.origin - global_transform.origin)
 			
-func tryInteract():
-	if interact_ray.is_colliding() and Input.is_action_just_pressed("interact") and interact_ray.get_collider().is_in_group("interactable"):
-		print("interacting")
-#health handling
+#healthbar handling
 func set_health_label(): #change to bar, add to base?
-	health_label.text = str(hp)
-	
-func take_damage(dmg):
-	super.take_damage(dmg)
 	health_label.text = str(hp)
 	if (hp <= 25):
 		health_label.text = "[shake rate=20.0 level=" + str(50 - hp) + " connected=1]" + str(hp) + "[/shake]"
 	
 func hit(dir, dmg):
-		take_damage(dmg)
-		emit_signal("player_hit") #surprise tool that will help us later! for screen fx 
+		super.take_damage(dmg)
+		set_health_label()
 		velocity += dir * 4.0
+		emit_signal("player_hit") #surprise tool that will help us later! for screen fx 
