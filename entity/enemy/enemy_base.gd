@@ -24,3 +24,4 @@ func set_target_position(target_location):
 	
 func apply_knockback(force):
 	knockback_force = force.normalized() * 8.0 
+	

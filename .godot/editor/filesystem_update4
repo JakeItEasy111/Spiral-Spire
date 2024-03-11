@@ -6,9 +6,12 @@ res://levels/main_level/world.tscn
 res://entity/player/player.tscn
 res://entity/enemy/wicker/wicker_enemy.tscn
 res://objects/torch/torch.tscn
-res://assets/tilesets/tileset_new.tscn
-res://assets/models/Doors/door.tscn
 res://levels/dungeons/devroom.tscn
-res://entity/player/Player.gd
 res://entity/player/FootstepManager.gd
-res://entity/player/SwordSoundManager.gd
+res://entity/player/Player.gd
+res://entity/enemy/enemy_base.gd
+res://entity/enemy/enemy_base.tscn
+res://entity/enemy/EnemySoundManager.gd
+res://entity/enemy/wicker/WickerSoundManager.gd
+res://entity/enemy/wicker/WickerEnemy.gd
+res://entity/player/SoundManager.gd

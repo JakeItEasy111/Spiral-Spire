@@ -23,16 +23,14 @@ var melee_damage = 25
 @onready var camera = %Player_camera
 @onready var subviewport_camera = %Subviewport_camera
 @onready var health_label = $Health
-
-#temp
-@onready var ambient = $AmbiencePlayer #temporary location, to be removed
+@onready var sound_manager = $SoundManager
 
 #signals
 signal player_hit
 signal step 
+signal hit_object
 
 func _ready():
-	ambient.play() #to be removed
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	SPEED = 5.0
 	set_health_label() 
@@ -131,6 +129,8 @@ func meleeHit():
 			body.take_damage(melee_damage)
 			body.hitflash() 
 			body.apply_knockback(body.global_transform.origin - global_transform.origin)
+			var hit_pos = body
+			sound_manager.play_hit(hit_pos)
 			
 #healthbar handling
 func set_health_label(): #change to bar, add to base?
@@ -140,6 +140,8 @@ func set_health_label(): #change to bar, add to base?
 	
 func hit(dir, dmg):
 		super.take_damage(dmg)
-		set_health_label()
 		velocity += dir * 4.0
 		emit_signal("player_hit") #surprise tool that will help us later! for screen fx 
+		set_health_label() #move set_health_label function and all UI to 
+		
+

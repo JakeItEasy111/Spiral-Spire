@@ -7,8 +7,8 @@ const ATTACK_RANGE = 2.5
 @onready var particle = $GPUParticles3D
 @onready var state_machine
 @onready var fire_anim = $MeshInstance3D/Armature/Skeleton3D/Wicker/AnimatedSprite3D
-@onready var ambient_audio = $AmbientSFX
 @onready var attack_audio = $AttackSFX
+@onready var ambient_audio = $AmbientSFX
 
 func _ready():
 	fire_anim.play("default")
