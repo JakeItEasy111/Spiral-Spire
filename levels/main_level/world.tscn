@@ -66,4 +66,19 @@ mesh = SubResource("QuadMesh_bv6lr")
 [node name="door" parent="." instance=ExtResource("7_64wem")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12, 0, -3)
 
+[node name="Control" type="Control" parent="."]
+z_as_relative = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+visible = false
+top_level = true
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.67451, 0.0392157, 0, 1)
+
 [connection signal="player_hit" from="Player" to="." method="_on_player_player_hit"]

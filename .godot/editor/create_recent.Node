@@ -1,3 +1,5 @@
+ColorRect
+Control
 Node3D
 AnimationPlayer
 AnimationTree
@@ -29,4 +31,3 @@ Node
 CanvasModulate
 ShaderGlobalsOverride
 CollisionPolygon3D
-CollisionShape2D

@@ -28,7 +28,6 @@ var melee_damage = 25
 #signals
 signal player_hit
 signal step 
-signal hit_object
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

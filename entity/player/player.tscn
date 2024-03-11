@@ -309,6 +309,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 shape = SubResource("BoxShape3D_aeup4")
 
 [node name="SwordOverlay" type="CanvasLayer" parent="." index="3"]
+follow_viewport_enabled = true
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="SwordOverlay" index="0"]
 z_index = 1
