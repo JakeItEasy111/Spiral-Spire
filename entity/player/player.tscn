@@ -309,6 +309,10 @@ cull_mask = 1048063
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 shape = SubResource("BoxShape3D_aeup4")
 
+[node name="InteractRay" type="RayCast3D" parent="Head/Player_camera" index="1"]
+collision_mask = 2
+collide_with_areas = true
+
 [node name="SwordOverlay" type="CanvasLayer" parent="." index="3"]
 follow_viewport_enabled = true
 
