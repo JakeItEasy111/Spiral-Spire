@@ -55,3 +55,8 @@ func hitflash(): #WIP
 	tween.tween_property(fire_anim, "transparency", 0, 0.05)
 	tween.tween_property(legs, "emission", Color.BLACK, 0.05)
 	tween.tween_property(body, "emission", Color.BLACK, 0.05)
+
+func die():
+	anim_tree.set("parameters/conditions/die", true)
+	await get_tree().create_timer(2.0).timeout
+	queue_free()

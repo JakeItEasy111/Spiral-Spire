@@ -21,4 +21,4 @@ func take_damage(dmg):
 	set_hp(hp - dmg)
 
 func die():
-	queue_free() 
+	pass

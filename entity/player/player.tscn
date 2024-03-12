@@ -1,11 +1,10 @@
-[gd_scene load_steps=28 format=3 uid="uid://bpm05pdgfeeja"]
+[gd_scene load_steps=29 format=3 uid="uid://bpm05pdgfeeja"]
 
 [ext_resource type="PackedScene" uid="uid://bnyly0xy2l6ft" path="res://entity/entity_base.tscn" id="1_5030y"]
 [ext_resource type="Script" path="res://entity/player/Player.gd" id="2_objnu"]
 [ext_resource type="PackedScene" uid="uid://b2j84cqc0nvhe" path="res://assets/models/[EXECUTIONER SWORD]/executionersword.tscn" id="3_rluav"]
 [ext_resource type="AudioStream" uid="uid://c2fnfciivxmcb" path="res://assets/sounds/sfx/sword/swoosh_1.mp3" id="3_rosfm"]
 [ext_resource type="AudioStream" uid="uid://3gqdqfaq3aw6" path="res://assets/sounds/sfx/sword/swoosh_2.mp3" id="4_mu30q"]
-[ext_resource type="FontFile" uid="uid://0mhojjt0rey0" path="res://assets/fonts/alagard/alagard.ttf" id="4_w3pbu"]
 [ext_resource type="AudioStream" uid="uid://bbniqovmumiaa" path="res://assets/sounds/sfx/sword/swoosh_3.mp3" id="5_pqbkd"]
 [ext_resource type="Shader" uid="uid://b1ydtksksvlja" path="res://entity/player/pixelation.tres" id="6_2xjnj"]
 [ext_resource type="Script" path="res://entity/player/SoundManager.gd" id="7_8vmrd"]
@@ -18,6 +17,8 @@
 [ext_resource type="AudioStream" uid="uid://bt3p48aknuy6r" path="res://assets/sounds/sfx/footsteps/footstep_6.mp3" id="13_ls3c8"]
 [ext_resource type="AudioStream" uid="uid://lboho6hadop2" path="res://assets/sounds/sfx/fire/fire_hurt.mp3" id="17_4xi4n"]
 [ext_resource type="AudioStream" uid="uid://d08v7d8qj0q" path="res://assets/sounds/sfx/sword/hit.mp3" id="18_4qkq0"]
+[ext_resource type="AudioStream" uid="uid://dq126ud31dipu" path="res://assets/sounds/sfx/footsteps/fall_1.mp3" id="18_qwg8d"]
+[ext_resource type="AudioStream" uid="uid://2qjpoxl7lsw8" path="res://assets/sounds/sfx/footsteps/fall_2.mp3" id="19_mj3ah"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_o8nu8"]
 
@@ -335,19 +336,7 @@ unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
 cull_mask = 512
 
-[node name="Health" type="RichTextLabel" parent="." index="4"]
-z_index = 100
-offset_left = 77.0
-offset_top = 910.0
-offset_right = 427.0
-offset_bottom = 1054.0
-theme_override_fonts/normal_font = ExtResource("4_w3pbu")
-theme_override_font_sizes/normal_font_size = 100
-bbcode_enabled = true
-fit_content = true
-scroll_active = false
-
-[node name="SwordAnimPlayer" type="AnimationPlayer" parent="." index="5"]
+[node name="SwordAnimPlayer" type="AnimationPlayer" parent="." index="4"]
 libraries = {
 "": SubResource("AnimationLibrary_1t14b")
 }
@@ -357,29 +346,31 @@ libraries = {
 "": SubResource("AnimationLibrary_1t14b")
 }
 
-[node name="StairsBelowRayCast3D" type="RayCast3D" parent="." index="6"]
+[node name="StairsBelowRayCast3D" type="RayCast3D" parent="." index="5"]
 target_position = Vector3(0, -0.5, 0)
 
-[node name="StepUpSeparationRay_F" type="CollisionShape3D" parent="." index="7"]
+[node name="StepUpSeparationRay_F" type="CollisionShape3D" parent="." index="6"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.5, -0.55)
 shape = SubResource("SeparationRayShape3D_woocj")
 
-[node name="PixelShader" type="Sprite2D" parent="." index="8"]
+[node name="PixelShader" type="Sprite2D" parent="." index="7"]
 material = SubResource("ShaderMaterial_bxykc")
 scale = Vector2(15, 8.4375)
 texture = ExtResource("7_i6el5")
 centered = false
 
-[node name="GroundPosition" type="Marker3D" parent="." index="9"]
+[node name="GroundPosition" type="Marker3D" parent="." index="8"]
 
-[node name="SoundManager" type="Node3D" parent="." index="10" node_paths=PackedStringArray("ground_pos", "player")]
+[node name="SoundManager" type="Node3D" parent="." index="9" node_paths=PackedStringArray("ground_pos", "player")]
 script = ExtResource("7_8vmrd")
 footstep_sounds = Array[AudioStreamMP3]([ExtResource("8_vshi7"), ExtResource("9_osqyc"), ExtResource("10_bjqbn"), ExtResource("11_8w0hm"), ExtResource("12_2qvne"), ExtResource("13_ls3c8")])
 sword_sounds = Array[AudioStreamMP3]([ExtResource("3_rosfm"), ExtResource("4_mu30q"), ExtResource("5_pqbkd")])
 hurt_sounds = Array[AudioStreamMP3]([ExtResource("17_4xi4n")])
 hit_sound = Array[AudioStreamMP3]([ExtResource("18_4qkq0")])
+fall_sounds = Array[AudioStreamMP3]([ExtResource("18_qwg8d"), ExtResource("19_mj3ah")])
 ground_pos = NodePath("../GroundPosition")
 player = NodePath("..")
 
+[connection signal="fall" from="." to="SoundManager" method="_ready"]
 [connection signal="player_hit" from="." to="SoundManager" method="_ready"]
 [connection signal="step" from="." to="SoundManager" method="_ready"]

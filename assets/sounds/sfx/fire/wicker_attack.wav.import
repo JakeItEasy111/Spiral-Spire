@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ciuv1kurp4em8"
-path="res://.godot/imported/bitcrushed flame 2.wav-06339532d1f75a614fa41afc32a47882.sample"
+path="res://.godot/imported/wicker_attack.wav-1d3e8cc40723cee75f58443f8eb3be71.sample"
 
 [deps]
 
-source_file="res://assets/sounds/sfx/fire/bitcrushed flame 2.wav"
-dest_files=["res://.godot/imported/bitcrushed flame 2.wav-06339532d1f75a614fa41afc32a47882.sample"]
+source_file="res://assets/sounds/sfx/fire/wicker_attack.wav"
+dest_files=["res://.godot/imported/wicker_attack.wav-1d3e8cc40723cee75f58443f8eb3be71.sample"]
 
 [params]
 

@@ -4,6 +4,7 @@ extends "res://entity/entity_base.gd"
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 const JUMP_VELOCITY = 5
 const SENSITIVITY = 0.003
+var old_vel : float = 0.0
 
 #viewbob variables
 const BOB_FREQ = 2.0
@@ -28,11 +29,12 @@ var melee_damage = 25
 #signals
 signal player_hit
 signal step 
+signal fall 
+signal hp_change
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	SPEED = 5.0
-	set_health_label() 
 	
 func _unhandled_input(event): #mouse rotation
 	if event is InputEventMouseMotion:
@@ -71,6 +73,11 @@ func _physics_process(delta):
 	move_and_slide()
 	_snap_down_to_stairs_check()
 	melee()
+	
+	var diff = velocity.y - old_vel
+	if diff > 4:
+		emit_signal("fall")
+	old_vel = velocity.y
 
 func _headbob(time) -> Vector3:
 	var pos = Vector3.ZERO
@@ -130,17 +137,12 @@ func meleeHit():
 			body.apply_knockback(body.global_transform.origin - global_transform.origin)
 			var hit_pos = body
 			sound_manager.play_hit(hit_pos)
-			
-#healthbar handling
-func set_health_label(): #change to bar, add to base?
-	health_label.text = str(hp)
-	if (hp <= 25):
-		health_label.text = "[shake rate=20.0 level=" + str(50 - hp) + " connected=1]" + str(hp) + "[/shake]"
 	
 func hit(dir, dmg):
-		super.take_damage(dmg)
+		take_damage(dmg)
 		velocity += dir * 4.0
-		emit_signal("player_hit") #surprise tool that will help us later! for screen fx 
-		set_health_label() #move set_health_label function and all UI to 
+		emit_signal("player_hit") 
+		emit_signal("hp_change") 
 		
-
+func die():
+	queue_free()
