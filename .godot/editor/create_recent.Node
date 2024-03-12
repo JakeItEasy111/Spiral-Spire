@@ -1,3 +1,5 @@
+AudioStreamPlayer
+GPUParticles3D
 ColorRect
 Control
 Node3D
@@ -14,7 +16,6 @@ RigidBody3D
 Sprite2D
 SubViewport
 SubViewportContainer
-GPUParticles3D
 CollisionShape3D
 OmniLight3D
 LightOccluder2D
@@ -30,4 +31,3 @@ NavigationRegion3D
 Node
 CanvasModulate
 ShaderGlobalsOverride
-CollisionPolygon3D

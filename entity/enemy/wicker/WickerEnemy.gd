@@ -7,13 +7,14 @@ const ATTACK_RANGE = 2.5
 @onready var particle = $GPUParticles3D
 @onready var state_machine
 @onready var fire_anim = $MeshInstance3D/Armature/Skeleton3D/Wicker/AnimatedSprite3D
-@onready var attack_audio = $AttackSFX
-@onready var ambient_audio = $AmbientSFX
+@onready var attack_sfx = $AttackSFX
+@onready var ambient_sfx = $AmbientSFX
+@onready var death_sfx = $DeathSFX
 
 func _ready():
 	fire_anim.play("default")
-	ambient_audio.pitch_scale = randf_range(0.8, 1.2)
-	ambient_audio.play() 
+	ambient_sfx.pitch_scale = randf_range(0.8, 1.2)
+	ambient_sfx.play() 
 	state_machine = anim_tree.get("parameters/playback")
 
 func _process(delta):
@@ -42,9 +43,13 @@ func _hit_finished():
 		player.hit(dir, 20)
 
 func _play_attack_sfx():
-	attack_audio.pitch_scale = randf_range(0.8, 1.2)
-	attack_audio.play()
-		
+	attack_sfx.pitch_scale = randf_range(0.8, 1.2)
+	attack_sfx.play()
+
+func play_death_sfx():
+	death_sfx.pitch_scale = randf_range(0.8, 1.2)
+	death_sfx.play()
+	
 func hitflash(): #WIP 
 	var tween = get_tree().create_tween()
 	var body = $MeshInstance3D/Armature/Skeleton3D/Cylinder/Cylinder.get_active_material(0)
@@ -58,5 +63,7 @@ func hitflash(): #WIP
 
 func die():
 	anim_tree.set("parameters/conditions/die", true)
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(1.0).timeout
+	$OmniLight3D.visible = false 
+	await get_tree().create_timer(2.0).timeout 
 	queue_free()

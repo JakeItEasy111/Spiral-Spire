@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b8p77rewu34ul" path="res://levels/dungeons/devroom.tscn" id="6_jlux8"]
 [ext_resource type="Texture2D" uid="uid://bxbgr3mp2o2mn" path="res://assets/sprites/home depo.jpg" id="6_pp7g2"]
 [ext_resource type="PackedScene" uid="uid://88jssic5a3c2" path="res://entity/enemy/wicker/wicker_enemy.tscn" id="7_4rrae"]
-[ext_resource type="PackedScene" uid="uid://b8kxtpqpyap6m" path="res://assets/models/Doors/door.tscn" id="7_64wem"]
+[ext_resource type="PackedScene" uid="uid://b8kxtpqpyap6m" path="res://objects/door/door.tscn" id="7_64wem"]
 [ext_resource type="FontFile" uid="uid://0mhojjt0rey0" path="res://assets/fonts/alagard/alagard.ttf" id="8_frgwi"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gp45i"]
