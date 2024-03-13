@@ -4,3 +4,8 @@ res://entity/player/pixelation.tres
 res://assets/tilesets/tileset-new.tres
 res://assets/tilesets/props/prop_library.tres
 res://levels/main_level/world.tscn
+res://entity/player/InteractRay.gd
+res://objects/door/door.tscn
+res://objects/door/DoorInteraction.gd
+res://objects/door/Door.gd
+res://entity/player/Player.gd

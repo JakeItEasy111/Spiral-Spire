@@ -1,9 +1,10 @@
-[gd_scene load_steps=29 format=3 uid="uid://bpm05pdgfeeja"]
+[gd_scene load_steps=30 format=3 uid="uid://bpm05pdgfeeja"]
 
 [ext_resource type="PackedScene" uid="uid://bnyly0xy2l6ft" path="res://entity/entity_base.tscn" id="1_5030y"]
 [ext_resource type="Script" path="res://entity/player/Player.gd" id="2_objnu"]
 [ext_resource type="PackedScene" uid="uid://b2j84cqc0nvhe" path="res://assets/models/[EXECUTIONER SWORD]/executionersword.tscn" id="3_rluav"]
 [ext_resource type="AudioStream" uid="uid://c2fnfciivxmcb" path="res://assets/sounds/sfx/sword/swoosh_1.mp3" id="3_rosfm"]
+[ext_resource type="Script" path="res://entity/player/InteractRay.gd" id="4_jf8gx"]
 [ext_resource type="AudioStream" uid="uid://3gqdqfaq3aw6" path="res://assets/sounds/sfx/sword/swoosh_2.mp3" id="4_mu30q"]
 [ext_resource type="AudioStream" uid="uid://bbniqovmumiaa" path="res://assets/sounds/sfx/sword/swoosh_3.mp3" id="5_pqbkd"]
 [ext_resource type="Shader" uid="uid://b1ydtksksvlja" path="res://entity/player/pixelation.tres" id="6_2xjnj"]
@@ -302,6 +303,7 @@ layers = 512
 [node name="Player_camera" type="Camera3D" parent="Head" index="1"]
 unique_name_in_owner = true
 cull_mask = 1048063
+script = ExtResource("4_jf8gx")
 
 [node name="Hitbox" type="Area3D" parent="Head/Player_camera" index="0"]
 
@@ -310,7 +312,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 shape = SubResource("BoxShape3D_aeup4")
 
 [node name="InteractRay" type="RayCast3D" parent="Head/Player_camera" index="1"]
-collision_mask = 2
+target_position = Vector3(0, 0, -2)
 collide_with_areas = true
 
 [node name="SwordOverlay" type="CanvasLayer" parent="." index="3"]

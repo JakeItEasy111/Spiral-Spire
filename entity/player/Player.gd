@@ -23,7 +23,6 @@ var melee_damage = 25
 @onready var head = $Head
 @onready var camera = %Player_camera
 @onready var subviewport_camera = %Subviewport_camera
-@onready var health_label = $Health
 @onready var sound_manager = $SoundManager
 
 #signals
