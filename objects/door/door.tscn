@@ -7,7 +7,7 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_dpktd"]
 size = Vector3(1.5, 3, 0.5)
 
-[node name="door" instance=ExtResource("1_8hn2p")]
+[node name="Door" instance=ExtResource("1_8hn2p")]
 script = ExtResource("2_b80yt")
 
 [node name="OpenDoorFront" type="Area3D" parent="." index="1" groups=["interactable"]]

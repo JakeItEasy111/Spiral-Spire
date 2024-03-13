@@ -1,9 +1,9 @@
-Camera3D
-Node
+AudioStreamPlayer
 CollisionShape3D
 Area3D
+Camera3D
+Node
 RayCast3D
-AudioStreamPlayer
 GPUParticles3D
 ColorRect
 Control

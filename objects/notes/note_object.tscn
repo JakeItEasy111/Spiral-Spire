@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=3 uid="uid://xfak30c1l3em"]
+
+[ext_resource type="PackedScene" uid="uid://d2xppx5lkf4sc" path="res://assets/models/Papers/papers_log_1.blend" id="1_roh2q"]
+[ext_resource type="Texture2D" uid="uid://c2j651hw4ilyi" path="res://assets/models/Papers/Materials/paper_log_1.png" id="2_yx136"]
+[ext_resource type="Script" path="res://objects/notes/pickup_note.gd" id="3_1hh4r"]
+[ext_resource type="Shader" path="res://objects/notes/item_highlighter.gdshader" id="3_3htpk"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rcige"]
+render_priority = 0
+shader = ExtResource("3_3htpk")
+shader_parameter/shine_color = Color(1, 1, 1, 1)
+shader_parameter/cycle_interval = 1.0
+shader_parameter/shine_speed = 3.0
+shader_parameter/shine_width = 3.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kdg7i"]
+next_pass = SubResource("ShaderMaterial_rcige")
+albedo_texture = ExtResource("2_yx136")
+texture_filter = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yvbgm"]
+size = Vector3(0.5, 0.25, 0.5)
+
+[node name="NoteObject" instance=ExtResource("1_roh2q")]
+
+[node name="Paper_Log1" parent="." index="0"]
+material_override = SubResource("StandardMaterial3D_kdg7i")
+
+[node name="PickupNote" type="Area3D" parent="." index="1" groups=["interactable"]]
+script = ExtResource("3_1hh4r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PickupNote" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05, 0)
+shape = SubResource("BoxShape3D_yvbgm")
