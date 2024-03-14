@@ -1,3 +1,5 @@
+Control
+TextureRect
 CanvasLayer
 Panel
 MenuBar
@@ -5,7 +7,6 @@ Label
 HBoxContainer
 VBoxContainer
 MarginContainer
-Control
 AudioStreamPlayer
 CollisionShape3D
 Area3D
@@ -29,4 +30,3 @@ SubViewport
 SubViewportContainer
 OmniLight3D
 LightOccluder2D
-AnimatedSprite3D
