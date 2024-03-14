@@ -1,7 +1,7 @@
 extends Node3D
 
 @onready var player = $Player
-@onready var health_label = $UI/Health
+@onready var health_label = $UILayer/UI/Health
 
 func _ready():
 	_on_player_hp_change()
@@ -11,7 +11,7 @@ func _physics_process(delta):
 		get_tree().call_group("enemies", "set_target_position", player.global_transform.origin)
 
 func _on_player_player_hit():
-	var flash = $UI/ColorRect
+	var flash = $UILayer/UI/ColorRect
 	var tween = get_tree().create_tween()
 	flash.visible = true;  
 	await tween.tween_property(flash, "modulate:a", 0.5, 0.125).finished

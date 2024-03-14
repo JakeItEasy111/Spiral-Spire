@@ -1,3 +1,11 @@
+CanvasLayer
+Panel
+MenuBar
+Label
+HBoxContainer
+VBoxContainer
+MarginContainer
+Control
 AudioStreamPlayer
 CollisionShape3D
 Area3D
@@ -6,7 +14,6 @@ Node
 RayCast3D
 GPUParticles3D
 ColorRect
-Control
 Node3D
 AnimationPlayer
 AnimationTree
@@ -23,10 +30,3 @@ SubViewportContainer
 OmniLight3D
 LightOccluder2D
 AnimatedSprite3D
-PointLight2D
-NavigationAgent3D
-RichTextLabel
-CanvasLayer
-SpotLight3D
-NavigationRegion3D
-CanvasModulate
