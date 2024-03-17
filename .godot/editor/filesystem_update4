@@ -1,11 +1,16 @@
-res://objects/notes/note_object.tscn
+res://levels/menu/menu.tscn
 res://entity/player/SoundManager.gd
-res://objects/notes/pickup_note.gd
 res://entity/player/pixelation.tres
 res://assets/tilesets/tileset-new.tres
 res://assets/tilesets/props/prop_library.tres
-res://objects/notes/item_highlighter.gdshader
-res://assets/models/[EXECUTIONER SWORD]/viewmodel.gdshader
+res://objects/notes/pickup_note.gd
 res://levels/main_level/world.tscn
-res://objects/door/door.tscn
 res://entity/player/player.tscn
+res://entity/enemy/wicker/wicker_enemy.tscn
+res://levels/dungeons/devroom.tscn
+res://entity/enemy/enemy_base.tscn
+res://entity/player/InteractRay.gd
+res://objects/notes/note_object.tscn
+res://objects/notes/note_object.gd
+res://objects/door/door.tscn
+res://objects/door/Door.gd

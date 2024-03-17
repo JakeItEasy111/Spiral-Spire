@@ -1,3 +1,6 @@
+AudioStreamPlayer
+Timer
+RichTextLabel
 Control
 TextureRect
 CanvasLayer
@@ -7,7 +10,6 @@ Label
 HBoxContainer
 VBoxContainer
 MarginContainer
-AudioStreamPlayer
 CollisionShape3D
 Area3D
 Camera3D
@@ -22,11 +24,9 @@ MeshInstance3D
 AudioStreamPlayer3D
 Marker3D
 GridMap
-Timer
 CharacterBody3D
 RigidBody3D
 Sprite2D
 SubViewport
 SubViewportContainer
 OmniLight3D
-LightOccluder2D

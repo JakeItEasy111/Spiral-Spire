@@ -1,18 +1,37 @@
-[gd_scene load_steps=7 format=3 uid="uid://xfak30c1l3em"]
+[gd_scene load_steps=13 format=3 uid="uid://xfak30c1l3em"]
 
 [ext_resource type="PackedScene" uid="uid://d2xppx5lkf4sc" path="res://assets/models/Papers/papers_log_1.blend" id="1_roh2q"]
 [ext_resource type="Texture2D" uid="uid://c34rgaqw10ksm" path="res://assets/models/Papers/Materials/noteTexture.png" id="2_6osah"]
+[ext_resource type="Script" path="res://objects/notes/note_object.gd" id="2_o8x5e"]
 [ext_resource type="Script" path="res://objects/notes/pickup_note.gd" id="3_1hh4r"]
 [ext_resource type="Texture2D" uid="uid://cygjk7g5rcmnb" path="res://assets/sprites/noteUI.png" id="4_3wmx7"]
+[ext_resource type="Shader" path="res://objects/notes/item_highlighter.gdshader" id="4_s8eja"]
+[ext_resource type="AudioStream" uid="uid://cp8mn2qt7oxhm" path="res://assets/sounds/sfx/interactions/note_interact.mp3" id="5_8jovm"]
+[ext_resource type="FontFile" uid="uid://dapwaattyuyd4" path="res://assets/fonts/rubber-biscuit/RUBBBI__.TTF" id="7_mrd7c"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_77d07"]
+render_priority = 0
+shader = ExtResource("4_s8eja")
+shader_parameter/shine_color = Color(1, 1, 1, 1)
+shader_parameter/cycle_interval = 1.0
+shader_parameter/shine_speed = 3.0
+shader_parameter/shine_width = 3.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tvadh"]
+next_pass = SubResource("ShaderMaterial_77d07")
 albedo_texture = ExtResource("2_6osah")
 texture_filter = 2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yvbgm"]
-size = Vector3(0.5, 0.5, 0.5)
+size = Vector3(0.25, 0.25, 0.3)
+
+[sub_resource type="Theme" id="Theme_2qlso"]
+default_base_scale = 1.0
+default_font = ExtResource("7_mrd7c")
+default_font_size = 35
 
 [node name="NoteObject" instance=ExtResource("1_roh2q")]
+script = ExtResource("2_o8x5e")
 
 [node name="Paper_Log1" parent="." index="0"]
 material_override = SubResource("StandardMaterial3D_tvadh")
@@ -35,6 +54,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 
 [node name="NoteTexture" type="TextureRect" parent="NoteLayer/NoteUI" index="0"]
 layout_mode = 1
@@ -45,3 +65,24 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_3wmx7")
 stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="NoteLayer/NoteUI" index="1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -357.0
+offset_top = -484.0
+offset_right = 352.0
+offset_bottom = 458.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme = SubResource("Theme_2qlso")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+scroll_active = false
+
+[node name="InteractSFX" type="AudioStreamPlayer" parent="." index="3"]
+stream = ExtResource("5_8jovm")

@@ -128,6 +128,7 @@ open_angle_rear = 5
 
 [node name="NoteObject" parent="." instance=ExtResource("9_snddd")]
 transform = Transform3D(0.347296, 0, -1.96962, 0, 2, 0, 1.96962, 0, 0.347296, 8.4, 1.05, 13.1)
+note_text = "Testing testing testing testing what the fuck is a good story"
 
 [connection signal="hp_change" from="Player" to="." method="_on_player_hp_change"]
 [connection signal="player_hit" from="Player" to="." method="_on_player_player_hit"]

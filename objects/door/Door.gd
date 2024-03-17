@@ -1,5 +1,8 @@
 extends Node3D
 
+@onready var open_sfx = $OpenSFX
+@onready var close_sfx = $CloseSFX
+
 enum DOOR_STATES {
 	closed,
 	opened
@@ -21,7 +24,7 @@ var open_direction = OPEN_DIRECTIONS.closed
 func _process(delta : float) -> void:
 	match door_state:
 		DOOR_STATES.closed:
-			rotation_degrees.y = lerpf(rotation_degrees.y, start_angle, delta * 3)
+			rotation_degrees.y = lerpf(rotation_degrees.y, start_angle, delta * 6)
 		DOOR_STATES.opened:
 			if open_direction == OPEN_DIRECTIONS.front:
 				rotation_degrees.y = lerpf(rotation_degrees.y, open_angle_front, delta * 3)
@@ -32,10 +35,12 @@ func open(dir : int):
 	if door_state == DOOR_STATES.closed:
 		door_state = DOOR_STATES.opened
 		open_direction = dir
+		open_sfx.play()
 		return
 	if door_state == DOOR_STATES.opened:
 		door_state = DOOR_STATES.closed
 		open_direction = dir 
+		close_sfx.play()
 		return
 
 func _on_open_door_front_open() -> void:
