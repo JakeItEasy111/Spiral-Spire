@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsfm2mjc7jfru"]
+
+[ext_resource type="PackedScene" uid="uid://c0gq3fbxime2q" path="res://assets/models/Clothman/clothman.blend" id="1_05q4e"]
+
+[node name="clothman" instance=ExtResource("1_05q4e")]
+
+[node name="Skeleton3D" parent="Clothman" index="0"]
+bones/0/position = Vector3(0, -0.452858, 0)
+bones/1/rotation = Quaternion(0.000858268, 0, 0, 1)
+bones/3/rotation = Quaternion(0.0458008, -0.0221132, -0.344228, 0.937508)
+bones/4/rotation = Quaternion(-0.0625884, 0.0302611, -0.315021, 0.946535)
+bones/8/rotation = Quaternion(-0.00117754, -0.000982811, -0.47892, 0.877858)
+bones/11/rotation = Quaternion(-0.000562028, 0.000126238, 0.479609, 0.877482)
+bones/14/rotation = Quaternion(0.044343, 0.0219423, 0.348919, 0.935846)
+bones/17/rotation = Quaternion(-0.0614503, 0.0273391, -0.713256, 0.697669)
+bones/19/rotation = Quaternion(-0.061533, -0.0274829, 0.713708, 0.697194)
+
+[node name="Ear_l" parent="Clothman/Skeleton3D" index="0"]
+transform = Transform3D(3.65589, -0.337177, 0.0989571, 0.246679, -0.0124888, -1.50069, 0.843152, 1.46565, 0.00997804, -0.656545, 2.28138, -0.0487524)
+bone_idx = 9
+
+[node name="Ear_r" parent="Clothman/Skeleton3D" index="1"]
+transform = Transform3D(3.65619, -0.340293, 0.0856251, 0.212481, -0.0125443, -1.50153, 0.85113, 1.46493, 0.00703239, -0.65648, 2.28761, -0.0501663)
+bone_idx = 12
+
+[node name="Wings_l" parent="Clothman/Skeleton3D" index="2"]
+transform = Transform3D(1.49059, -0.567915, 0.242475, 0.121275, -0.351973, -1.5699, 0.605486, 1.4686, -0.282486, -1.16294, 1.04978, -1.0254)
+bone_idx = 18
+
+[node name="Wings_r" parent="Clothman/Skeleton3D" index="3"]
+transform = Transform3D(1.60368, 0.110484, 0.138474, 0.159785, -0.357587, -1.56518, -0.0764899, 1.56943, -0.366367, -1.2722, 1.01947, -0.488694)
+bone_idx = 20
+
+[node name="Legs" parent="Clothman/Skeleton3D" index="4"]
+transform = Transform3D(1.36057, 0.38397, -0.777568, -0.569053, 1.48695, -0.261445, 0.654388, 0.494714, 1.38932, -0.263516, -0.743822, -0.0747627)
+bone_idx = 21
