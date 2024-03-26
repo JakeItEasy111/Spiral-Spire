@@ -86,3 +86,7 @@ scroll_active = false
 
 [node name="InteractSFX" type="AudioStreamPlayer" parent="." index="3"]
 stream = ExtResource("5_8jovm")
+
+[node name="InteractCooldown" type="Timer" parent="." index="4"]
+wait_time = 0.1
+one_shot = true

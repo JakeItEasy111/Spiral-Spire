@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bigrp33bo7xk0"]
+
+[ext_resource type="FontFile" uid="uid://0mhojjt0rey0" path="res://assets/fonts/alagard/alagard.ttf" id="1_rmwr6"]
+
+[resource]
+default_font = ExtResource("1_rmwr6")
+default_font_size = 64

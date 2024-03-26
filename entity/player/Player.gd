@@ -1,6 +1,6 @@
 extends "res://entity/entity_base.gd"
 
-#extended movement variables 
+var dead = false 
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 const JUMP_VELOCITY = 5
 const SENSITIVITY = 0.003
@@ -30,22 +30,31 @@ signal player_hit
 signal step 
 signal fall 
 signal hp_change
+signal player_dead
 
 func _ready():
+	dead = false 
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	SPEED = 5.0
 	
 func _unhandled_input(event): #mouse rotation
+	if dead:
+		return 
 	if event is InputEventMouseMotion:
 		head.rotate_y(-event.relative.x * SENSITIVITY) #rotates around y axis
 		camera.rotate_x(-event.relative.y * SENSITIVITY) #rotates around x axis
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80)) #limits camera 
 		
 func _process(delta):
+	if dead:
+		return
+		
 	subviewport_camera.set_global_transform(camera.get_global_transform())
 	
 func _physics_process(delta):
-	
+	if dead:
+		return
+		
 	# Adds gravity.
 	if not is_on_floor():
 		velocity.y -= gravity * delta 
@@ -144,4 +153,6 @@ func hit(dir, dmg):
 		emit_signal("hp_change") 
 		
 func die():
-	queue_free()
+	dead = true 
+	$SwordOverlay.visible = false 
+	emit_signal("player_dead")

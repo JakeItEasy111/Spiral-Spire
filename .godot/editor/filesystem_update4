@@ -1,6 +1,16 @@
+res://levels/main_level/world.tscn
 res://entity/player/SoundManager.gd
-res://objects/notes/pickup_note.gd
 res://entity/player/pixelation.tres
 res://assets/tilesets/tileset-new.tres
 res://assets/tilesets/props/prop_library.tres
+res://objects/notes/pickup_note.gd
+res://themes/ui_theme.tres
+res://levels/main_level/PauseMenu.gd
+res://levels/menu/menu.tscn
+res://entity/player/player.tscn
+res://objects/notes/note_object.tscn
+res://objects/notes/note_object.gd
 res://assets/models/Clothman/clothman.tscn
+res://entity/player/Player.gd
+res://levels/main_level/DeathScreen.gd
+res://levels/main_level/world.gd
