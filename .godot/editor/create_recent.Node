@@ -1,3 +1,4 @@
+AnimationTree
 AudioStreamPlayer2D
 Label
 RichTextLabel
@@ -23,11 +24,9 @@ GPUParticles3D
 ColorRect
 Node3D
 AnimationPlayer
-AnimationTree
 MeshInstance3D
 AudioStreamPlayer3D
 Marker3D
 GridMap
 CharacterBody3D
 RigidBody3D
-Sprite2D

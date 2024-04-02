@@ -1,25 +1,85 @@
-[gd_scene load_steps=2 format=3 uid="uid://v7a8pmro05g2"]
+[gd_scene load_steps=11 format=3 uid="uid://v7a8pmro05g2"]
 
 [ext_resource type="PackedScene" uid="uid://c0gq3fbxime2q" path="res://assets/models/Clothman/clothman.blend" id="1_adf0n"]
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kbcqg"]
+animation = &"Attack"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xxses"]
+animation = &"Death"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_gqol3"]
+animation = &"Fly"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_dm0t8"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_h2phj"]
+advance_mode = 2
+advance_condition = &"attack"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4l1v2"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_72hwt"]
+xfade_time = 0.2
+advance_mode = 2
+advance_condition = &"die"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xtn10"]
+xfade_time = 0.2
+advance_mode = 2
+advance_condition = &"die"
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_nrk68"]
+states/Attack/node = SubResource("AnimationNodeAnimation_kbcqg")
+states/Attack/position = Vector2(451, 106)
+states/Death/node = SubResource("AnimationNodeAnimation_xxses")
+states/Death/position = Vector2(369, 189)
+states/Fly/node = SubResource("AnimationNodeAnimation_gqol3")
+states/Fly/position = Vector2(303, 106)
+states/Start/position = Vector2(189, 106)
+transitions = ["Start", "Fly", SubResource("AnimationNodeStateMachineTransition_dm0t8"), "Fly", "Attack", SubResource("AnimationNodeStateMachineTransition_h2phj"), "Attack", "Fly", SubResource("AnimationNodeStateMachineTransition_4l1v2"), "Fly", "Death", SubResource("AnimationNodeStateMachineTransition_72hwt"), "Attack", "Death", SubResource("AnimationNodeStateMachineTransition_xtn10")]
+graph_offset = Vector2(-362, 47)
+
 [node name="clothman" instance=ExtResource("1_adf0n")]
 
+[node name="Skeleton3D" parent="Clothman" index="0"]
+bones/0/position = Vector3(0, -0.399773, 0)
+bones/1/rotation = Quaternion(0.00268854, 0, 0, 0.999996)
+bones/3/rotation = Quaternion(0.0456232, -0.0224311, -0.351856, 0.934672)
+bones/4/rotation = Quaternion(-0.0625884, 0.0302611, -0.315021, 0.946535)
+bones/8/rotation = Quaternion(-0.00369049, -0.00308031, -0.474019, 0.880502)
+bones/11/rotation = Quaternion(-0.00176084, 0.000395594, 0.476189, 0.879341)
+bones/14/rotation = Quaternion(0.042499, 0.0228134, 0.356377, 0.933096)
+bones/15/rotation = Quaternion(-0.0667439, 0.00761437, 0.382244, 0.921617)
+bones/17/rotation = Quaternion(-0.166105, -0.0571684, -0.436841, 0.88222)
+bones/19/rotation = Quaternion(-0.166074, 0.0571816, 0.437881, 0.881709)
+
 [node name="Ear_l" parent="Clothman/Skeleton3D" index="0"]
-transform = Transform3D(3.65614, -0.338963, 0.0911117, 0.226652, -0.0123588, -1.5012, 0.847711, 1.46524, 0.00841545, -0.656515, 2.2547, -0.0524718)
+transform = Transform3D(3.65498, -0.333406, 0.115707, 0.289423, -0.012732, -1.49947, 0.83346, 1.46651, 0.0132874, -0.656524, 2.32485, -0.0408277)
 bone_idx = 9
 
 [node name="Ear_r" parent="Clothman/Skeleton3D" index="1"]
-transform = Transform3D(3.65614, -0.338963, 0.0911121, 0.226653, -0.0123588, -1.5012, 0.847711, 1.46524, 0.00841545, -0.656515, 2.2547, -0.0524718)
+transform = Transform3D(3.65615, -0.343101, 0.0739132, 0.182221, -0.0129197, -1.50216, 0.8583, 1.46427, 0.00406492, -0.656382, 2.34439, -0.0452346)
 bone_idx = 12
 
 [node name="Wings_l" parent="Clothman/Skeleton3D" index="2"]
-transform = Transform3D(1.58423, -0.235302, 0.19501, 0.163762, -0.215626, -1.59056, 0.258026, 1.58156, -0.187839, -1.24674, 0.98008, -0.747941)
+transform = Transform3D(1.53303, 0.496102, 0.0829913, 0.0837063, 0.0108722, -1.61123, -0.495982, 1.53524, -0.0154077, -1.22677, 1.12492, -0.136501)
 bone_idx = 18
 
 [node name="Wings_r" parent="Clothman/Skeleton3D" index="3"]
-transform = Transform3D(1.58423, -0.235301, 0.19501, 0.163762, -0.215626, -1.59056, 0.258026, 1.58156, -0.187839, -1.24674, 0.98008, -0.747941)
+transform = Transform3D(1.30282, -0.913947, 0.265593, 0.307376, -0.0220715, -1.58374, 0.900754, 1.32944, 0.156294, -1.00505, 0.948894, -1.23573)
 bone_idx = 20
 
 [node name="Legs" parent="Clothman/Skeleton3D" index="4"]
-transform = Transform3D(1.36057, 0.38397, -0.777568, -0.569053, 1.48695, -0.261445, 0.654388, 0.494714, 1.38932, -0.263516, -0.774996, -0.0747627)
+transform = Transform3D(1.36057, 0.38397, -0.777568, -0.569053, 1.48695, -0.261445, 0.654388, 0.494714, 1.38932, -0.263516, -0.690737, -0.0747627)
 bone_idx = 21
+
+[node name="AnimationTree" type="AnimationTree" parent="." index="2"]
+tree_root = SubResource("AnimationNodeStateMachine_nrk68")
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/conditions/attack = false
+parameters/conditions/die = false

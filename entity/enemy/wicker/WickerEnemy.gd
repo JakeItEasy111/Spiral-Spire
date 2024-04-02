@@ -12,7 +12,6 @@ const ATTACK_RANGE = 2.5
 @onready var death_sfx = $DeathSFX
 
 func _ready():
-	hp = 75
 	fire_anim.play("default")
 	ambient_sfx.pitch_scale = randf_range(0.8, 1.2)
 	ambient_sfx.play() 
