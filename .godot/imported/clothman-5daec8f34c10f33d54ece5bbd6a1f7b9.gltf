@@ -2391,11 +2391,23 @@
 					1
 				],
 				"metallicFactor":0,
-				"roughnessFactor":0.5
+				"roughnessFactor":0
 			}
 		},
 		{
 			"doubleSided":true,
+			"extensions":{
+				"KHR_materials_specular":{
+					"specularColorFactor":[
+						0,
+						0,
+						0
+					]
+				},
+				"KHR_materials_ior":{
+					"ior":1.4500000476837158
+				}
+			},
 			"name":"Material",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -2409,6 +2421,18 @@
 			"alphaCutoff":0.5,
 			"alphaMode":"MASK",
 			"doubleSided":true,
+			"extensions":{
+				"KHR_materials_specular":{
+					"specularColorFactor":[
+						0,
+						0,
+						0
+					]
+				},
+				"KHR_materials_ior":{
+					"ior":1.4500000476837158
+				}
+			},
 			"name":"Probiskis",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -2422,6 +2446,18 @@
 			"alphaCutoff":0.5,
 			"alphaMode":"MASK",
 			"doubleSided":true,
+			"extensions":{
+				"KHR_materials_specular":{
+					"specularColorFactor":[
+						0,
+						0,
+						0
+					]
+				},
+				"KHR_materials_ior":{
+					"ior":1.4500000476837158
+				}
+			},
 			"name":"wings",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{
@@ -2433,6 +2469,18 @@
 		},
 		{
 			"doubleSided":true,
+			"extensions":{
+				"KHR_materials_specular":{
+					"specularColorFactor":[
+						0,
+						0,
+						0
+					]
+				},
+				"KHR_materials_ior":{
+					"ior":1.4500000476837158
+				}
+			},
 			"name":"Material",
 			"pbrMetallicRoughness":{
 				"baseColorTexture":{

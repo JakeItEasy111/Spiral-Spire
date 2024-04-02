@@ -2,7 +2,6 @@ extends "res://entity/entity_base.gd"
 
 @onready var nav_agent = $NavigationAgent3D
 @onready var player : CharacterBody3D = $"../Player"
-@onready var canMove 
 @onready var knockback_force : Vector3 = Vector3.ZERO
 
 func _physics_process(delta):
@@ -24,4 +23,7 @@ func set_target_position(target_location):
 	
 func apply_knockback(force):
 	knockback_force = force.normalized() * 8.0 
+	
+func hitflash():
+	pass 
 	

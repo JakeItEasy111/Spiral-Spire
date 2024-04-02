@@ -1,8 +1,7 @@
 extends CharacterBody3D
 
-@export var hp_max : int = 100 
+@export var hp_max : int = 100
 @export var hp : int = hp_max: set = set_hp
-@export var defense: int = 0
 @export var SPEED: float = 3.0 
 
 @onready var mesh = $MeshInstance3D

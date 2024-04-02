@@ -1,7 +1,9 @@
+res://entity/enemy/clothman
+res://entity/enemy
+res://
 res://UI
 res://assets/fonts/alagard
 res://assets/models/Clothman
-res://
 res://assets/fonts/rubber-biscuit
 res://objects/notes
 res://assets/models/Doors
@@ -10,7 +12,6 @@ res://assets/tilesets/props
 res://entity/enemy/wicker
 res://assets/models/Wicker
 res://assets/sprites
-res://entity/enemy
 res://assets/models/[EXECUTIONER SWORD]
 C:/Program Files/Blender Foundation/Blender 3.6
 res://entity/enemy/test_enemy

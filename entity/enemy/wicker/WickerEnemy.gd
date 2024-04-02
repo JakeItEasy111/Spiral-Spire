@@ -12,6 +12,7 @@ const ATTACK_RANGE = 2.5
 @onready var death_sfx = $DeathSFX
 
 func _ready():
+	hp = 75
 	fire_anim.play("default")
 	ambient_sfx.pitch_scale = randf_range(0.8, 1.2)
 	ambient_sfx.play() 
@@ -50,7 +51,7 @@ func play_death_sfx():
 	death_sfx.pitch_scale = randf_range(0.8, 1.2)
 	death_sfx.play()
 	
-func hitflash(): #WIP 
+func hitflash(): 
 	var tween = get_tree().create_tween()
 	var body = $MeshInstance3D/Armature/Skeleton3D/Cylinder/Cylinder.get_active_material(0)
 	var legs = $MeshInstance3D/Armature/Skeleton3D/Wicker/Wicker.get_active_material(0)

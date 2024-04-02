@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cuvy8k807aurp"]
+
+[ext_resource type="PackedScene" uid="uid://cdc56lh434xix" path="res://entity/enemy/enemy_base.tscn" id="1_qrr7s"]
+[ext_resource type="Script" path="res://entity/enemy/clothman/ClothmanEnemy.gd" id="2_3fp0y"]
+[ext_resource type="PackedScene" uid="uid://v7a8pmro05g2" path="res://assets/models/Clothman/clothman_model.tscn" id="2_u200o"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_41kf8"]
+radius = 0.4
+height = 4.0
+
+[node name="ClothmanEnemy" instance=ExtResource("1_qrr7s")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 2, 0)
+script = ExtResource("2_3fp0y")
+hp_max = 200
+hp = 200
+SPEED = 1.0
+
+[node name="clothman" parent="MeshInstance3D" index="0" instance=ExtResource("2_u200o")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+
+[node name="CollisionShape3D" parent="." index="1"]
+shape = SubResource("CapsuleShape3D_41kf8")
