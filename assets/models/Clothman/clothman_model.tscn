@@ -46,35 +46,35 @@ graph_offset = Vector2(-362, 47)
 [node name="clothman" instance=ExtResource("1_adf0n")]
 
 [node name="Skeleton3D" parent="Clothman" index="0"]
-bones/0/position = Vector3(0, -0.399773, 0)
-bones/1/rotation = Quaternion(0.00268854, 0, 0, 0.999996)
-bones/3/rotation = Quaternion(0.0456232, -0.0224311, -0.351856, 0.934672)
+bones/0/position = Vector3(0, -0.452858, 0)
+bones/1/rotation = Quaternion(0.000858268, 0, 0, 1)
+bones/3/rotation = Quaternion(0.0458008, -0.0221132, -0.344228, 0.937508)
 bones/4/rotation = Quaternion(-0.0625884, 0.0302611, -0.315021, 0.946535)
-bones/8/rotation = Quaternion(-0.00369049, -0.00308031, -0.474019, 0.880502)
-bones/11/rotation = Quaternion(-0.00176084, 0.000395594, 0.476189, 0.879341)
-bones/14/rotation = Quaternion(0.042499, 0.0228134, 0.356377, 0.933096)
+bones/8/rotation = Quaternion(-0.00117754, -0.000982811, -0.47892, 0.877857)
+bones/11/rotation = Quaternion(-0.000562028, 0.000126238, 0.479609, 0.877482)
+bones/14/rotation = Quaternion(0.044343, 0.0219423, 0.348919, 0.935846)
 bones/15/rotation = Quaternion(-0.0667439, 0.00761437, 0.382244, 0.921617)
-bones/17/rotation = Quaternion(-0.166105, -0.0571684, -0.436841, 0.88222)
-bones/19/rotation = Quaternion(-0.166074, 0.0571816, 0.437881, 0.881709)
+bones/17/rotation = Quaternion(-0.0614503, 0.0273391, -0.713256, 0.697669)
+bones/19/rotation = Quaternion(-0.061533, -0.0274829, 0.713708, 0.697194)
 
 [node name="Ear_l" parent="Clothman/Skeleton3D" index="0"]
-transform = Transform3D(3.65498, -0.333406, 0.115707, 0.289423, -0.012732, -1.49947, 0.83346, 1.46651, 0.0132874, -0.656524, 2.32485, -0.0408277)
+transform = Transform3D(3.65589, -0.337177, 0.0989571, 0.246679, -0.0124888, -1.50069, 0.843152, 1.46565, 0.00997804, -0.656545, 2.28138, -0.0487524)
 bone_idx = 9
 
 [node name="Ear_r" parent="Clothman/Skeleton3D" index="1"]
-transform = Transform3D(3.65615, -0.343101, 0.0739132, 0.182221, -0.0129197, -1.50216, 0.8583, 1.46427, 0.00406492, -0.656382, 2.34439, -0.0452346)
+transform = Transform3D(3.65619, -0.340293, 0.0856252, 0.212481, -0.0125443, -1.50153, 0.85113, 1.46493, 0.00703239, -0.65648, 2.28761, -0.0501663)
 bone_idx = 12
 
 [node name="Wings_l" parent="Clothman/Skeleton3D" index="2"]
-transform = Transform3D(1.53303, 0.496102, 0.0829913, 0.0837063, 0.0108722, -1.61123, -0.495982, 1.53524, -0.0154077, -1.22677, 1.12492, -0.136501)
+transform = Transform3D(1.49059, -0.567915, 0.242475, 0.121275, -0.351973, -1.5699, 0.605486, 1.4686, -0.282486, -1.16294, 1.04978, -1.0254)
 bone_idx = 18
 
 [node name="Wings_r" parent="Clothman/Skeleton3D" index="3"]
-transform = Transform3D(1.30282, -0.913947, 0.265593, 0.307376, -0.0220715, -1.58374, 0.900754, 1.32944, 0.156294, -1.00505, 0.948894, -1.23573)
+transform = Transform3D(1.60368, 0.110484, 0.138474, 0.159785, -0.357587, -1.56518, -0.0764899, 1.56943, -0.366367, -1.2722, 1.01947, -0.488694)
 bone_idx = 20
 
 [node name="Legs" parent="Clothman/Skeleton3D" index="4"]
-transform = Transform3D(1.36057, 0.38397, -0.777568, -0.569053, 1.48695, -0.261445, 0.654388, 0.494714, 1.38932, -0.263516, -0.690737, -0.0747627)
+transform = Transform3D(1.36057, 0.38397, -0.777568, -0.569053, 1.48695, -0.261445, 0.654388, 0.494714, 1.38932, -0.263516, -0.743822, -0.0747627)
 bone_idx = 21
 
 [node name="AnimationTree" type="AnimationTree" parent="." index="2"]

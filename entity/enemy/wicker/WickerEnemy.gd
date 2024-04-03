@@ -25,16 +25,16 @@ func _process(delta):
 		"wicker_attack":
 			SPEED = 0
 			particle.emitting = true
-			if (_target_in_range()):
+			if (_target_in_atk_range()):
 				anim_player.get_animation("wicker_attack").loop_mode =  (Animation.LOOP_LINEAR)
 			else:
 				anim_player.get_animation("wicker_attack").loop_mode =  (Animation.LOOP_NONE)
 			
 	#animations
-	anim_tree.set("parameters/conditions/attack", _target_in_range())
-	anim_tree.set("parameters/conditions/run", !_target_in_range())
+	anim_tree.set("parameters/conditions/attack", _target_in_atk_range() && _target_in_range())
+	anim_tree.set("parameters/conditions/run", !_target_in_atk_range() && _target_in_range())
 	
-func _target_in_range():
+func _target_in_atk_range():
 	return global_position.distance_to(player.global_position) < ATTACK_RANGE
 	
 func _hit_finished():
@@ -62,6 +62,7 @@ func hitflash():
 	tween.tween_property(body, "emission", Color.BLACK, 0.05)
 
 func die():
+	dead = true 
 	anim_tree.set("parameters/conditions/die", true)
 	await get_tree().create_timer(1.0).timeout
 	$OmniLight3D.visible = false 

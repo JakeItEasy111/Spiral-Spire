@@ -1,8 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1712079917
+::res://::1712145347
 icon.svg::CompressedTexture2D::4677634300119052370::1697632783::1712060596::1::::<><>::
-project_time_traker.json::JSON::-1::1712065075::0::1::::<><>::
-ClothmanEnemy.gd::GDScript::-1::1712080092::0::1::::<>CharacterBody3D<>::
+project_time_traker.json::JSON::-1::1712080950::0::1::::<><>::
 ::res://addons/::1698770634
 project_time_traker.json::JSON::-1::1698770630::0::1::::<><>::
 ::res://addons/FloorArchitect/::1698770683
@@ -49,9 +48,9 @@ RUBBBB__.TTF::FontFile::5454963030482535355::1706126184::1706126188::1::::<><>::
 RUBBBI__.TTF::FontFile::7191563521478504995::1706126184::1706126188::1::::<><>::
 RUBBBRO_.TTF::FontFile::28651141056237683::1706126184::1706126188::1::::<><>::
 ::res://assets/models/::1711114178
-::res://assets/models/Clothman/::1712079916
+::res://assets/models/Clothman/::1712080949
 clothman.blend::PackedScene::6540970464192708662::1712061184::1712061208::1::::<><>::
-clothman_model.tscn::PackedScene::1540085542907488039::1712079916::0::1::::<><>::uid://c0gq3fbxime2q::::res://assets/models/Clothman/clothman.blend
+clothman_model.tscn::PackedScene::1540085542907488039::1712080949::0::1::::<><>::uid://c0gq3fbxime2q::::res://assets/models/Clothman/clothman.blend
 ::res://assets/models/Clothman/textures/::1712061206
 clothman-fur.png::CompressedTexture2D::4516536843655279909::1712061187::1712061206::1::::<><>::
 clothman-surcoat.png::CompressedTexture2D::6171959036028644995::1712061187::1712061206::1::::<><>::
@@ -206,30 +205,32 @@ prop_tileset_chair_n.png::CompressedTexture2D::6672320827237372629::1709668758::
 ::res://entity/::1712064294
 entity_base.gd::GDScript::-1::1712064294::0::1::::<>CharacterBody3D<>::
 entity_base.tscn::PackedScene::3349132812800360065::1712063631::0::1::::<><>::res://entity/entity_base.gd
-::res://entity/enemy/::1712079916
+::res://entity/enemy/::1712080527
 enemy_base.gd::GDScript::-1::1712063339::0::1::::<>CharacterBody3D<>::
-enemy_base.tscn::PackedScene::4989414113129158411::1712079916::0::1::::<><>::uid://bnyly0xy2l6ft::::res://entity/entity_base.tscn<>res://entity/enemy/enemy_base.gd
-::res://entity/enemy/clothman/::1712080019
-::res://entity/enemy/test_enemy/::1706713851
+enemy_base.tscn::PackedScene::4989414113129158411::1712080527::0::1::::<><>::uid://bnyly0xy2l6ft::::res://entity/entity_base.tscn<>res://entity/enemy/enemy_base.gd
+::res://entity/enemy/clothman/::1712080922
+ClothmanEnemy.gd::GDScript::-1::1712080447::0::1::::<>CharacterBody3D<>::
+clothman_enemy.tscn::PackedScene::2291787907812483341::1712080922::0::1::::<><>::uid://cdc56lh434xix::::res://entity/enemy/enemy_base.tscn<>res://entity/enemy/clothman/ClothmanEnemy.gd<>uid://v7a8pmro05g2::::res://assets/models/Clothman/clothman_model.tscn
+::res://entity/enemy/test_enemy/::1712080527
 TestEnemy.gd::GDScript::-1::1706280916::0::1::::<>CharacterBody3D<>::
-test_enemy.tscn::PackedScene::3001968007551582081::1706713851::0::1::::<><>::uid://cdc56lh434xix
-::res://entity/enemy/wicker/::1712079916
+test_enemy.tscn::PackedScene::3001968007551582081::1712080527::0::1::::<><>::uid://cdc56lh434xix::::res://entity/enemy/enemy_base.tscn<>res://entity/enemy/test_enemy/TestEnemy.gd
+::res://entity/enemy/wicker/::1712080922
 WickerEnemy.gd::GDScript::-1::1712079793::0::1::::<>CharacterBody3D<>::
-wicker_enemy.tscn::PackedScene::2384935861073958895::1712079916::0::1::::<><>::uid://cdc56lh434xix::::res://entity/enemy/enemy_base.tscn<>res://entity/enemy/wicker/WickerEnemy.gd<>uid://bd10pnluc05w7::::res://assets/models/Wicker/textures/wicker-diffuse-3.png<>uid://s1wwidb58yg1::::res://assets/sprites/fireSpriteSheet.png<>uid://bnsk4pmuiobk5::::res://assets/models/Wicker/wick_mat.tres<>uid://dk2mli3vfnyjo::::res://assets/models/Wicker/wicker_attack.res<>uid://touee2kqcxhf::::res://assets/sprites/9_brightfire_spritesheet.png<>uid://beiji3ek3fr0a::::res://assets/sounds/sfx/fire/ambient_fire.mp3<>uid://ciuv1kurp4em8::::res://assets/sounds/sfx/fire/wicker_attack.wav<>uid://dgl4s1s46ljeu::::res://assets/sprites/16_sunburn_spritesheet.png<>uid://b263l3tyqtetu::::res://assets/sounds/sfx/fire/wicker_die.wav
-::res://entity/player/::1712079916
+wicker_enemy.tscn::PackedScene::2384935861073958895::1712080922::0::1::::<><>::uid://cdc56lh434xix::::res://entity/enemy/enemy_base.tscn<>res://entity/enemy/wicker/WickerEnemy.gd<>uid://bd10pnluc05w7::::res://assets/models/Wicker/textures/wicker-diffuse-3.png<>uid://s1wwidb58yg1::::res://assets/sprites/fireSpriteSheet.png<>uid://bnsk4pmuiobk5::::res://assets/models/Wicker/wick_mat.tres<>uid://dk2mli3vfnyjo::::res://assets/models/Wicker/wicker_attack.res<>uid://touee2kqcxhf::::res://assets/sprites/9_brightfire_spritesheet.png<>uid://beiji3ek3fr0a::::res://assets/sounds/sfx/fire/ambient_fire.mp3<>uid://ciuv1kurp4em8::::res://assets/sounds/sfx/fire/wicker_attack.wav<>uid://dgl4s1s46ljeu::::res://assets/sprites/16_sunburn_spritesheet.png<>uid://b263l3tyqtetu::::res://assets/sounds/sfx/fire/wicker_die.wav
+::res://entity/player/::1712080921
 InteractRay.gd::GDScript::-1::1710763334::0::1::::<>Camera3D<>::
 pixelation.tres::VisualShader::4261092318961097702::1712078646::0::1::::<><>::
 Player.gd::GDScript::-1::1712064345::0::1::::<>CharacterBody3D<>::
-player.tscn::PackedScene::3465598162712734386::1712079916::0::1::::<><>::uid://bnyly0xy2l6ft::::res://entity/entity_base.tscn<>res://entity/player/Player.gd<>uid://b2j84cqc0nvhe::::res://assets/models/[EXECUTIONER SWORD]/executionersword.tscn<>uid://c2fnfciivxmcb::::res://assets/sounds/sfx/sword/swoosh_1.mp3<>res://entity/player/InteractRay.gd<>uid://3gqdqfaq3aw6::::res://assets/sounds/sfx/sword/swoosh_2.mp3<>uid://bbniqovmumiaa::::res://assets/sounds/sfx/sword/swoosh_3.mp3<>uid://b1ydtksksvlja::::res://entity/player/pixelation.tres<>res://entity/player/SoundManager.gd<>uid://b7v47oi3pw6yg::::res://icon.svg<>uid://c716fycad42od::::res://assets/sounds/sfx/footsteps/footstep_1.mp3<>uid://012336lw68p1::::res://assets/sounds/sfx/footsteps/footstep_2.mp3<>uid://bi3inbpfpgjs6::::res://assets/sounds/sfx/footsteps/footstep_3.mp3<>uid://ddjn0lqwtgpea::::res://assets/sounds/sfx/footsteps/footstep_4.mp3<>uid://ynsm3dbjxnpa::::res://assets/sounds/sfx/footsteps/footstep_5.mp3<>uid://bt3p48aknuy6r::::res://assets/sounds/sfx/footsteps/footstep_6.mp3<>uid://lboho6hadop2::::res://assets/sounds/sfx/fire/fire_hurt.mp3<>uid://d08v7d8qj0q::::res://assets/sounds/sfx/sword/hit.mp3<>uid://dq126ud31dipu::::res://assets/sounds/sfx/footsteps/fall_1.mp3<>uid://2qjpoxl7lsw8::::res://assets/sounds/sfx/footsteps/fall_2.mp3
+player.tscn::PackedScene::3465598162712734386::1712080921::0::1::::<><>::uid://bnyly0xy2l6ft::::res://entity/entity_base.tscn<>res://entity/player/Player.gd<>uid://b2j84cqc0nvhe::::res://assets/models/[EXECUTIONER SWORD]/executionersword.tscn<>uid://c2fnfciivxmcb::::res://assets/sounds/sfx/sword/swoosh_1.mp3<>res://entity/player/InteractRay.gd<>uid://3gqdqfaq3aw6::::res://assets/sounds/sfx/sword/swoosh_2.mp3<>uid://bbniqovmumiaa::::res://assets/sounds/sfx/sword/swoosh_3.mp3<>uid://b1ydtksksvlja::::res://entity/player/pixelation.tres<>res://entity/player/SoundManager.gd<>uid://b7v47oi3pw6yg::::res://icon.svg<>uid://c716fycad42od::::res://assets/sounds/sfx/footsteps/footstep_1.mp3<>uid://012336lw68p1::::res://assets/sounds/sfx/footsteps/footstep_2.mp3<>uid://bi3inbpfpgjs6::::res://assets/sounds/sfx/footsteps/footstep_3.mp3<>uid://ddjn0lqwtgpea::::res://assets/sounds/sfx/footsteps/footstep_4.mp3<>uid://ynsm3dbjxnpa::::res://assets/sounds/sfx/footsteps/footstep_5.mp3<>uid://bt3p48aknuy6r::::res://assets/sounds/sfx/footsteps/footstep_6.mp3<>uid://lboho6hadop2::::res://assets/sounds/sfx/fire/fire_hurt.mp3<>uid://d08v7d8qj0q::::res://assets/sounds/sfx/sword/hit.mp3<>uid://dq126ud31dipu::::res://assets/sounds/sfx/footsteps/fall_1.mp3<>uid://2qjpoxl7lsw8::::res://assets/sounds/sfx/footsteps/fall_2.mp3
 SoundManager.gd::GDScript::-1::1712078645::0::1::::<>Node3D<>::
 ::res://levels/::1699628226
 ::res://levels/dungeons/::1711115089
 devroom.tscn::PackedScene::4735619179336160775::1711115089::0::1::::<><>::uid://us1ixi1tpfp8
-::res://levels/main_level/::1712079916
+::res://levels/main_level/::1712080921
 DeathScreen.gd::GDScript::-1::1712059911::0::1::::<>Control<>::
 PauseMenu.gd::GDScript::-1::1712059911::0::1::::<>Control<>::
 world.gd::GDScript::-1::1712059911::0::1::::<>Node3D<>::
-world.tscn::PackedScene::3548032570636659567::1712079916::0::1::::<><>::res://levels/main_level/world.gd<>res://levels/main_level/PauseMenu.gd<>uid://bigrp33bo7xk0::::res://UI/ui_theme.tres<>uid://ims4h0555a65::::res://UI/deathScreen.png<>uid://ql0l8j2ni6xb::::res://objects/torch/torch.tscn<>uid://bpm05pdgfeeja::::res://entity/player/player.tscn<>res://levels/main_level/DeathScreen.gd<>uid://b263l3tyqtetu::::res://assets/sounds/sfx/fire/wicker_die.wav<>uid://b8p77rewu34ul::::res://levels/dungeons/devroom.tscn<>uid://bxbgr3mp2o2mn::::res://assets/sprites/home depo.jpg<>uid://88jssic5a3c2::::res://entity/enemy/wicker/wicker_enemy.tscn<>uid://b8kxtpqpyap6m::::res://objects/door/door.tscn<>uid://0mhojjt0rey0::::res://assets/fonts/alagard/alagard.ttf<>uid://xfak30c1l3em::::res://objects/notes/note_object.tscn<>uid://cuvy8k807aurp::::res://entity/enemy/clothman/clothman_enemy.tscn<>uid://bi1f8ern5d0yv::::res://entity/enemy/test_enemy/test_enemy.tscn
+world.tscn::PackedScene::3548032570636659567::1712080921::0::1::::<><>::res://levels/main_level/world.gd<>res://levels/main_level/PauseMenu.gd<>uid://bigrp33bo7xk0::::res://UI/ui_theme.tres<>uid://ims4h0555a65::::res://UI/deathScreen.png<>uid://ql0l8j2ni6xb::::res://objects/torch/torch.tscn<>uid://bpm05pdgfeeja::::res://entity/player/player.tscn<>res://levels/main_level/DeathScreen.gd<>uid://b263l3tyqtetu::::res://assets/sounds/sfx/fire/wicker_die.wav<>uid://b8p77rewu34ul::::res://levels/dungeons/devroom.tscn<>uid://bxbgr3mp2o2mn::::res://assets/sprites/home depo.jpg<>uid://88jssic5a3c2::::res://entity/enemy/wicker/wicker_enemy.tscn<>uid://b8kxtpqpyap6m::::res://objects/door/door.tscn<>uid://0mhojjt0rey0::::res://assets/fonts/alagard/alagard.ttf<>uid://xfak30c1l3em::::res://objects/notes/note_object.tscn<>uid://7wfoajse50ld::::res://entity/enemy/clothman/clothman_enemy.tscn
 ::res://levels/menu/::1712078831
 Button.gd::GDScript::-1::1698930724::0::1::::<>Button<>::
 menu.tscn::PackedScene::6982835356959887867::1712078831::0::1::::<><>::uid://cjyopdofstljf::::res://assets/fonts/rubber-biscuit/RUBBBB__.TTF<>res://levels/menu/Button.gd
@@ -241,7 +242,7 @@ DoorInteraction.gd::GDScript::-1::1710333645::0::1::::<>Area3D<>::
 ::res://objects/notes/::1712078645
 item_highlighter.gdshader::Shader::-1::1710439370::0::1::::<><>::
 note_object.gd::GDScript::-1::1712059911::0::1::::<>Node3D<>::
-note_object.tscn::PackedScene::1624684659784087548::1712061844::0::1::::<><>::uid://d2xppx5lkf4sc::::res://assets/models/Papers/papers_log_1.blend<>uid://c34rgaqw10ksm::::res://assets/models/Papers/Materials/noteTexture.png<>res://objects/notes/note_object.gd<>res://objects/notes/pickup_note.gd<>uid://cygjk7g5rcmnb::::res://assets/sprites/noteUI.png<>res://objects/notes/item_highlighter.gdshader<>uid://cp8mn2qt7oxhm::::res://assets/sounds/sfx/interactions/note_interact.mp3<>uid://dapwaattyuyd4::::res://assets/fonts/rubber-biscuit/RUBBBI__.TTF
+note_object.tscn::PackedScene::1624684659784087548::1712061844::0::1::::<><>::uid://d2xppx5lkf4sc
 pickup_note.gd::GDScript::-1::1712078645::0::1::::<>Area3D<>::
 ::res://objects/torch/::1710159543
 torch.gd::GDScript::-1::1709819792::0::1::::<>Node3D<>::
