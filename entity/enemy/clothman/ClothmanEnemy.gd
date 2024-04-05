@@ -12,10 +12,15 @@ func _process(delta):
 			SPEED = 1
 		"Attack":
 			SPEED = 0
+			shoot()
 		
 	anim_tree.set("parameters/conditions/attack", _can_see_target() && _target_in_range())
 	anim_tree.set("parameters/conditions/run", _target_in_range())
 
+func shoot():
+	print("shoot projectile")
+	
+	
 func die():
 	dead = true 
 	anim_tree.set("parameters/conditions/die", true)

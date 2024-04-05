@@ -1,3 +1,4 @@
+res://assets/sprites
 res://entity/enemy/clothman
 res://entity/enemy
 res://
@@ -11,7 +12,6 @@ res://assets/tilesets
 res://assets/tilesets/props
 res://entity/enemy/wicker
 res://assets/models/Wicker
-res://assets/sprites
 res://assets/models/[EXECUTIONER SWORD]
 C:/Program Files/Blender Foundation/Blender 3.6
 res://entity/enemy/test_enemy

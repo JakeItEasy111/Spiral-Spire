@@ -1,3 +1,7 @@
+Timer
+AnimatedSprite3D
+CollisionShape3D
+Area3D
 RayCast3D
 AnimationTree
 AudioStreamPlayer2D
@@ -6,7 +10,6 @@ RichTextLabel
 TextEdit
 TextureRect
 Control
-Timer
 Button
 VBoxContainer
 PanelContainer
@@ -16,8 +19,6 @@ Panel
 MenuBar
 HBoxContainer
 MarginContainer
-CollisionShape3D
-Area3D
 Camera3D
 Node
 GPUParticles3D
@@ -29,4 +30,3 @@ AudioStreamPlayer3D
 Marker3D
 GridMap
 CharacterBody3D
-RigidBody3D

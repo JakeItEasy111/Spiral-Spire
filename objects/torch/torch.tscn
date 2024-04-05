@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://objects/torch/torch.gd" id="1_541s6"]
 [ext_resource type="PackedScene" uid="uid://cf5pelgcm2f01" path="res://assets/models/Torch/torch.blend" id="1_h3y1y"]
 [ext_resource type="Texture2D" uid="uid://c4ae1mg3052f7" path="res://assets/sprites/torchfire_spritesheet.png" id="2_p358v"]
-[ext_resource type="AudioStream" uid="uid://beiji3ek3fr0a" path="res://assets/sounds/sfx/fire/bitcrushed_fire.mp3" id="4_m4a5e"]
+[ext_resource type="AudioStream" uid="uid://beiji3ek3fr0a" path="res://assets/sounds/sfx/fire/ambient_fire.mp3" id="4_m4a5e"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x5lfq"]
 atlas = ExtResource("2_p358v")

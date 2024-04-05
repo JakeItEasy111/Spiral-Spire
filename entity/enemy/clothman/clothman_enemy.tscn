@@ -25,3 +25,5 @@ shape = SubResource("CapsuleShape3D_tkwtb")
 visible = true
 collide_with_areas = true
 debug_shape_custom_color = Color(1, 0, 0, 1)
+
+[node name="AttackTimer" type="Timer" parent="." index="4"]
