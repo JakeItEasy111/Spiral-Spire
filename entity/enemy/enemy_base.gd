@@ -3,8 +3,8 @@ extends "res://entity/entity_base.gd"
 @onready var nav_agent = $NavigationAgent3D
 @onready var player : CharacterBody3D = $"../Player"
 @onready var knockback_force : Vector3 = Vector3.ZERO
-@onready var sight_ray : RayCast3D = $PlayerDetectRay
-@onready var detect_range : int = 10
+@onready var sight_rays = [$PlayerDetectRay, $PlayerDetectRay2, $PlayerDetectRay3]
+@export var detect_range : int 
 @onready var dead = false 
 
 func _physics_process(delta):
@@ -29,9 +29,10 @@ func set_target_position(target_location):
 	nav_agent.target_position = target_location
 
 func _can_see_target():
-	if sight_ray.is_colliding():
-		if sight_ray.get_collider() == player:
-			return true; 
+	for ray in sight_rays:
+		if(ray.is_colliding):
+			if ray.get_collider() == player:
+				return true; 
 	
 func apply_knockback(force):
 	knockback_force = force.normalized() * 8.0 

@@ -31,8 +31,8 @@ func _process(delta):
 				anim_player.get_animation("wicker_attack").loop_mode =  (Animation.LOOP_NONE)
 			
 	#animations
-	anim_tree.set("parameters/conditions/attack", _target_in_atk_range() && _target_in_range())
-	anim_tree.set("parameters/conditions/run", !_target_in_atk_range() && _target_in_range())
+	anim_tree.set("parameters/conditions/attack", _target_in_atk_range() and _target_in_range())
+	anim_tree.set("parameters/conditions/run", !_target_in_atk_range() and _target_in_range())
 	
 func _target_in_atk_range():
 	return global_position.distance_to(player.global_position) < ATTACK_RANGE

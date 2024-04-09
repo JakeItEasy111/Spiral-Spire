@@ -280,7 +280,7 @@ length = 0.5
 shader = ExtResource("6_2xjnj")
 shader_parameter/Pixelisation = 256.0
 
-[node name="Player" instance=ExtResource("1_5030y")]
+[node name="Player" groups=["player"] instance=ExtResource("1_5030y")]
 script = ExtResource("2_objnu")
 hp = 100
 
