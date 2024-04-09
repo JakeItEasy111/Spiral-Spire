@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://crath66sueysf"]
+[gd_scene load_steps=21 format=3 uid="uid://crath66sueysf"]
 
 [ext_resource type="Script" path="res://entity/enemy/clothman/clothman_projectile.gd" id="1_4q2xl"]
 [ext_resource type="Texture2D" uid="uid://c4xehlik1qhdr" path="res://assets/sprites/light-projectile-2-spritesheet.png" id="1_s77i7"]
+[ext_resource type="Texture2D" uid="uid://dewkqpx881otn" path="res://assets/sprites/light-projectile-spritesheet.png" id="3_ksbh8"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_xgvok"]
 radius = 0.1
@@ -56,7 +57,69 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xyox"]
+atlas = ExtResource("3_ksbh8")
+region = Rect2(18, 0, 32, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_op3sb"]
+atlas = ExtResource("3_ksbh8")
+region = Rect2(51, 0, 32, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1dkn"]
+atlas = ExtResource("3_ksbh8")
+region = Rect2(84, 0, 32, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hngxt"]
+atlas = ExtResource("3_ksbh8")
+region = Rect2(117, 0, 32, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3rtpv"]
+atlas = ExtResource("3_ksbh8")
+region = Rect2(150, 0, 32, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lc3x"]
+atlas = ExtResource("3_ksbh8")
+region = Rect2(216, 0, 32, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pufdn"]
+atlas = ExtResource("3_ksbh8")
+region = Rect2(249, 0, 32, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xa70k"]
+atlas = ExtResource("3_ksbh8")
+region = Rect2(282, 0, 32, 17)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_pb837"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5xyox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_op3sb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r1dkn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hngxt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3rtpv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1lc3x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pufdn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xa70k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
 
 [node name="ClothmanProjectile" type="Area3D"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
@@ -69,16 +132,22 @@ shape = SubResource("SphereShape3D_xgvok")
 wait_time = 3.0
 one_shot = true
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+[node name="ProjectileSprite" type="AnimatedSprite3D" parent="."]
 billboard = 1
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_dpago")
 frame_progress = 0.0934901
 
 [node name="BurstEffect" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05, 0, 0)
+visible = false
+billboard = 1
+texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_pb837")
+frame_progress = 0.985023
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 light_energy = 0.5
 omni_range = 2.5
 omni_attenuation = 2.0

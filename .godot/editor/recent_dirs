@@ -1,10 +1,10 @@
-res://entity/enemy/clothman
 res://assets/sprites
+res://assets/models/Clothman
+res://entity/enemy/clothman
 res://entity/enemy
 res://
 res://UI
 res://assets/fonts/alagard
-res://assets/models/Clothman
 res://assets/fonts/rubber-biscuit
 res://objects/notes
 res://assets/models/Doors

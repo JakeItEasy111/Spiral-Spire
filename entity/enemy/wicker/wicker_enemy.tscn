@@ -912,7 +912,7 @@ skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_2kdfg")
 
 [node name="Wicker" type="BoneAttachment3D" parent="MeshInstance3D/Armature/Skeleton3D" index="1"]
-transform = Transform3D(0.0633271, -2.29441e-09, 1.7129e-09, 4.03104e-10, 0.360448, 2.90418e-08, -1.7129e-09, -1.65302e-07, 0.0633271, 0.000184395, 2.00801, -0.0373012)
+transform = Transform3D(0.0633271, -2.29441e-09, 1.7129e-09, 4.03104e-10, 0.360448, 2.90418e-08, -1.7129e-09, -1.65302e-07, 0.0633271, 0.000184395, 2.00801, -0.0373011)
 bone_name = "Wicker"
 bone_idx = 12
 
