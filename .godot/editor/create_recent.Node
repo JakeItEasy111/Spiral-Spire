@@ -1,8 +1,8 @@
+Node3D
+AnimatedSprite3D
+Timer
 OmniLight3D
 PointLight2D
-Node3D
-Timer
-AnimatedSprite3D
 CollisionShape3D
 Area3D
 RayCast3D
@@ -30,4 +30,3 @@ AnimationPlayer
 MeshInstance3D
 AudioStreamPlayer3D
 Marker3D
-GridMap

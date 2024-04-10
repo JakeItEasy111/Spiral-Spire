@@ -5,10 +5,10 @@ extends Node3D
 var can_shoot : bool = true;
 
 func shoot():
-	can_shoot = false
+	can_shoot = false 
 	$"../AttackTimer".start() 
 	
-	var b = bullet.instantiate()
+	var b = bullet.instantiate() 
 	b.rotation_degrees = self.global_transform.basis.get_euler() 
 	self.add_child(b) 
 
@@ -18,3 +18,4 @@ func _on_clothman_enemy_shoot():
 		
 func _on_attack_timer_timeout():
 	can_shoot = true 
+
