@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://v7a8pmro05g2"]
+[gd_scene load_steps=39 format=3 uid="uid://v7a8pmro05g2"]
 
 [ext_resource type="Texture2D" uid="uid://bm012qc8ahk4v" path="res://assets/models/Clothman/textures/probiscis.png" id="1_d6v2l"]
 [ext_resource type="Texture2D" uid="uid://3cx6bgyu2507" path="res://assets/models/Clothman/textures/clothman-wings.png" id="2_y1xld"]
@@ -14,6 +14,7 @@ cull_mode = 2
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("1_d6v2l")
 roughness = 0.5
+emission_enabled = true
 texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_4hp0w"]
@@ -85,6 +86,7 @@ cull_mode = 2
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("2_y1xld")
 roughness = 0.5
+emission_enabled = true
 texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_6hxc8"]
@@ -153,6 +155,7 @@ cull_mode = 2
 vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("3_n881p")
 roughness = 0.5
+emission_enabled = true
 texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_52rf6"]
@@ -192,6 +195,7 @@ vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("4_lhtcv")
 metallic_specular = 0.0
 roughness = 0.5
+emission_enabled = true
 texture_filter = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ko08"]
@@ -201,6 +205,7 @@ vertex_color_use_as_albedo = true
 albedo_color = Color(0, 0, 0, 1)
 metallic_specular = 0.0
 roughness = 0.0
+emission_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ae5ag"]
 resource_name = "Material"
@@ -209,6 +214,7 @@ vertex_color_use_as_albedo = true
 albedo_texture = ExtResource("3_n881p")
 metallic_specular = 0.0
 roughness = 0.5
+emission_enabled = true
 texture_filter = 2
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_y1vvi"]
@@ -621,6 +627,211 @@ states/Start/position = Vector2(189, 106)
 transitions = ["Start", "Fly", SubResource("AnimationNodeStateMachineTransition_dm0t8"), "Fly", "Attack", SubResource("AnimationNodeStateMachineTransition_h2phj"), "Attack", "Fly", SubResource("AnimationNodeStateMachineTransition_4l1v2"), "Fly", "Death", SubResource("AnimationNodeStateMachineTransition_72hwt"), "Attack", "Death", SubResource("AnimationNodeStateMachineTransition_xtn10")]
 graph_offset = Vector2(-362, 47)
 
+[sub_resource type="Animation" id="Animation_pdytn"]
+resource_name = "hitflash"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Clothman/Skeleton3D/Body :mesh:surface_1/material:emission")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Clothman/Skeleton3D/Body :mesh:surface_0/material:emission")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Clothman/Skeleton3D/Body :mesh:surface_2/material:emission")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Clothman/Skeleton3D/Legs/Legs:mesh:surface_0/material:emission")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Clothman/Skeleton3D/Wings_r/Wings_r:mesh:surface_0/material:emission")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Clothman/Skeleton3D/Wings_l/Wings_l:mesh:surface_0/material:emission")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Clothman/Skeleton3D/Ear_r/Ear_r:mesh:surface_0/material:emission")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Clothman/Skeleton3D/Ear_l/Ear_l:mesh:surface_0/material:emission")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_4xil4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Clothman/Skeleton3D/Body :mesh:surface_1/material:emission")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Clothman/Skeleton3D/Body :mesh:surface_0/material:emission")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Clothman/Skeleton3D/Body :mesh:surface_2/material:emission")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Clothman/Skeleton3D/Legs/Legs:mesh:surface_0/material:emission")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Clothman/Skeleton3D/Wings_r/Wings_r:mesh:surface_0/material:emission")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Clothman/Skeleton3D/Wings_l/Wings_l:mesh:surface_0/material:emission")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Clothman/Skeleton3D/Ear_r/Ear_r:mesh:surface_0/material:emission")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Clothman/Skeleton3D/Ear_l/Ear_l:mesh:surface_0/material:emission")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ncmcn"]
+_data = {
+"RESET": SubResource("Animation_4xil4"),
+"hitflash": SubResource("Animation_pdytn")
+}
+
 [node name="clothman" type="Node3D"]
 
 [node name="Clothman" type="Node3D" parent="."]
@@ -631,7 +842,7 @@ bones/0/name = "Bone"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.484032, 0)
 bones/0/enabled = true
-bones/0/position = Vector3(0, -0.183467, 0)
+bones/0/position = Vector3(0, -0.348249, 0)
 bones/0/rotation = Quaternion(0, 0, 0, 1)
 bones/0/scale = Vector3(1, 1, 1)
 bones/1/name = "Bone.001"
@@ -639,7 +850,7 @@ bones/1/parent = 0
 bones/1/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.16134, 0)
 bones/1/enabled = true
 bones/1/position = Vector3(0, 1.16134, 0)
-bones/1/rotation = Quaternion(0.0164866, 0, 0, 0.999864)
+bones/1/rotation = Quaternion(0.00495214, 0, 0, 0.999988)
 bones/1/scale = Vector3(1, 1, 1)
 bones/2/name = "shoulder.l"
 bones/2/parent = 1
@@ -653,7 +864,7 @@ bones/3/parent = 2
 bones/3/rest = Transform3D(0.767389, 0.637071, -0.072482, -0.641103, 0.764143, -0.0712227, 0.0100126, 0.101124, 0.994823, 0, 0.161344, 7.10543e-15)
 bones/3/enabled = true
 bones/3/position = Vector3(0, 0.161344, 7.10543e-15)
-bones/3/rotation = Quaternion(0.04454, -0.0248425, -0.393227, 0.918026)
+bones/3/rotation = Quaternion(0.045416, -0.0228264, -0.360432, 0.9314)
 bones/3/scale = Vector3(1, 1, 1)
 bones/4/name = "forearm.l"
 bones/4/parent = 3
@@ -688,7 +899,7 @@ bones/8/parent = 7
 bones/8/rest = Transform3D(0.536875, 0.843662, 8.09398e-08, -0.843662, 0.536875, -7.85545e-09, -5.00819e-08, -6.40684e-08, 1, 1.49012e-08, 0.34904, 8.88178e-15)
 bones/8/enabled = true
 bones/8/position = Vector3(1.49012e-08, 0.34904, 8.88178e-15)
-bones/8/rotation = Quaternion(-0.0226729, -0.0189245, -0.436347, 0.899294)
+bones/8/rotation = Quaternion(-0.00680115, -0.00567671, -0.467924, 0.883724)
 bones/8/scale = Vector3(1, 1, 1)
 bones/9/name = "Ear.l"
 bones/9/parent = 8
@@ -709,7 +920,7 @@ bones/11/parent = 10
 bones/11/rest = Transform3D(0.536875, -0.843662, -8.09398e-08, 0.843662, 0.536875, -7.85545e-09, 5.00819e-08, -6.40684e-08, 1, -1.49012e-08, 0.34904, 8.88178e-15)
 bones/11/enabled = true
 bones/11/position = Vector3(-1.49012e-08, 0.34904, 8.88178e-15)
-bones/11/rotation = Quaternion(-0.0108046, 0.0024276, 0.450131, 0.892894)
+bones/11/rotation = Quaternion(-0.00324393, 0.00072882, 0.471947, 0.881621)
 bones/11/scale = Vector3(1, 1, 1)
 bones/12/name = "Ear.r"
 bones/12/parent = 11
@@ -730,7 +941,7 @@ bones/14/parent = 13
 bones/14/rest = Transform3D(0.760875, -0.644935, 0.0716036, 0.648836, 0.757678, -0.0702465, -0.00894802, 0.0999079, 0.994956, 0, 0.161344, 7.10543e-15)
 bones/14/enabled = true
 bones/14/position = Vector3(0, 0.161344, 7.10543e-15)
-bones/14/rotation = Quaternion(0.0369415, 0.0268084, 0.397088, 0.916645)
+bones/14/rotation = Quaternion(0.0406948, 0.0237665, 0.364773, 0.929903)
 bones/14/scale = Vector3(1, 1, 1)
 bones/15/name = "forearm.r"
 bones/15/parent = 14
@@ -751,7 +962,7 @@ bones/17/parent = 16
 bones/17/rest = Transform3D(0.195803, 0.974658, 0.108174, -0.97116, 0.177422, 0.15928, 0.136051, -0.136242, 0.981289, 0, 0.500426, -7.45058e-08)
 bones/17/enabled = true
 bones/17/position = Vector3(0, 0.500426, -7.45058e-08)
-bones/17/rotation = Quaternion(-0.0480095, 0.0385866, -0.741517, 0.668101)
+bones/17/rotation = Quaternion(-0.14213, -0.0324481, -0.512649, 0.846131)
 bones/17/scale = Vector3(1, 1, 1)
 bones/18/name = "Wings.l"
 bones/18/parent = 17
@@ -765,7 +976,7 @@ bones/19/parent = 16
 bones/19/rest = Transform3D(0.195803, -0.974658, -0.108174, 0.97116, 0.177422, 0.15928, -0.136051, -0.136242, 0.981289, 0, 0.500426, -7.45058e-08)
 bones/19/enabled = true
 bones/19/position = Vector3(0, 0.500426, -7.45058e-08)
-bones/19/rotation = Quaternion(-0.0480839, -0.0387324, 0.741942, 0.667615)
+bones/19/rotation = Quaternion(-0.142085, 0.0324421, 0.513771, 0.845458)
 bones/19/scale = Vector3(1, 1, 1)
 bones/20/name = "Wings.r"
 bones/20/parent = 19
@@ -783,7 +994,7 @@ bones/21/rotation = Quaternion(0.123061, -0.233042, -0.155099, 0.952099)
 bones/21/scale = Vector3(1.61344, 1.61344, 1.61344)
 
 [node name="Ear_l" type="BoneAttachment3D" parent="Clothman/Skeleton3D"]
-transform = Transform3D(3.63074, -0.306724, 0.242321, 0.612011, -0.0131872, -1.48386, 0.761867, 1.47231, 0.0371915, -0.652668, 2.46782, 0.0185488)
+transform = Transform3D(3.65311, -0.328813, 0.136451, 0.342338, -0.0129713, -1.49768, 0.82153, 1.46754, 0.017335, -0.65634, 2.36443, -0.031041)
 bone_name = "Ear.l"
 bone_idx = 9
 
@@ -792,7 +1003,7 @@ mesh = SubResource("ArrayMesh_gqquo")
 skeleton = NodePath("")
 
 [node name="Ear_r" type="BoneAttachment3D" parent="Clothman/Skeleton3D"]
-transform = Transform3D(3.64863, -0.36298, -0.0147025, -0.0471499, -0.0149194, -1.50379, 0.906971, 1.45944, -0.0190295, -0.654714, 2.58801, -0.0073835)
+transform = Transform3D(3.65579, -0.346518, 0.0594098, 0.144732, -0.0133457, -1.50281, 0.866939, 1.46346, 0.000362332, -0.656222, 2.40047, -0.0391064)
 bone_name = "Ear.r"
 bone_idx = 12
 
@@ -801,7 +1012,7 @@ mesh = SubResource("ArrayMesh_pes22")
 skeleton = NodePath("")
 
 [node name="Wings_l" type="BoneAttachment3D" parent="Clothman/Skeleton3D"]
-transform = Transform3D(1.43419, -0.687588, 0.271132, 0.0821809, -0.439846, -1.55015, 0.734531, 1.39174, -0.355957, -1.1142, 1.36842, -1.11384)
+transform = Transform3D(1.5946, 0.227536, 0.0930794, 0.106873, -0.091477, -1.6073, -0.221392, 1.59469, -0.105481, -1.26954, 1.16263, -0.358053)
 bone_name = "Wings.l"
 bone_idx = 18
 
@@ -810,7 +1021,7 @@ mesh = SubResource("ArrayMesh_elxlw")
 skeleton = NodePath("")
 
 [node name="Wings_r" type="BoneAttachment3D" parent="Clothman/Skeleton3D"]
-transform = Transform3D(1.59224, 0.240157, 0.101437, 0.166305, -0.452213, -1.53982, -0.200768, 1.53004, -0.471025, -1.26755, 1.30221, -0.377775)
+transform = Transform3D(1.43897, -0.674058, 0.279662, 0.255706, -0.113393, -1.58901, 0.683506, 1.4615, 0.00569677, -1.1179, 1.0455, -1.07021)
 bone_name = "Wings.r"
 bone_idx = 20
 
@@ -819,7 +1030,7 @@ mesh = SubResource("ArrayMesh_00thh")
 skeleton = NodePath("")
 
 [node name="Legs" type="BoneAttachment3D" parent="Clothman/Skeleton3D"]
-transform = Transform3D(1.36057, 0.38397, -0.777567, -0.569053, 1.48695, -0.261447, 0.654386, 0.494715, 1.38933, -0.263516, -0.474431, -0.0747627)
+transform = Transform3D(1.36057, 0.38397, -0.777567, -0.569053, 1.48695, -0.261447, 0.654386, 0.494715, 1.38933, -0.263516, -0.639213, -0.0747627)
 bone_name = "Legs"
 bone_idx = 21
 
@@ -842,3 +1053,9 @@ anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/conditions/attack = false
 parameters/conditions/die = false
+
+[node name="Hitflash" type="AnimationPlayer" parent="."]
+speed_scale = 2.0
+libraries = {
+"": SubResource("AnimationLibrary_ncmcn")
+}

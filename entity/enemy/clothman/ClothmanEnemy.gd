@@ -3,6 +3,7 @@ extends "res://entity/enemy/enemy_base.gd"
 @onready var state_machine
 @onready var anim_tree = $MeshInstance3D/clothman/AnimationTree
 @onready var death_anim = $DeathAnim
+@onready var hitflash_anim = $MeshInstance3D/clothman/Hitflash
 
 signal shoot 
 
@@ -21,9 +22,8 @@ func _process(delta):
 	anim_tree.set("parameters/conditions/run", !_can_see_target() or !_target_in_range())
 
 func hitflash():
-	#signal to clothman model
-	pass
-	
+	hitflash_anim.play()
+
 func die():
 	dead = true 
 	anim_tree.set("parameters/conditions/die", true)

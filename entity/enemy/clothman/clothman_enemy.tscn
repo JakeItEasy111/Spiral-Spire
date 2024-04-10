@@ -164,7 +164,7 @@ visible = false
 billboard = 1
 texture_filter = 0
 sprite_frames = SubResource("SpriteFrames_65dum")
-frame_progress = 0.489501
+frame_progress = 0.293891
 
 [connection signal="shoot" from="." to="ProjectileSpawner" method="_on_clothman_enemy_shoot"]
 [connection signal="timeout" from="AttackTimer" to="ProjectileSpawner" method="_on_attack_timer_timeout"]
