@@ -22,7 +22,7 @@ func _process(delta):
 	anim_tree.set("parameters/conditions/run", !_can_see_target() or !_target_in_range())
 
 func hitflash():
-	hitflash_anim.play()
+	hitflash_anim.play("hitflash")
 
 func die():
 	dead = true 

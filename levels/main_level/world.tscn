@@ -195,6 +195,8 @@ theme = ExtResource("4_tq4yi")
 text = "Quit"
 
 [node name="Player" parent="." instance=ExtResource("5_a0c0x")]
+hp_max = 200
+hp = 200
 
 [node name="devroom" parent="." instance=ExtResource("6_jlux8")]
 
@@ -202,11 +204,12 @@ text = "Quit"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, -0.1, 7.3)
 SPEED = 2.0
 
+[node name="WickerEnemy2" parent="." instance=ExtResource("7_4rrae")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8, -0.1, -0.7)
+SPEED = 2.0
+
 [node name="torch" parent="." instance=ExtResource("5_2lj5i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1.1, -1.3)
-
-[node name="WickerEnemy2" parent="." instance=ExtResource("7_4rrae")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7, 0, 11)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2.1, -14)
@@ -222,7 +225,10 @@ transform = Transform3D(0.347296, 0, -1.96962, 0, 2, 0, 1.96962, 0, 0.347296, 8.
 note_text = "Testing testing testing testing what the fuck is a good story"
 
 [node name="ClothmanEnemy" parent="." instance=ExtResource("15_f7cm5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.493596, 1, 15.2032)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 14)
+
+[node name="ClothmanEnemy2" parent="." instance=ExtResource("15_f7cm5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 16)
 
 [connection signal="pressed" from="UILayer/PauseMenu/PanelContainer/VBoxContainer/Resume" to="UILayer/PauseMenu" method="_on_resume_pressed"]
 [connection signal="pressed" from="UILayer/PauseMenu/PanelContainer/VBoxContainer/Quit" to="UILayer/PauseMenu" method="_on_quit_pressed"]

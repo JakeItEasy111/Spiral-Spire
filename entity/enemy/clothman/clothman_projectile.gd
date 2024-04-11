@@ -6,6 +6,7 @@ var kill = false
 @onready var proj_kill_anim = $BurstEffect
 
 const BULLET_SPEED = 6
+const BULLET_DAMAGE = 5 
 
 func _ready() -> void:
 	top_level = true; 
@@ -21,7 +22,7 @@ func _on_BulletTimer_timeout() -> void:
 func _on_body_entered(body):
 	if body.is_in_group("player"): 
 		var dir = body.global_transform.origin - global_transform.origin
-		body.hit(dir, 10)
+		body.hit(dir, BULLET_DAMAGE)
 		kill_effect() 
 		await get_tree().create_timer(0.75).timeout
 		queue_free() 
