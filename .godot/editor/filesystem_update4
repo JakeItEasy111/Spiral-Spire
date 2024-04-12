@@ -9,7 +9,10 @@ res://entity/player/player.tscn
 res://entity/enemy/clothman/clothman_enemy.tscn
 res://assets/models/Clothman/clothman_model.tscn
 res://entity/enemy/wicker/wicker_enemy.tscn
-res://entity/enemy/clothman/ClothmanEnemy.gd
-res://entity/enemy/wicker/WickerEnemy.gd
 res://entity/entity_base.tscn
 res://entity/enemy/clothman/clothman_projectile.tscn
+res://levels/main_level/PauseMenu.gd
+res://UI/ui_theme.tres
+res://objects/pickups/hp_cheese.tscn
+res://objects/pickups/hp_cheese.gd
+res://levels/main_level/world.gd

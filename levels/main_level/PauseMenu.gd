@@ -24,3 +24,7 @@ func _on_quit_pressed():
 	
 func _process(delta):
 	testEsc()
+
+func _on_restart_pressed():
+	get_tree().reload_current_scene()
+	get_tree().paused = false

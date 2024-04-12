@@ -706,6 +706,81 @@ states/wicker_walk/position = Vector2(286, 100)
 transitions = ["Start", "wicker_walk", SubResource("AnimationNodeStateMachineTransition_jrn85"), "wicker_walk", "wicker_attack", SubResource("AnimationNodeStateMachineTransition_blmgu"), "wicker_attack", "wicker_walk", SubResource("AnimationNodeStateMachineTransition_wyjmt"), "wicker_walk", "wicker_die", SubResource("AnimationNodeStateMachineTransition_4j23t"), "wicker_attack", "wicker_die", SubResource("AnimationNodeStateMachineTransition_dsrma")]
 graph_offset = Vector2(-255, 49)
 
+[sub_resource type="Animation" id="Animation_5esga"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Armature/Skeleton3D/leg3:surface_material_override/0:emission")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Armature/Skeleton3D/leg1:surface_material_override/0:emission")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Armature/Skeleton3D/leg2:mesh:surface_0/material:emission")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Armature/Skeleton3D/Wicker/Wicker:surface_material_override/0:emission")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Armature/Skeleton3D/Cylinder/Cylinder:surface_material_override/0:emission")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Armature/Skeleton3D/Wicker/AnimatedSprite3D:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="Animation" id="Animation_ai13l"]
 resource_name = "hitflash"
 length = 0.2
@@ -780,81 +855,6 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
-}
-
-[sub_resource type="Animation" id="Animation_5esga"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Armature/Skeleton3D/leg3:surface_material_override/0:emission")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 1)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Armature/Skeleton3D/leg1:surface_material_override/0:emission")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 1)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Armature/Skeleton3D/leg2:mesh:surface_0/material:emission")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 1)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Armature/Skeleton3D/Wicker/Wicker:surface_material_override/0:emission")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 1)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Armature/Skeleton3D/Cylinder/Cylinder:surface_material_override/0:emission")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 1)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Armature/Skeleton3D/Wicker/AnimatedSprite3D:visible")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tbxdi"]
@@ -1056,7 +1056,7 @@ bones/15/rotation = Quaternion(0.290564, -0.649451, -0.644649, 0.279668)
 bones/15/scale = Vector3(1, 1, 1)
 
 [node name="Cylinder" type="BoneAttachment3D" parent="MeshInstance3D/Armature/Skeleton3D" index="0"]
-transform = Transform3D(1.03092, -7.70427e-09, 2.78847e-08, 6.56223e-09, 1.21033, 4.7278e-07, -2.78847e-08, -5.55057e-07, 1.03092, -0.0228615, 1.25745, -0.0114533)
+transform = Transform3D(1.03092, -7.70427e-09, 2.78847e-08, 6.56223e-09, 1.21033, 4.7278e-07, -2.78847e-08, -5.55057e-07, 1.03092, -0.0228615, 1.25745, -0.0114532)
 bone_name = "Cylinder"
 bone_idx = 11
 
@@ -1067,7 +1067,7 @@ skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_2kdfg")
 
 [node name="Wicker" type="BoneAttachment3D" parent="MeshInstance3D/Armature/Skeleton3D" index="1"]
-transform = Transform3D(0.0633271, -2.29441e-09, 1.7129e-09, 4.03104e-10, 0.360448, 2.90418e-08, -1.7129e-09, -1.65302e-07, 0.0633271, -0.0228615, 2.38196, -0.0114538)
+transform = Transform3D(0.0633271, -2.29441e-09, 1.7129e-09, 4.03104e-10, 0.360448, 2.90418e-08, -1.7129e-09, -1.65302e-07, 0.0633271, -0.0228615, 2.38196, -0.0114537)
 bone_name = "Wicker"
 bone_idx = 12
 

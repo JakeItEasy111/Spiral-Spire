@@ -1000,7 +1000,7 @@ bones/21/rotation = Quaternion(0.123061, -0.233042, -0.155099, 0.952099)
 bones/21/scale = Vector3(1.61344, 1.61344, 1.61344)
 
 [node name="Ear_l" type="BoneAttachment3D" parent="Clothman/Skeleton3D"]
-transform = Transform3D(3.55558, -0.27762, 0.402679, 1.01944, -0.0107093, -1.44761, 0.675204, 1.4781, 0.0651438, -0.638303, 2.48559, 0.0931214)
+transform = Transform3D(3.55558, -0.27762, 0.402679, 1.01944, -0.0107093, -1.44761, 0.675204, 1.4781, 0.0651438, -0.638303, 2.48559, 0.0931213)
 bone_name = "Ear.l"
 bone_idx = 9
 
@@ -1010,7 +1010,7 @@ skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_q2set")
 
 [node name="Ear_r" type="BoneAttachment3D" parent="Clothman/Skeleton3D"]
-transform = Transform3D(3.62061, -0.384921, -0.12802, -0.341329, -0.0155768, -1.49769, 0.954965, 1.45381, -0.0499428, -0.650197, 2.73363, 0.0426159)
+transform = Transform3D(3.62061, -0.384921, -0.128021, -0.341332, -0.0155764, -1.49769, 0.954965, 1.45381, -0.0499427, -0.650196, 2.73363, 0.0426158)
 bone_name = "Ear.r"
 bone_idx = 12
 
@@ -1020,7 +1020,7 @@ skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_q2set")
 
 [node name="Wings_l" type="BoneAttachment3D" parent="Clothman/Skeleton3D"]
-transform = Transform3D(1.58404, 0.29371, 0.0879528, 0.118746, -0.160999, -1.60099, -0.282667, 1.57829, -0.179682, -1.26279, 1.46013, -0.28203)
+transform = Transform3D(1.58404, 0.293711, 0.0879523, 0.118746, -0.160998, -1.60099, -0.282668, 1.57829, -0.179681, -1.26279, 1.46013, -0.282029)
 bone_name = "Wings.l"
 bone_idx = 18
 
@@ -1030,7 +1030,7 @@ skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_x7wet")
 
 [node name="Wings_r" type="BoneAttachment3D" parent="Clothman/Skeleton3D"]
-transform = Transform3D(1.40915, -0.734285, 0.279849, 0.223463, -0.176418, -1.58812, 0.753362, 1.42579, -0.0523807, -1.09287, 1.37772, -1.09739)
+transform = Transform3D(1.40915, -0.734286, 0.27985, 0.223465, -0.176417, -1.58812, 0.753363, 1.42579, -0.0523792, -1.09287, 1.37772, -1.09739)
 bone_name = "Wings.r"
 bone_idx = 20
 

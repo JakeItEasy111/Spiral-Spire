@@ -1,11 +1,13 @@
-AnimationPlayer
+CollisionShape3D
+Area3D
 Node3D
+Sprite3D
+HBoxContainer
+AnimationPlayer
 AnimatedSprite3D
 Timer
 OmniLight3D
 PointLight2D
-CollisionShape3D
-Area3D
 RayCast3D
 AnimationTree
 AudioStreamPlayer2D
@@ -21,7 +23,6 @@ AudioStreamPlayer
 CanvasLayer
 Panel
 MenuBar
-HBoxContainer
 MarginContainer
 Camera3D
 Node
@@ -29,4 +30,3 @@ GPUParticles3D
 ColorRect
 MeshInstance3D
 AudioStreamPlayer3D
-Marker3D

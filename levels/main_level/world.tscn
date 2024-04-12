@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bqsxtwiigm17h"]
+[gd_scene load_steps=22 format=3 uid="uid://bqsxtwiigm17h"]
 
 [ext_resource type="Script" path="res://levels/main_level/world.gd" id="1_ox0py"]
 [ext_resource type="Script" path="res://levels/main_level/PauseMenu.gd" id="3_3p4rt"]
@@ -15,6 +15,7 @@
 [ext_resource type="FontFile" uid="uid://0mhojjt0rey0" path="res://assets/fonts/alagard/alagard.ttf" id="8_frgwi"]
 [ext_resource type="PackedScene" uid="uid://xfak30c1l3em" path="res://objects/notes/note_object.tscn" id="9_snddd"]
 [ext_resource type="PackedScene" uid="uid://7wfoajse50ld" path="res://entity/enemy/clothman/clothman_enemy.tscn" id="15_f7cm5"]
+[ext_resource type="PackedScene" uid="uid://du1b3ig34anc" path="res://objects/pickups/hp_cheese.tscn" id="16_bsk82"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gp45i"]
 sky_top_color = Color(0.384314, 0.454902, 0.54902, 1)
@@ -173,23 +174,27 @@ offset_bottom = 447.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="UILayer/PauseMenu/PanelContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="UILayer/PauseMenu/PanelContainer"]
 layout_mode = 2
 theme_override_constants/separation = 100
 alignment = 1
 
-[node name="Resume" type="Button" parent="UILayer/PauseMenu/PanelContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="UILayer/PauseMenu/PanelContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="Resume" type="Button" parent="UILayer/PauseMenu/PanelContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("4_tq4yi")
 text = "Resume"
 
-[node name="Restart" type="Button" parent="UILayer/PauseMenu/PanelContainer/VBoxContainer"]
+[node name="Restart" type="Button" parent="UILayer/PauseMenu/PanelContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("4_tq4yi")
-disabled = true
 text = "Restart"
 
-[node name="Quit" type="Button" parent="UILayer/PauseMenu/PanelContainer/VBoxContainer"]
+[node name="Quit" type="Button" parent="UILayer/PauseMenu/PanelContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("4_tq4yi")
 text = "Quit"
@@ -228,8 +233,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 14)
 [node name="ClothmanEnemy2" parent="." instance=ExtResource("15_f7cm5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 16)
 
-[connection signal="pressed" from="UILayer/PauseMenu/PanelContainer/VBoxContainer/Resume" to="UILayer/PauseMenu" method="_on_resume_pressed"]
-[connection signal="pressed" from="UILayer/PauseMenu/PanelContainer/VBoxContainer/Quit" to="UILayer/PauseMenu" method="_on_quit_pressed"]
+[node name="Cheese" parent="." instance=ExtResource("16_bsk82")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5, 0, -4)
+
+[connection signal="pressed" from="UILayer/PauseMenu/PanelContainer/HBoxContainer/VBoxContainer/Resume" to="UILayer/PauseMenu" method="_on_resume_pressed"]
+[connection signal="toggled" from="UILayer/PauseMenu/PanelContainer/HBoxContainer/VBoxContainer/Restart" to="UILayer/PauseMenu" method="_on_restart_toggled"]
+[connection signal="pressed" from="UILayer/PauseMenu/PanelContainer/HBoxContainer/VBoxContainer/Quit" to="UILayer/PauseMenu" method="_on_quit_pressed"]
 [connection signal="hp_change" from="Player" to="." method="_on_player_hp_change"]
 [connection signal="player_dead" from="Player" to="UILayer/DeathScreen" method="_on_player_player_dead"]
 [connection signal="player_hit" from="Player" to="." method="_on_player_player_hit"]
+[connection signal="player_healed" from="Cheese" to="." method="_on_cheese_player_healed"]
