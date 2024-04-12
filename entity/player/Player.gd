@@ -29,7 +29,6 @@ var melee_damage = 25
 signal player_hit
 signal step 
 signal fall 
-signal hp_change
 signal player_dead
 
 func _ready():
@@ -150,7 +149,6 @@ func hit(dir, dmg):
 		take_damage(dmg)
 		velocity += dir * 4.0
 		emit_signal("player_hit") 
-		emit_signal("hp_change") 
 		
 func die():
 	dead = true 

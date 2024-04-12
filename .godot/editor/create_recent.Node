@@ -1,3 +1,4 @@
+Timer
 CollisionShape3D
 Area3D
 Node3D
@@ -5,7 +6,6 @@ Sprite3D
 HBoxContainer
 AnimationPlayer
 AnimatedSprite3D
-Timer
 OmniLight3D
 PointLight2D
 RayCast3D

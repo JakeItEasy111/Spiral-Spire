@@ -134,7 +134,7 @@ z_index = 1
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
-color = Color(0.67451, 0.0392157, 0, 1)
+color = Color(0.152941, 0.733333, 0.321569, 1)
 
 [node name="Health" type="RichTextLabel" parent="UILayer/UI"]
 z_index = 100
@@ -234,7 +234,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 14)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 16)
 
 [node name="Cheese" parent="." instance=ExtResource("16_bsk82")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5, 0, -4)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5, 0, 18)
+
+[node name="Cheese2" parent="." instance=ExtResource("16_bsk82")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8, 0, 20)
+
+[node name="Cheese3" parent="." instance=ExtResource("16_bsk82")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 20)
 
 [connection signal="pressed" from="UILayer/PauseMenu/PanelContainer/HBoxContainer/VBoxContainer/Resume" to="UILayer/PauseMenu" method="_on_resume_pressed"]
 [connection signal="toggled" from="UILayer/PauseMenu/PanelContainer/HBoxContainer/VBoxContainer/Restart" to="UILayer/PauseMenu" method="_on_restart_toggled"]
@@ -243,3 +249,5 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5, 0, -4)
 [connection signal="player_dead" from="Player" to="UILayer/DeathScreen" method="_on_player_player_dead"]
 [connection signal="player_hit" from="Player" to="." method="_on_player_player_hit"]
 [connection signal="player_healed" from="Cheese" to="." method="_on_cheese_player_healed"]
+[connection signal="player_healed" from="Cheese2" to="." method="_on_cheese_player_healed"]
+[connection signal="player_healed" from="Cheese3" to="." method="_on_cheese_player_healed"]

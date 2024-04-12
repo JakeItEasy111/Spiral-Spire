@@ -18,4 +18,6 @@ func _on_clothman_enemy_shoot():
 		
 func _on_attack_timer_timeout():
 	can_shoot = true 
+	
+
 

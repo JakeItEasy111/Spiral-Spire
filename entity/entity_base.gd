@@ -7,11 +7,14 @@ extends CharacterBody3D
 @onready var mesh = $MeshInstance3D
 @onready var collShape = $CollisionShape3D
 
+signal hp_change 
+
 func _physics_process(delta):
 	move_and_slide() 
 
 func set_hp(new_hp):
 	hp = new_hp
+	emit_signal("hp_change")
 	if hp <= 0:
 		die()
 	return hp
