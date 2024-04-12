@@ -195,8 +195,6 @@ theme = ExtResource("4_tq4yi")
 text = "Quit"
 
 [node name="Player" parent="." instance=ExtResource("5_a0c0x")]
-hp_max = 200
-hp = 200
 
 [node name="devroom" parent="." instance=ExtResource("6_jlux8")]
 

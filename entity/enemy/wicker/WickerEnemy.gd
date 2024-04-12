@@ -10,6 +10,7 @@ const ATTACK_RANGE = 2.5
 @onready var attack_sfx = $AttackSFX
 @onready var ambient_sfx = $AmbientSFX
 @onready var death_sfx = $DeathSFX
+@onready var hitflash_anim = $MeshInstance3D/Hitflash
 
 func _ready():
 	fire_anim.play("default")
@@ -51,15 +52,7 @@ func play_death_sfx():
 	death_sfx.play()
 	
 func hitflash(): 
-	var tween = get_tree().create_tween()
-	var body = $MeshInstance3D/Armature/Skeleton3D/Cylinder/Cylinder.get_active_material(0)
-	var legs = $MeshInstance3D/Armature/Skeleton3D/Wicker/Wicker.get_active_material(0)
-	tween.tween_property(fire_anim, "transparency", 1.0, 0.05)
-	tween.tween_property(body, "emission", Color.WHITE, 0.05)
-	tween.tween_property(legs, "emission", Color.WHITE, 0.05)
-	tween.tween_property(fire_anim, "transparency", 0, 0.05)
-	tween.tween_property(legs, "emission", Color.BLACK, 0.05)
-	tween.tween_property(body, "emission", Color.BLACK, 0.05)
+	hitflash_anim.play("hitflash")
 
 func die():
 	dead = true 

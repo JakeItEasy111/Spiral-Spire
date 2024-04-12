@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://88jssic5a3c2"]
+[gd_scene load_steps=72 format=3 uid="uid://88jssic5a3c2"]
 
 [ext_resource type="PackedScene" uid="uid://cdc56lh434xix" path="res://entity/enemy/enemy_base.tscn" id="1_uobmb"]
 [ext_resource type="Script" path="res://entity/enemy/wicker/WickerEnemy.gd" id="2_4edl6"]
@@ -706,6 +706,163 @@ states/wicker_walk/position = Vector2(286, 100)
 transitions = ["Start", "wicker_walk", SubResource("AnimationNodeStateMachineTransition_jrn85"), "wicker_walk", "wicker_attack", SubResource("AnimationNodeStateMachineTransition_blmgu"), "wicker_attack", "wicker_walk", SubResource("AnimationNodeStateMachineTransition_wyjmt"), "wicker_walk", "wicker_die", SubResource("AnimationNodeStateMachineTransition_4j23t"), "wicker_attack", "wicker_die", SubResource("AnimationNodeStateMachineTransition_dsrma")]
 graph_offset = Vector2(-255, 49)
 
+[sub_resource type="Animation" id="Animation_ai13l"]
+resource_name = "hitflash"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Armature/Skeleton3D/leg3:surface_material_override/0:emission")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Armature/Skeleton3D/leg1:surface_material_override/0:emission")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Armature/Skeleton3D/leg2:mesh:surface_0/material:emission")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Armature/Skeleton3D/Wicker/Wicker:surface_material_override/0:emission")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Armature/Skeleton3D/Cylinder/Cylinder:surface_material_override/0:emission")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Armature/Skeleton3D/Wicker/AnimatedSprite3D:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_5esga"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Armature/Skeleton3D/leg3:surface_material_override/0:emission")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Armature/Skeleton3D/leg1:surface_material_override/0:emission")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Armature/Skeleton3D/leg2:mesh:surface_0/material:emission")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Armature/Skeleton3D/Wicker/Wicker:surface_material_override/0:emission")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Armature/Skeleton3D/Cylinder/Cylinder:surface_material_override/0:emission")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Armature/Skeleton3D/Wicker/AnimatedSprite3D:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tbxdi"]
+_data = {
+"RESET": SubResource("Animation_5esga"),
+"hitflash": SubResource("Animation_ai13l")
+}
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_t0uxw"]
 
 [sub_resource type="Gradient" id="Gradient_tkp76"]
@@ -778,8 +935,8 @@ size = Vector2(3, 3)
 [node name="WickerEnemy" instance=ExtResource("1_uobmb")]
 script = ExtResource("2_4edl6")
 detect_range = 10
-hp_max = 80
-hp = 80
+hp_max = 75
+hp = 75
 
 [node name="Armature" type="Node3D" parent="MeshInstance3D" index="0"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.301887, 0)
@@ -789,7 +946,7 @@ bones/0/name = "body0"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.96046e-08, 0)
 bones/0/enabled = true
-bones/0/position = Vector3(-0.0064539, 0.0378576, -0.00220895)
+bones/0/position = Vector3(-0.0228615, 0.134102, -0.0114527)
 bones/0/rotation = Quaternion(0, 0, 0, 1)
 bones/0/scale = Vector3(1, 1, 1)
 bones/1/name = "body1"
@@ -825,42 +982,42 @@ bones/5/parent = 0
 bones/5/rest = Transform3D(-0.126363, 0.70743, -0.695396, 0.419355, -0.597199, -0.683736, -0.898985, -0.378016, -0.2212, 0.759525, 0.517657, -0.523182)
 bones/5/enabled = true
 bones/5/position = Vector3(0.759525, 0.517657, -0.523182)
-bones/5/rotation = Quaternion(0.535436, 0.657993, -0.503595, 0.163542)
+bones/5/rotation = Quaternion(0.49372, 0.715093, -0.462945, 0.174826)
 bones/5/scale = Vector3(1, 1, 1)
 bones/6/name = "leg1Left"
 bones/6/parent = 5
 bones/6/rest = Transform3D(0.787307, -0.544821, 0.288647, 0.358176, 0.0230898, -0.933369, 0.501854, 0.838234, 0.21332, 0, 0.962637, 1.3411e-07)
 bones/6/enabled = true
 bones/6/position = Vector3(0, 0.962637, 1.3411e-07)
-bones/6/rotation = Quaternion(0.659176, -0.0656956, 0.330625, 0.672204)
+bones/6/rotation = Quaternion(0.693248, -0.0593531, 0.346023, 0.629407)
 bones/6/scale = Vector3(1, 1, 1)
 bones/7/name = "leg0Right"
 bones/7/parent = 0
 bones/7/rest = Transform3D(-0.126363, -0.70743, 0.695396, -0.419355, -0.597199, -0.683736, 0.898985, -0.378016, -0.2212, -0.759525, 0.517657, -0.523182)
 bones/7/enabled = true
 bones/7/position = Vector3(-0.759525, 0.517657, -0.523182)
-bones/7/rotation = Quaternion(0.656472, -0.417348, 0.618106, 0.113182)
+bones/7/rotation = Quaternion(0.671249, -0.375013, 0.631112, 0.102408)
 bones/7/scale = Vector3(1, 1, 1)
 bones/8/name = "leg1Right"
 bones/8/parent = 7
 bones/8/rest = Transform3D(0.787307, 0.544821, -0.288647, -0.358176, 0.0230898, -0.933369, -0.501854, 0.838234, 0.21332, 0, 0.962637, 1.3411e-07)
 bones/8/enabled = true
 bones/8/position = Vector3(0, 0.962637, 1.3411e-07)
-bones/8/rotation = Quaternion(0.604584, 0.0767375, -0.307892, 0.730611)
+bones/8/rotation = Quaternion(0.553704, 0.0816643, -0.281733, 0.77934)
 bones/8/scale = Vector3(1, 1, 1)
 bones/9/name = "leg0Back"
 bones/9/parent = 0
 bones/9/rest = Transform3D(0.494411, 0.0519172, 0.867676, 0.711746, -0.597199, -0.369826, 0.498975, 0.800411, -0.332213, -0.0439458, 0.517657, 0.921231)
 bones/9/enabled = true
 bones/9/position = Vector3(-0.0439458, 0.517657, 0.921231)
-bones/9/rotation = Quaternion(0.784347, 0.23902, 0.44246, 0.363178)
+bones/9/rotation = Quaternion(0.790441, 0.233499, 0.446628, 0.348144)
 bones/9/scale = Vector3(1, 1, 1)
 bones/10/name = "leg1Back"
 bones/10/parent = 9
 bones/10/rest = Transform3D(0.0168024, -0.87475, 0.484284, 0.999709, 0.0230897, 0.00702099, -0.0173236, 0.484025, 0.874883, -1.79745e-07, 0.962637, 1.21072e-08)
 bones/10/enabled = true
 bones/10/position = Vector3(-1.79745e-07, 0.962637, 1.21072e-08)
-bones/10/rotation = Quaternion(0.167705, 0.187036, 0.656346, 0.711408)
+bones/10/rotation = Quaternion(0.15831, 0.198249, 0.613182, 0.748093)
 bones/10/scale = Vector3(1, 1, 1)
 bones/11/name = "Cylinder"
 bones/11/parent = 0
@@ -880,7 +1037,7 @@ bones/13/name = "leg2Left"
 bones/13/parent = -1
 bones/13/rest = Transform3D(0.365491, 0.840624, -0.399709, 0.737989, 0, 0.674813, 0.567264, -0.541619, -0.620371, 0.985941, -0.801942, -0.617061)
 bones/13/enabled = true
-bones/13/position = Vector3(1.42992, -0.407593, -0.91447)
+bones/13/position = Vector3(1.45243, -0.164381, -0.958813)
 bones/13/rotation = Quaternion(-0.704603, -0.560107, -0.0594501, 0.431602)
 bones/13/scale = Vector3(1, 1, 1)
 bones/14/name = "leg2Right"
@@ -894,12 +1051,12 @@ bones/15/name = "leg2.002"
 bones/15/parent = -1
 bones/15/rest = Transform3D(-0.674717, -0.0168393, -0.737885, -0.737989, 0, 0.674812, -0.0113634, 0.999858, -0.0124273, -0.00429809, -0.801942, 1.16311)
 bones/15/enabled = true
-bones/15/position = Vector3(-0.00429813, -0.801943, 1.16311)
+bones/15/position = Vector3(-0.00381572, -0.76793, 1.19312)
 bones/15/rotation = Quaternion(0.290564, -0.649451, -0.644649, 0.279668)
 bones/15/scale = Vector3(1, 1, 1)
 
 [node name="Cylinder" type="BoneAttachment3D" parent="MeshInstance3D/Armature/Skeleton3D" index="0"]
-transform = Transform3D(1.03092, -7.70427e-09, 2.78847e-08, 6.56223e-09, 1.21033, 4.7278e-07, -2.78847e-08, -5.55057e-07, 1.03092, -0.00645391, 1.16121, -0.00220947)
+transform = Transform3D(1.03092, -7.70427e-09, 2.78847e-08, 6.56223e-09, 1.21033, 4.7278e-07, -2.78847e-08, -5.55057e-07, 1.03092, -0.0228615, 1.25745, -0.0114533)
 bone_name = "Cylinder"
 bone_idx = 11
 
@@ -910,7 +1067,7 @@ skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_2kdfg")
 
 [node name="Wicker" type="BoneAttachment3D" parent="MeshInstance3D/Armature/Skeleton3D" index="1"]
-transform = Transform3D(0.0633271, -2.29441e-09, 1.7129e-09, 4.03104e-10, 0.360448, 2.90418e-08, -1.7129e-09, -1.65302e-07, 0.0633271, -0.00645391, 2.28572, -0.00220998)
+transform = Transform3D(0.0633271, -2.29441e-09, 1.7129e-09, 4.03104e-10, 0.360448, 2.90418e-08, -1.7129e-09, -1.65302e-07, 0.0633271, -0.0228615, 2.38196, -0.0114538)
 bone_name = "Wicker"
 bone_idx = 12
 
@@ -953,6 +1110,11 @@ active = true
 parameters/conditions/attack = false
 parameters/conditions/die = false
 parameters/conditions/run = false
+
+[node name="Hitflash" type="AnimationPlayer" parent="MeshInstance3D" index="3"]
+libraries = {
+"": SubResource("AnimationLibrary_tbxdi")
+}
 
 [node name="CollisionShape3D" parent="." index="1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
