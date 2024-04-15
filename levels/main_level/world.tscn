@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bqsxtwiigm17h"]
+[gd_scene load_steps=23 format=3 uid="uid://bqsxtwiigm17h"]
 
 [ext_resource type="Script" path="res://levels/main_level/world.gd" id="1_ox0py"]
 [ext_resource type="Script" path="res://levels/main_level/PauseMenu.gd" id="3_3p4rt"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://xfak30c1l3em" path="res://objects/notes/note_object.tscn" id="9_snddd"]
 [ext_resource type="PackedScene" uid="uid://7wfoajse50ld" path="res://entity/enemy/clothman/clothman_enemy.tscn" id="15_f7cm5"]
 [ext_resource type="PackedScene" uid="uid://du1b3ig34anc" path="res://objects/pickups/hp_cheese.tscn" id="16_bsk82"]
+[ext_resource type="PackedScene" uid="uid://d3vqehqdh84gu" path="res://objects/key/key_object.tscn" id="17_kevmh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gp45i"]
 sky_top_color = Color(0.384314, 0.454902, 0.54902, 1)
@@ -207,10 +208,6 @@ text = "Quit"
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, -0.1, 7.3)
 SPEED = 2.0
 
-[node name="WickerEnemy2" parent="." instance=ExtResource("7_4rrae")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8, -0.1, -0.7)
-SPEED = 2.0
-
 [node name="torch" parent="." instance=ExtResource("5_2lj5i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1.1, -1.3)
 
@@ -230,9 +227,6 @@ note_text = "Testing testing testing testing what the fuck is a good story"
 [node name="ClothmanEnemy" parent="." instance=ExtResource("15_f7cm5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 14)
 
-[node name="ClothmanEnemy2" parent="." instance=ExtResource("15_f7cm5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 1, 16)
-
 [node name="Cheese" parent="." instance=ExtResource("16_bsk82")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5, 0, 18)
 
@@ -241,6 +235,9 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8, 0, 20)
 
 [node name="Cheese3" parent="." instance=ExtResource("16_bsk82")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 20)
+
+[node name="Key" parent="." instance=ExtResource("17_kevmh")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5, 0, -5)
 
 [connection signal="pressed" from="UILayer/PauseMenu/PanelContainer/HBoxContainer/VBoxContainer/Resume" to="UILayer/PauseMenu" method="_on_resume_pressed"]
 [connection signal="toggled" from="UILayer/PauseMenu/PanelContainer/HBoxContainer/VBoxContainer/Restart" to="UILayer/PauseMenu" method="_on_restart_toggled"]

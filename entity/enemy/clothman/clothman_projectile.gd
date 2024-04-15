@@ -5,7 +5,7 @@ var kill = false
 @onready var proj_anim = $ProjectileSprite
 @onready var proj_kill_anim = $BurstEffect
 
-const BULLET_SPEED = 6
+const BULLET_SPEED = 5
 const BULLET_DAMAGE = 5 
 
 func _ready() -> void:

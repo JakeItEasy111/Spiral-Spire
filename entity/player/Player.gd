@@ -1,29 +1,28 @@
 extends "res://entity/entity_base.gd"
 
-var dead = false 
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
-const JUMP_VELOCITY = 5
-const SENSITIVITY = 0.003
-var old_vel : float = 0.0
-
-#viewbob variables
+#constants
 const BOB_FREQ = 2.0
 const BOB_AMP = 0.06
+const JUMP_VELOCITY = 5
+const SENSITIVITY = 0.003
+const MELEE_DAMAGE = 25 
+
+#variables 
+var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+var old_vel : float = 0.0
 var t_bob = 0.0
-
-#footstep variables
 var can_play : bool = true
-
-# sword variables
-var melee_damage = 25
-@onready var melee_anim = $SwordAnimPlayer
-@onready var hitbox = $Head/Player_camera/Hitbox
+var dead = false 
+var key_inventory = []
 
 # nodes  
 @onready var head = $Head
 @onready var camera = %Player_camera
 @onready var subviewport_camera = %Subviewport_camera
+@onready var melee_anim = $SwordAnimPlayer
+@onready var hitbox = $Head/Player_camera/Hitbox
 @onready var sound_manager = $SoundManager
+@onready var interact_ray = $Head/Player_camera/InteractRay
 
 #signals
 signal player_hit
@@ -49,6 +48,14 @@ func _process(delta):
 		return
 		
 	subviewport_camera.set_global_transform(camera.get_global_transform())
+	
+	if Input.is_action_just_pressed("interact") and interact_ray.is_colliding():
+		var collider = interact_ray.get_collider()
+		if collider.is_in_group("interactable"):
+			collider.use()
+		if collider.is_in_group("key"):
+			key_inventory.append(collider)
+			collider.pick_up()
 	
 func _physics_process(delta):
 	if dead:
@@ -139,7 +146,7 @@ func melee():
 func meleeHit():
 	for body in hitbox.get_overlapping_bodies():
 		if body.is_in_group("enemies"):
-			body.take_damage(melee_damage)
+			body.take_damage(MELEE_DAMAGE)
 			body.hitflash() 
 			body.apply_knockback(body.global_transform.origin - global_transform.origin)
 			var hit_pos = body
@@ -154,3 +161,9 @@ func die():
 	dead = true 
 	$SwordOverlay.visible = false 
 	emit_signal("player_dead")
+
+func hasKey(key):
+	if(key_inventory.has(key)):
+		return true
+	else:
+		return false

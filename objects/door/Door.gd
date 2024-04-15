@@ -1,8 +1,5 @@
 extends Node3D
 
-@onready var open_sfx = $OpenSFX
-@onready var close_sfx = $CloseSFX
-
 enum DOOR_STATES {
 	closed,
 	opened
@@ -13,6 +10,9 @@ enum OPEN_DIRECTIONS {
 	front,
 	rear
 }
+
+@onready var open_sfx = $OpenSFX
+@onready var close_sfx = $CloseSFX
 
 var door_state = DOOR_STATES.closed
 var open_direction = OPEN_DIRECTIONS.closed 
