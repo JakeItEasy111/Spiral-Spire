@@ -4,6 +4,7 @@ extends "res://entity/enemy/enemy_base.gd"
 @onready var anim_tree = $MeshInstance3D/clothman/AnimationTree
 @onready var death_anim = $DeathAnim
 @onready var hitflash_anim = $MeshInstance3D/clothman/Hitflash
+@onready var flight_sfx = $FlightSfx
 
 signal shoot 
 
@@ -25,7 +26,7 @@ func hitflash():
 	hitflash_anim.play("hitflash")
 
 func die():
-	dead = true 
+	flight_sfx.stop()
 	anim_tree.set("parameters/conditions/die", true)
 	await get_tree().create_timer(1.5).timeout
 	death_anim.visible = true 

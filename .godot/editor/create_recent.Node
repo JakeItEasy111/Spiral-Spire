@@ -1,3 +1,4 @@
+AudioStreamPlayer3D
 Timer
 CollisionShape3D
 Area3D
@@ -29,4 +30,3 @@ Node
 GPUParticles3D
 ColorRect
 MeshInstance3D
-AudioStreamPlayer3D
