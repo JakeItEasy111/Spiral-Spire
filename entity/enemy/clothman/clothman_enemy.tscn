@@ -128,9 +128,8 @@ animations = [{
 [node name="ClothmanEnemy" instance=ExtResource("1_qrr7s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("2_3fp0y")
-detect_range = 15
-hp_max = 120
-hp = 120
+detect_range = 20
+hp = 100
 SPEED = 1.0
 
 [node name="clothman" parent="MeshInstance3D" index="0" instance=ExtResource("2_u200o")]

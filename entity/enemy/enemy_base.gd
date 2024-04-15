@@ -13,12 +13,13 @@ func _physics_process(delta):
 		knockback_force *= 0.95
 		
 		#navigation
-		var current_location = global_transform.origin
-		var next_location = nav_agent.get_next_path_position()
-		var new_velocity = (next_location - current_location).normalized() * SPEED
-		velocity.x = new_velocity.x + knockback_force.x
-		velocity.z = new_velocity.z + knockback_force.z
-			
+		if(_target_in_range()):
+			var current_location = global_transform.origin
+			var next_location = nav_agent.get_next_path_position()
+			var new_velocity = (next_location - current_location).normalized() * SPEED
+			velocity.x = new_velocity.x + knockback_force.x
+			velocity.z = new_velocity.z + knockback_force.z
+				
 		look_at(Vector3(player.global_position.x, global_position.y, player.global_position.z), Vector3.UP)
 		move_and_slide()  
 

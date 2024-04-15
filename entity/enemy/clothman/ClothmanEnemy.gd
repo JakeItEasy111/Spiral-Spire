@@ -26,6 +26,7 @@ func hitflash():
 	hitflash_anim.play("hitflash")
 
 func die():
+	dead = true
 	flight_sfx.stop()
 	anim_tree.set("parameters/conditions/die", true)
 	await get_tree().create_timer(1.5).timeout
