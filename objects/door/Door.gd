@@ -14,7 +14,7 @@ enum OPEN_DIRECTIONS {
 @onready var open_sfx = $OpenSFX
 @onready var close_sfx = $CloseSFX
 @onready var unlock_sfx = $UnlockSFX
-@onready var player : CharacterBody3D = $"../Player"
+@onready var player : CharacterBody3D = get_tree().get_first_node_in_group("player")
 
 var door_state = DOOR_STATES.closed
 var open_direction = OPEN_DIRECTIONS.closed 

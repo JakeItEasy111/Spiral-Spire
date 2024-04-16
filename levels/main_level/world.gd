@@ -26,7 +26,7 @@ func _on_player_hp_change(): #move onto a script conneted to the UI scene node
 	if (player.hp <= 25):
 		health_label.text = "[shake rate=20.0 level=" + str(50 - player.hp) + " connected=1]" + str(player.hp) + "[/shake]"
 
-func _on_cheese_player_healed():
+func _on_player_player_healed():
 	var tween = get_tree().create_tween()
 	flash.color = Color(0.15, 0.73, 0.32)
 	flash.visible = true;  

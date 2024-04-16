@@ -26,6 +26,7 @@ var key_inventory : Array[Node3D]
 
 #signals
 signal player_hit
+signal player_healed
 signal step 
 signal fall 
 signal player_dead
@@ -154,9 +155,13 @@ func meleeHit():
 			sound_manager.play_hit(hit_pos)
 	
 func hit(dir, dmg):
-		take_damage(dmg)
-		velocity += dir * 4.0
-		emit_signal("player_hit") 
+	take_damage(dmg)
+	velocity += dir * 4.0
+	emit_signal("player_hit") 
+		
+func heal_to(new_hp):
+	set_hp(new_hp)
+	emit_signal("player_healed")
 		
 func die():
 	dead = true 

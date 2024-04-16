@@ -1,22 +1,14 @@
-[gd_scene load_steps=23 format=3 uid="uid://bqsxtwiigm17h"]
+[gd_scene load_steps=13 format=3 uid="uid://bqsxtwiigm17h"]
 
 [ext_resource type="Script" path="res://levels/main_level/world.gd" id="1_ox0py"]
 [ext_resource type="Script" path="res://levels/main_level/PauseMenu.gd" id="3_3p4rt"]
 [ext_resource type="Theme" uid="uid://bigrp33bo7xk0" path="res://UI/ui_theme.tres" id="4_tq4yi"]
 [ext_resource type="Texture2D" uid="uid://ims4h0555a65" path="res://UI/deathScreen.png" id="5_2eu65"]
-[ext_resource type="PackedScene" uid="uid://ql0l8j2ni6xb" path="res://objects/torch/torch.tscn" id="5_2lj5i"]
 [ext_resource type="PackedScene" uid="uid://bpm05pdgfeeja" path="res://entity/player/player.tscn" id="5_a0c0x"]
 [ext_resource type="Script" path="res://levels/main_level/DeathScreen.gd" id="5_vyd1k"]
 [ext_resource type="AudioStream" uid="uid://b263l3tyqtetu" path="res://assets/sounds/sfx/fire/wicker_die.wav" id="5_xkbsj"]
 [ext_resource type="PackedScene" uid="uid://b8p77rewu34ul" path="res://levels/dungeons/devroom.tscn" id="6_jlux8"]
-[ext_resource type="Texture2D" uid="uid://bxbgr3mp2o2mn" path="res://assets/sprites/home depo.jpg" id="6_pp7g2"]
-[ext_resource type="PackedScene" uid="uid://88jssic5a3c2" path="res://entity/enemy/wicker/wicker_enemy.tscn" id="7_4rrae"]
-[ext_resource type="PackedScene" uid="uid://b8kxtpqpyap6m" path="res://objects/door/door.tscn" id="7_64wem"]
 [ext_resource type="FontFile" uid="uid://0mhojjt0rey0" path="res://assets/fonts/alagard/alagard.ttf" id="8_frgwi"]
-[ext_resource type="PackedScene" uid="uid://xfak30c1l3em" path="res://objects/notes/note_object.tscn" id="9_snddd"]
-[ext_resource type="PackedScene" uid="uid://7wfoajse50ld" path="res://entity/enemy/clothman/clothman_enemy.tscn" id="15_f7cm5"]
-[ext_resource type="PackedScene" uid="uid://du1b3ig34anc" path="res://objects/pickups/hp_cheese.tscn" id="16_bsk82"]
-[ext_resource type="PackedScene" uid="uid://d3vqehqdh84gu" path="res://objects/key/key_object.tscn" id="17_kevmh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gp45i"]
 sky_top_color = Color(0.384314, 0.454902, 0.54902, 1)
@@ -38,16 +30,6 @@ volumetric_fog_enabled = true
 volumetric_fog_density = 0.3
 volumetric_fog_albedo = Color(0.101961, 0.101961, 0.101961, 1)
 volumetric_fog_ambient_inject = 0.65
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2fghu"]
-albedo_texture = ExtResource("6_pp7g2")
-grow_amount = 2.35
-proximity_fade_distance = 0.5
-
-[sub_resource type="QuadMesh" id="QuadMesh_bv6lr"]
-material = SubResource("StandardMaterial3D_2fghu")
-size = Vector2(3, 4)
-orientation = 0
 
 [node name="World" type="Node3D"]
 script = ExtResource("1_ox0py")
@@ -204,53 +186,11 @@ text = "Quit"
 
 [node name="devroom" parent="." instance=ExtResource("6_jlux8")]
 
-[node name="WickerEnemy" parent="." instance=ExtResource("7_4rrae")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, -0.1, 7.3)
-SPEED = 2.0
-
-[node name="torch" parent="." instance=ExtResource("5_2lj5i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 1.1, -1.3)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2.1, -14)
-mesh = SubResource("QuadMesh_bv6lr")
-
-[node name="door" parent="." instance=ExtResource("7_64wem")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 12, 0, -3)
-open_angle_front = 175
-open_angle_rear = 5
-
-[node name="NoteObject" parent="." instance=ExtResource("9_snddd")]
-transform = Transform3D(0.347296, 0, -1.96962, 0, 2, 0, 1.96962, 0, 0.347296, 8.4, 1.05, 13.1)
-note_text = "Testing testing testing testing what the fuck is a good story"
-
-[node name="ClothmanEnemy" parent="." instance=ExtResource("15_f7cm5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 14)
-
-[node name="Cheese" parent="." instance=ExtResource("16_bsk82")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5, 0, 18)
-
-[node name="Cheese2" parent="." instance=ExtResource("16_bsk82")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8, 0, 20)
-
-[node name="Cheese3" parent="." instance=ExtResource("16_bsk82")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 20)
-
-[node name="Key" parent="." instance=ExtResource("17_kevmh")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5, 0.4, -5)
-
-[node name="Door" parent="." node_paths=PackedStringArray("key") instance=ExtResource("7_64wem")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.5, 0, 16.5)
-open_angle_front = 180
-key = NodePath("../Key")
-
 [connection signal="pressed" from="UILayer/PauseMenu/PanelContainer/HBoxContainer/VBoxContainer/Resume" to="UILayer/PauseMenu" method="_on_resume_pressed"]
 [connection signal="pressed" from="UILayer/PauseMenu/PanelContainer/HBoxContainer/VBoxContainer/Restart" to="UILayer/PauseMenu" method="_on_restart_pressed"]
 [connection signal="toggled" from="UILayer/PauseMenu/PanelContainer/HBoxContainer/VBoxContainer/Restart" to="UILayer/PauseMenu" method="_on_restart_toggled"]
 [connection signal="pressed" from="UILayer/PauseMenu/PanelContainer/HBoxContainer/VBoxContainer/Quit" to="UILayer/PauseMenu" method="_on_quit_pressed"]
 [connection signal="hp_change" from="Player" to="." method="_on_player_hp_change"]
 [connection signal="player_dead" from="Player" to="UILayer/DeathScreen" method="_on_player_player_dead"]
+[connection signal="player_healed" from="Player" to="." method="_on_player_player_healed"]
 [connection signal="player_hit" from="Player" to="." method="_on_player_player_hit"]
-[connection signal="player_healed" from="Cheese" to="." method="_on_cheese_player_healed"]
-[connection signal="player_healed" from="Cheese2" to="." method="_on_cheese_player_healed"]
-[connection signal="player_healed" from="Cheese3" to="." method="_on_cheese_player_healed"]

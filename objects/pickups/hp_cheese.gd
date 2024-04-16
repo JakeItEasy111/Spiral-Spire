@@ -1,22 +1,21 @@
 extends Node3D
 
 @onready var pickup_area = $Area3D
-@onready var player : CharacterBody3D = $"../Player"
 @onready var eat_sfx = $EatSFX
-const heal_amount = 30
-
-signal player_healed
+const HEAL_AMOUNT = 20
 
 func _process(delta):
 	for body in pickup_area.get_overlapping_bodies():
-		if body == player and player.hp < player.hp_max:
-			if (body.hp + heal_amount >= body.hp_max):
-				body.set_hp(body.hp_max)
+		if body.is_in_group("player") and body.hp < body.hp_max:
+			if (body.hp + HEAL_AMOUNT >= body.hp_max):
+				body.heal_to(body.hp_max)
 			else:
-				body.set_hp(body.hp + heal_amount)
-			emit_signal("player_healed")
-			visible = false
-			eat_sfx.pitch_scale = randf_range(0.8, 1.2)
-			eat_sfx.play()
-			await eat_sfx.finished
-			queue_free()
+				body.heal_to(body.hp + HEAL_AMOUNT)
+			despawn() 
+			set_process(false)
+
+func despawn():
+	eat_sfx.play()
+	$Area3D.queue_free()
+	await get_tree().create_timer(0.5).timeout
+	queue_free()
