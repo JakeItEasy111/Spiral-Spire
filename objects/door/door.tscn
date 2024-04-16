@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://b8kxtpqpyap6m"]
+[gd_scene load_steps=8 format=3 uid="uid://b8kxtpqpyap6m"]
 
 [ext_resource type="PackedScene" uid="uid://b0pj5f86o37nd" path="res://assets/models/Doors/door.glb" id="1_8hn2p"]
 [ext_resource type="Script" path="res://objects/door/Door.gd" id="2_b80yt"]
 [ext_resource type="Script" path="res://objects/door/DoorInteraction.gd" id="2_grvp1"]
 [ext_resource type="AudioStream" uid="uid://boslcr33g85mv" path="res://assets/sounds/sfx/doors/door_open.mp3" id="4_mdywx"]
 [ext_resource type="AudioStream" uid="uid://ldu6cklnfu7v" path="res://assets/sounds/sfx/doors/door_close.mp3" id="5_mejv7"]
+[ext_resource type="AudioStream" uid="uid://cju85mplugc0o" path="res://assets/sounds/sfx/doors/door_unlock.mp3" id="6_kcl6t"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dpktd"]
 size = Vector3(1.5, 3, 0.5)
@@ -31,6 +32,9 @@ stream = ExtResource("4_mdywx")
 
 [node name="CloseSFX" type="AudioStreamPlayer" parent="." index="4"]
 stream = ExtResource("5_mejv7")
+
+[node name="UnlockSFX" type="AudioStreamPlayer" parent="." index="5"]
+stream = ExtResource("6_kcl6t")
 
 [connection signal="open" from="OpenDoorFront" to="." method="_on_open_door_front_open"]
 [connection signal="open" from="OpenDoorRear" to="." method="_on_open_door_rear_open"]

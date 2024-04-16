@@ -237,9 +237,15 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 8, 0, 20)
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 20)
 
 [node name="Key" parent="." instance=ExtResource("17_kevmh")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5, 0, -5)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 5, 0.4, -5)
+
+[node name="Door" parent="." node_paths=PackedStringArray("key") instance=ExtResource("7_64wem")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.5, 0, 16.5)
+open_angle_front = 180
+key = NodePath("../Key")
 
 [connection signal="pressed" from="UILayer/PauseMenu/PanelContainer/HBoxContainer/VBoxContainer/Resume" to="UILayer/PauseMenu" method="_on_resume_pressed"]
+[connection signal="pressed" from="UILayer/PauseMenu/PanelContainer/HBoxContainer/VBoxContainer/Restart" to="UILayer/PauseMenu" method="_on_restart_pressed"]
 [connection signal="toggled" from="UILayer/PauseMenu/PanelContainer/HBoxContainer/VBoxContainer/Restart" to="UILayer/PauseMenu" method="_on_restart_toggled"]
 [connection signal="pressed" from="UILayer/PauseMenu/PanelContainer/HBoxContainer/VBoxContainer/Quit" to="UILayer/PauseMenu" method="_on_quit_pressed"]
 [connection signal="hp_change" from="Player" to="." method="_on_player_hp_change"]

@@ -5,6 +5,7 @@ extends "res://entity/enemy/enemy_base.gd"
 @onready var death_anim = $DeathAnim
 @onready var hitflash_anim = $MeshInstance3D/clothman/Hitflash
 @onready var flight_sfx = $FlightSfx
+@onready var death_sfx = $DeathSfx
 
 signal shoot 
 
@@ -32,6 +33,7 @@ func die():
 	await get_tree().create_timer(1.5).timeout
 	death_anim.visible = true 
 	death_anim.play()
+	death_sfx.play()
 	$MeshInstance3D/clothman.visible = false 
 	await get_tree().create_timer(1.0).timeout
 	queue_free()

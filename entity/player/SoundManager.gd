@@ -10,7 +10,7 @@ extends Node3D
 @export var player : CharacterBody3D = get_parent() 
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+func _ready():
 	player.step.connect(play_footstep)
 	player.player_hit.connect(play_hurt)
 	player.fall.connect(play_fall)

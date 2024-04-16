@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://7wfoajse50ld"]
+[gd_scene load_steps=27 format=3 uid="uid://7wfoajse50ld"]
 
 [ext_resource type="PackedScene" uid="uid://cdc56lh434xix" path="res://entity/enemy/enemy_base.tscn" id="1_qrr7s"]
 [ext_resource type="Script" path="res://entity/enemy/clothman/ClothmanEnemy.gd" id="2_3fp0y"]
@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://mgie721oocop" path="res://assets/sounds/sfx/clothman/cast_light.mp3" id="6_bdl2e"]
 [ext_resource type="Texture2D" uid="uid://duqxv4fcy8cx0" path="res://assets/sprites/dustPuffSpritesheet.png" id="6_t5da0"]
 [ext_resource type="AudioStream" uid="uid://c1w8xra7sruo1" path="res://assets/sounds/sfx/clothman/ambient_flying.mp3" id="8_lp83h"]
+[ext_resource type="AudioStream" uid="uid://lxv2wwud4mij" path="res://assets/sounds/sfx/clothman/death_poof.mp3" id="9_trdlj"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tkwtb"]
 height = 3.0
@@ -176,6 +177,9 @@ volume_db = 15.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.5)
 stream = ExtResource("6_bdl2e")
 volume_db = -10.0
+
+[node name="DeathSfx" type="AudioStreamPlayer" parent="." index="11"]
+stream = ExtResource("9_trdlj")
 
 [connection signal="shoot" from="." to="ProjectileSpawner" method="_on_clothman_enemy_shoot"]
 [connection signal="timeout" from="AttackTimer" to="ProjectileSpawner" method="_on_attack_timer_timeout"]

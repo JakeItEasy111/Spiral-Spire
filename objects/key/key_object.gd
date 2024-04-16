@@ -1,4 +1,7 @@
 extends Node3D
 
-func pick_up():
-	queue_free()
+@onready var pickup_sfx = $AudioStreamPlayer
+
+func pickup():
+	pickup_sfx.play() 
+	visible = false

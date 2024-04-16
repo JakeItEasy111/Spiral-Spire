@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://du1b3ig34anc"]
+[gd_scene load_steps=5 format=3 uid="uid://du1b3ig34anc"]
 
 [ext_resource type="Script" path="res://objects/pickups/hp_cheese.gd" id="1_gqmek"]
 [ext_resource type="Texture2D" uid="uid://diq7i0w5s3uwt" path="res://assets/sprites/cheese.png" id="2_awmfe"]
+[ext_resource type="AudioStream" uid="uid://bac34330kakun" path="res://assets/sounds/sfx/interactions/consume_cheese.mp3" id="3_6acp8"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_qhum2"]
 radius = 0.25
@@ -22,3 +23,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("SphereShape3D_qhum2")
+
+[node name="EatSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_6acp8")
+volume_db = 10.0

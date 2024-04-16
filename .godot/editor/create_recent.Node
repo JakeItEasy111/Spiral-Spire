@@ -1,3 +1,4 @@
+AudioStreamPlayer
 CollisionShape3D
 Area3D
 Sprite3D
@@ -20,7 +21,6 @@ Control
 Button
 VBoxContainer
 PanelContainer
-AudioStreamPlayer
 CanvasLayer
 Panel
 MenuBar
