@@ -1,3 +1,4 @@
+GridMap
 AudioStreamPlayer
 CollisionShape3D
 Area3D
@@ -29,4 +30,3 @@ Camera3D
 Node
 GPUParticles3D
 ColorRect
-MeshInstance3D

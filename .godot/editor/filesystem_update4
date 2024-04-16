@@ -5,13 +5,5 @@ res://assets/tilesets/tileset-new.tres
 res://assets/tilesets/props/prop_library.tres
 res://assets/models/Wicker/wick_mat.tres
 res://entity/player/pixelation.tres
+res://levels/dungeons/floor_one.tscn
 res://levels/main_level/world.tscn
-res://entity/player/player.tscn
-res://entity/enemy/enemy_base.gd
-res://entity/enemy/enemy_base.tscn
-res://objects/pickups/hp_cheese.gd
-res://objects/door/Door.gd
-res://objects/door/door.tscn
-res://objects/pickups/hp_cheese.tscn
-res://entity/player/Player.gd
-res://levels/main_level/world.gd
