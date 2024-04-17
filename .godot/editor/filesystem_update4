@@ -3,7 +3,12 @@ res://entity/player/SoundManager.gd
 res://entity/player/pixelation.tres
 res://assets/tilesets/tileset-new.tres
 res://assets/tilesets/props/prop_library.tres
-res://objects/notes/pickup_note.gd
 res://assets/models/Wicker/wick_mat.tres
+res://objects/notes/pickup_note.gd
+res://assets/models/Wicker/wicker_attack.res
 res://levels/dungeons/devroom.tscn
 res://levels/main_level/world.tscn
+res://objects/key/key_object.tscn
+res://entity/enemy/wicker/wicker_enemy.tscn
+res://objects/pickups/hp_cheese.tscn
+res://objects/pickups/hp_cheese.gd

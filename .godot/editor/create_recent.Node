@@ -1,9 +1,9 @@
-StaticBody3D
 CollisionShape3D
+Area3D
+StaticBody3D
 MeshInstance3D
 GridMap
 AudioStreamPlayer
-Area3D
 Sprite3D
 AudioStreamPlayer3D
 Timer
@@ -30,4 +30,3 @@ MenuBar
 MarginContainer
 Camera3D
 Node
-GPUParticles3D

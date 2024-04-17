@@ -2,7 +2,7 @@ extends Node3D
 
 @onready var pickup_area = $Area3D
 @onready var eat_sfx = $EatSFX
-const HEAL_AMOUNT = 20
+const HEAL_AMOUNT = 15
 
 func _process(delta):
 	for body in pickup_area.get_overlapping_bodies():
