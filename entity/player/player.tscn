@@ -309,9 +309,12 @@ cull_mask = 1048063
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
 shape = SubResource("BoxShape3D_aeup4")
 
-[node name="InteractRay" type="RayCast3D" parent="Head/Player_camera" index="1"]
+[node name="InteractRay" type="RayCast3D" parent="Head/Player_camera/Hitbox" index="1"]
 target_position = Vector3(0, 0, -2)
 collide_with_areas = true
+collide_with_bodies = false
+debug_shape_custom_color = Color(0.929412, 0, 0, 1)
+debug_shape_thickness = 4
 
 [node name="SwordOverlay" type="CanvasLayer" parent="." index="3"]
 follow_viewport_enabled = true

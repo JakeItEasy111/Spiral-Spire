@@ -22,7 +22,7 @@ var key_inventory : Array[Node3D]
 @onready var melee_anim = $SwordAnimPlayer
 @onready var hitbox = $Head/Player_camera/Hitbox
 @onready var sound_manager = $SoundManager
-@onready var interact_ray = $Head/Player_camera/InteractRay
+@onready var interact_ray = $Head/Player_camera/Hitbox/InteractRay
 
 #signals
 signal player_hit
@@ -49,15 +49,6 @@ func _process(delta):
 		return
 		
 	subviewport_camera.set_global_transform(camera.get_global_transform())
-	
-	#interaction & key handling
-	if Input.is_action_just_pressed("interact") and interact_ray.is_colliding():
-		var collider = interact_ray.get_collider()
-		if collider.is_in_group("interactable"):
-			collider.use()
-		if collider.is_in_group("key"):
-			key_inventory.append(collider.get_parent_node_3d())
-			collider.get_parent_node_3d().pickup()
 	
 func _physics_process(delta):
 	if dead:
@@ -89,6 +80,7 @@ func _physics_process(delta):
 	move_and_slide()
 	_snap_down_to_stairs_check()
 	melee()
+	tryInteract()
 	
 	var diff = velocity.y - old_vel
 	if diff > 4:
@@ -153,7 +145,17 @@ func meleeHit():
 			body.apply_knockback(body.global_transform.origin - global_transform.origin)
 			var hit_pos = body
 			sound_manager.play_hit(hit_pos)
-	
+
+func tryInteract():
+	if interact_ray.is_colliding():
+		var collider = interact_ray.get_collider()
+		if Input.is_action_just_pressed("interact"):
+			if collider.is_in_group("interactable"):
+				collider.use()
+			if collider.is_in_group("key"):
+				key_inventory.append(collider.get_parent_node_3d())
+				collider.get_parent_node_3d().pickup()
+
 func hit(dir, dmg):
 	take_damage(dmg)
 	velocity += dir * 4.0
