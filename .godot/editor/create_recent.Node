@@ -1,6 +1,8 @@
+StaticBody3D
+CollisionShape3D
+MeshInstance3D
 GridMap
 AudioStreamPlayer
-CollisionShape3D
 Area3D
 Sprite3D
 AudioStreamPlayer3D
@@ -29,4 +31,3 @@ MarginContainer
 Camera3D
 Node
 GPUParticles3D
-ColorRect
