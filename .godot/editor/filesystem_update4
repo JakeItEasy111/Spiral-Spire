@@ -6,7 +6,5 @@ res://assets/tilesets/props/prop_library.tres
 res://assets/models/Wicker/wick_mat.tres
 res://entity/player/pixelation.tres
 res://levels/main_level/world.tscn
-res://levels/dungeons/floor_one.tscn
 res://UI/scene_transition.tscn
-res://objects/pickups/hp_cheese.tscn
-res://UI/scene_transition.gd
+res://levels/dungeons/floor_two.tscn

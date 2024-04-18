@@ -1,3 +1,4 @@
+GridMap
 AudioStreamPlayer2D
 ColorRect
 AnimationPlayer
@@ -8,7 +9,6 @@ CollisionShape3D
 Area3D
 StaticBody3D
 MeshInstance3D
-GridMap
 AudioStreamPlayer
 Sprite3D
 AudioStreamPlayer3D
