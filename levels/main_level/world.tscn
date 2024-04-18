@@ -9,7 +9,7 @@
 [ext_resource type="Script" path="res://levels/main_level/DeathScreen.gd" id="5_vyd1k"]
 [ext_resource type="AudioStream" uid="uid://b263l3tyqtetu" path="res://assets/sounds/sfx/fire/wicker_die.wav" id="5_xkbsj"]
 [ext_resource type="FontFile" uid="uid://0mhojjt0rey0" path="res://assets/fonts/alagard/alagard.ttf" id="8_frgwi"]
-[ext_resource type="PackedScene" uid="uid://bxtldkplrbs5l" path="res://levels/dungeons/floor_one.tscn" id="9_n8eaf"]
+[ext_resource type="PackedScene" uid="uid://bi6235vomq6iw" path="res://levels/dungeons/floor_two.tscn" id="10_xd88q"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gp45i"]
 sky_top_color = Color(0.384314, 0.454902, 0.54902, 1)
@@ -187,7 +187,7 @@ text = "Quit"
 
 [node name="Player" parent="." instance=ExtResource("5_a0c0x")]
 
-[node name="FloorOne" parent="." instance=ExtResource("9_n8eaf")]
+[node name="FloorTwo" parent="." instance=ExtResource("10_xd88q")]
 
 [connection signal="pressed" from="UILayer/PauseMenu/PanelContainer/HBoxContainer/VBoxContainer/Resume" to="UILayer/PauseMenu" method="_on_resume_pressed"]
 [connection signal="pressed" from="UILayer/PauseMenu/PanelContainer/HBoxContainer/VBoxContainer/Restart" to="UILayer/PauseMenu" method="_on_restart_pressed"]
@@ -197,4 +197,3 @@ text = "Quit"
 [connection signal="player_dead" from="Player" to="UILayer/DeathScreen" method="_on_player_player_dead"]
 [connection signal="player_healed" from="Player" to="." method="_on_player_player_healed"]
 [connection signal="player_hit" from="Player" to="." method="_on_player_player_hit"]
-[connection signal="change_level" from="FloorOne" to="." method="_on_floor_one_change_level"]
