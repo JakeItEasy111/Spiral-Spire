@@ -1,5 +1,6 @@
-[gd_scene load_steps=15 format=3 uid="uid://bxtldkplrbs5l"]
+[gd_scene load_steps=16 format=3 uid="uid://bxtldkplrbs5l"]
 
+[ext_resource type="Script" path="res://levels/dungeons/floor_one.gd" id="1_0rtbi"]
 [ext_resource type="MeshLibrary" uid="uid://us1ixi1tpfp8" path="res://assets/tilesets/tileset-new.tres" id="1_552g5"]
 [ext_resource type="MeshLibrary" uid="uid://cyaw2a0rl3vw" path="res://assets/tilesets/props/prop_library.tres" id="2_tyegq"]
 [ext_resource type="PackedScene" uid="uid://b8kxtpqpyap6m" path="res://objects/door/door.tscn" id="3_g2qtf"]
@@ -31,6 +32,7 @@ size = Vector3(3, 4, 1)
 size = Vector3(6, 1, 6)
 
 [node name="FloorOne" type="Node"]
+script = ExtResource("1_0rtbi")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_uua1q")
@@ -70,7 +72,7 @@ shape = SubResource("BoxShape3D_7bs42")
 [node name="Door" parent="." node_paths=PackedStringArray("key") instance=ExtResource("3_g2qtf")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -4.5, 6, -31.5)
 open_angle_front = 175
-open_angle_rear = 5
+open_angle_rear = 10
 key = NodePath("../Key")
 
 [node name="Door2" parent="." instance=ExtResource("3_g2qtf")]
@@ -124,10 +126,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7, 7, -26.7)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3, 7, -26.7)
 
 [node name="torch5" parent="." instance=ExtResource("7_ojbmj")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 12, 7, -24.4)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 12, 7, -24.3)
 
 [node name="torch6" parent="." instance=ExtResource("7_ojbmj")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 22.5, 7, -24.4)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 22.5, 7, -24.3)
 
 [node name="torch7" parent="." instance=ExtResource("7_ojbmj")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 12, 7, -16.8)
@@ -149,6 +151,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 24.6, 6, -15.2)
 
 [node name="NoteObject" parent="." instance=ExtResource("9_cd5vq")]
 transform = Transform3D(1.44889, 0, -0.388229, 0, 1.5, 0, 0.388229, 0, 1.44889, -0.194, 7.05, -30.716)
+note_text = "I embarked on this journey hoping that in my travels I'd discover some divine truth, a state of enlightenment, and finally leave these burdens behind. Thus far I've only managed to get lost, injured and singed by the monsters in this dizzying place. How pathetic. How typical."
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 11, 3)
@@ -156,3 +159,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 11, 3)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 3, 0)
 shape = SubResource("BoxShape3D_n3tvh")
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]

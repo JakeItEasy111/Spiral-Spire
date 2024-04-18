@@ -55,9 +55,11 @@ func hitflash():
 	hitflash_anim.play("hitflash")
 
 func die():
-	dead = true 
-	anim_tree.set("parameters/conditions/die", true)
-	await get_tree().create_timer(1.0).timeout
-	$OmniLight3D.visible = false 
-	await get_tree().create_timer(2.0).timeout 
-	queue_free()
+	if (!dead):
+		dead = true 
+		anim_tree.set("parameters/conditions/die", true)
+		await get_tree().create_timer(1.0).timeout
+		$OmniLight3D.visible = false 
+		fire_anim.queue_free()
+		await get_tree().create_timer(2.0).timeout 
+		queue_free()

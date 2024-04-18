@@ -4,8 +4,11 @@ extends Node3D
 @onready var health_label = $UILayer/UI/Health
 @onready var flash = $UILayer/UI/ColorRect
 
+var level : Node
+
 func _ready():
 	_on_player_hp_change()
+	level = $FloorOne
 	
 func _physics_process(delta):
 	if(player != null):
@@ -35,3 +38,6 @@ func _on_player_player_healed():
 	var tween2 = get_tree().create_tween()
 	await tween2.tween_property(flash, "modulate:a", 0.0, 0.25).finished
 	flash.visible = false; 
+
+func _on_floor_one_change_level():
+	$SceneTransition.change_level_scene(level, "res://levels/dungeons/devroom.tscn")

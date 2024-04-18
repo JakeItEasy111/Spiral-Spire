@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://bqsxtwiigm17h"]
+[gd_scene load_steps=14 format=3 uid="uid://bqsxtwiigm17h"]
 
 [ext_resource type="Script" path="res://levels/main_level/world.gd" id="1_ox0py"]
+[ext_resource type="PackedScene" uid="uid://b6ypnk1rqyd2v" path="res://UI/scene_transition.tscn" id="2_7dbj7"]
 [ext_resource type="Script" path="res://levels/main_level/PauseMenu.gd" id="3_3p4rt"]
 [ext_resource type="Theme" uid="uid://bigrp33bo7xk0" path="res://UI/ui_theme.tres" id="4_tq4yi"]
 [ext_resource type="Texture2D" uid="uid://ims4h0555a65" path="res://UI/deathScreen.png" id="5_2eu65"]
@@ -36,6 +37,8 @@ script = ExtResource("1_ox0py")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_7m8yv")
+
+[node name="SceneTransition" parent="." instance=ExtResource("2_7dbj7")]
 
 [node name="UILayer" type="CanvasLayer" parent="."]
 layer = 3
@@ -194,3 +197,4 @@ text = "Quit"
 [connection signal="player_dead" from="Player" to="UILayer/DeathScreen" method="_on_player_player_dead"]
 [connection signal="player_healed" from="Player" to="." method="_on_player_player_healed"]
 [connection signal="player_hit" from="Player" to="." method="_on_player_player_hit"]
+[connection signal="change_level" from="FloorOne" to="." method="_on_floor_one_change_level"]
