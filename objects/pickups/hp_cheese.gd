@@ -15,6 +15,7 @@ func _process(delta):
 			set_process(false)
 
 func despawn():
+	visible = false 
 	eat_sfx.play()
 	$Area3D.queue_free()
 	await get_tree().create_timer(0.5).timeout
