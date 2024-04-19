@@ -9,6 +9,7 @@ var level : Node
 func _ready():
 	_on_player_hp_change()
 	level = $FloorOne
+	level.change_level.connect(_on_floor_one_change_level)
 	
 func _physics_process(delta):
 	if(player != null):
@@ -40,4 +41,4 @@ func _on_player_player_healed():
 	flash.visible = false; 
 
 func _on_floor_one_change_level():
-	$SceneTransition.change_level_scene(level, "res://levels/dungeons/devroom.tscn")
+	$SceneTransition.change_level_scene(level, "res://levels/dungeons/floor_two.tscn")

@@ -1,3 +1,4 @@
+res://assets/fonts/rubber-biscuit
 res://assets/tilesets
 res://assets/fonts/alagard
 res://UI
@@ -8,7 +9,6 @@ res://assets/models/Clothman
 res://entity/enemy/clothman
 res://entity/enemy
 res://
-res://assets/fonts/rubber-biscuit
 res://objects/notes
 res://assets/models/Doors
 res://entity/enemy/wicker

@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cygjk7g5rcmnb" path="res://assets/sprites/noteUI.png" id="4_3wmx7"]
 [ext_resource type="Shader" path="res://objects/notes/item_highlighter.gdshader" id="4_s8eja"]
 [ext_resource type="AudioStream" uid="uid://cp8mn2qt7oxhm" path="res://assets/sounds/sfx/interactions/note_interact.mp3" id="5_8jovm"]
-[ext_resource type="FontFile" uid="uid://dapwaattyuyd4" path="res://assets/fonts/rubber-biscuit/RUBBBI__.TTF" id="7_mrd7c"]
+[ext_resource type="FontFile" uid="uid://cjyopdofstljf" path="res://assets/fonts/rubber-biscuit/RUBBBB__.TTF" id="7_e7lqa"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_77d07"]
 render_priority = 0
@@ -27,7 +27,7 @@ radius = 0.33
 
 [sub_resource type="Theme" id="Theme_2qlso"]
 default_base_scale = 1.0
-default_font = ExtResource("7_mrd7c")
+default_font = ExtResource("7_e7lqa")
 default_font_size = 35
 
 [node name="NoteObject" instance=ExtResource("1_roh2q")]
@@ -82,6 +82,7 @@ grow_vertical = 2
 mouse_filter = 1
 theme = SubResource("Theme_2qlso")
 theme_override_colors/default_color = Color(0, 0, 0, 1)
+bbcode_enabled = true
 scroll_active = false
 
 [node name="InteractSFX" type="AudioStreamPlayer" parent="." index="3"]
