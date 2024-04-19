@@ -1,11 +1,11 @@
-res://levels/main_level/world.tscn
+res://levels/dungeons/devroom.tscn
 res://entity/player/SoundManager.gd
-res://objects/notes/pickup_note.gd
+res://entity/player/pixelation.tres
 res://assets/tilesets/tileset-new.tres
 res://assets/tilesets/props/prop_library.tres
 res://assets/models/Wicker/wick_mat.tres
-res://entity/player/pixelation.tres
-res://levels/dungeons/devroom.tscn
+res://objects/notes/pickup_note.gd
+res://levels/main_level/world.tscn
 res://UI/scene_transition.tscn
 res://levels/dungeons/floor_two.tscn
 res://levels/dungeons/floor_one.tscn
