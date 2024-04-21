@@ -20,7 +20,7 @@ func _on_resume_pressed():
 	resume()
 
 func _on_quit_pressed():
-	get_tree().quit() 
+	get_tree().change_scene_to_file("res://levels/menu/menu.tscn")
 	
 func _process(delta):
 	testEsc()

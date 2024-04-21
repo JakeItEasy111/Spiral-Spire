@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bqsxtwiigm17h"]
+[gd_scene load_steps=18 format=3 uid="uid://bqsxtwiigm17h"]
 
 [ext_resource type="Script" path="res://levels/main_level/world.gd" id="1_ox0py"]
 [ext_resource type="PackedScene" uid="uid://b6ypnk1rqyd2v" path="res://UI/scene_transition.tscn" id="2_7dbj7"]
@@ -32,6 +32,19 @@ volumetric_fog_density = 0.3
 volumetric_fog_albedo = Color(0.101961, 0.101961, 0.101961, 1)
 volumetric_fog_ambient_inject = 0.65
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ef1g"]
+bg_color = Color(0.0235294, 0.0235294, 0.0235294, 0.521569)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kiuk4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bv1q4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cphdl"]
+
 [node name="World" type="Node3D"]
 script = ExtResource("1_ox0py")
 
@@ -47,7 +60,6 @@ layer = 3
 process_mode = 3
 visible = false
 top_level = true
-z_index = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -116,14 +128,12 @@ anchors_preset = 0
 [node name="ColorRect" type="ColorRect" parent="UILayer/UI"]
 visible = false
 top_level = true
-z_index = 1
 layout_mode = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 color = Color(0.152941, 0.733333, 0.321569, 1)
 
 [node name="Health" type="RichTextLabel" parent="UILayer/UI"]
-z_index = 100
 layout_mode = 0
 offset_left = 77.0
 offset_top = 910.0
@@ -159,6 +169,7 @@ offset_right = 394.0
 offset_bottom = 447.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3ef1g")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UILayer/PauseMenu/PanelContainer"]
 layout_mode = 2
@@ -173,16 +184,19 @@ alignment = 1
 [node name="Resume" type="Button" parent="UILayer/PauseMenu/PanelContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("4_tq4yi")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kiuk4")
 text = "Resume"
 
 [node name="Restart" type="Button" parent="UILayer/PauseMenu/PanelContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("4_tq4yi")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bv1q4")
 text = "Restart"
 
 [node name="Quit" type="Button" parent="UILayer/PauseMenu/PanelContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("4_tq4yi")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_cphdl")
 text = "Quit"
 
 [node name="Player" parent="." instance=ExtResource("5_a0c0x")]
