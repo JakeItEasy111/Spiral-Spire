@@ -1,3 +1,5 @@
+GridMap
+Node
 CollisionShape3D
 Area3D
 StaticBody3D
@@ -5,7 +7,6 @@ RichTextLabel
 Control
 TextureRect
 Label3D
-GridMap
 AudioStreamPlayer2D
 ColorRect
 AnimationPlayer
@@ -29,4 +30,3 @@ VBoxContainer
 PanelContainer
 Panel
 MenuBar
-MarginContainer

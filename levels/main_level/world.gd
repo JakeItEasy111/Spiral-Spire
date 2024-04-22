@@ -42,3 +42,6 @@ func _on_player_player_healed():
 
 func _on_floor_one_change_level():
 	$SceneTransition.change_level_scene(level, "res://levels/dungeons/floor_two.tscn")
+	
+func _on_floor_two_seamless_level_change():
+	pass
