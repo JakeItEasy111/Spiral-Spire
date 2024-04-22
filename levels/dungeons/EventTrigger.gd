@@ -1,10 +1,7 @@
 extends Area3D
 
-@onready var world = get_tree().get_node("../../..")
-signal seamless_level_change
-
-func _ready():
-	world.connect(seamless_level_change)
+@onready var world = get_parent().get_parent()
+signal level_switch
 	
 func _on_area_entered(area):
-	emit_signal("seamless_level_change")
+	emit_signal("level_switch")

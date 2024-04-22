@@ -12,7 +12,12 @@ func change_level_scene(level, path):
 	$AudioStreamPlayer2D.play() 
 	await $AnimationPlayer.animation_finished
 	in_transition = true 
-	
+
+	add_child(level)
+	player.position = Vector3.ZERO
+
+func change_level_no_transition(level, path):
+	level.queue_free()
 	level = load(path).instantiate() 
 	add_child(level)
 	player.position = Vector3.ZERO
