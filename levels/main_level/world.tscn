@@ -200,6 +200,7 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_cphdl")
 text = "Quit"
 
 [node name="Player" parent="." instance=ExtResource("5_a0c0x")]
+hp = 10000
 
 [node name="FloorOne" parent="." instance=ExtResource("10_nlrvs")]
 
@@ -211,4 +212,3 @@ text = "Quit"
 [connection signal="player_dead" from="Player" to="UILayer/DeathScreen" method="_on_player_player_dead"]
 [connection signal="player_healed" from="Player" to="." method="_on_player_player_healed"]
 [connection signal="player_hit" from="Player" to="." method="_on_player_player_hit"]
-[connection signal="change_level" from="FloorOne" to="." method="_on_floor_one_change_level"]

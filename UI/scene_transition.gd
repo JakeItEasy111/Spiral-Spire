@@ -1,10 +1,14 @@
 extends CanvasLayer
 
 @onready var player = get_tree().get_first_node_in_group("player")
+@onready var world = get_parent()
 var in_transition = false 
+
+signal connect_level(level)
 
 func change_level_scene(level, path):
 	get_tree().paused = true 
+	$"../UILayer".visible = false
 	level.queue_free()
 	level = load(path).instantiate() 
 	
@@ -28,5 +32,6 @@ func _process(delta):
 		if Input.is_action_just_pressed("space"):
 			get_tree().paused = false
 			$AnimationPlayer.play_backwards("dissolve")
-			in_transition = false 
+			in_transition = false
+			$"../UILayer".visible = true 
 

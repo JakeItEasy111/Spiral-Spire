@@ -24,13 +24,13 @@ size = Vector3(5, 4, 0.25)
 size = Vector3(10, 5, 2.5)
 
 [node name="FloorTwo" type="Node"]
+script = ExtResource("11_cfl8b")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_uua1q")
 
 [node name="GridMap" type="GridMap" parent="NavigationRegion3D"]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
-visible = false
 mesh_library = ExtResource("1_57rxm")
 cell_size = Vector3(1, 1, 1)
 cell_center_y = false
@@ -215,10 +215,9 @@ shape = SubResource("BoxShape3D_nhum7")
 
 [node name="EventTrigger" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.1628, 36.62, -19.735)
-script = ExtResource("11_cfl8b")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="EventTrigger"]
-transform = Transform3D(1.10587, 0, 0, 0, 1.00593, 0, 0, 0, 1.00593, 1.84714, -0.658936, -3.25984)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.84714, -1.15549, -2.3507)
 shape = SubResource("BoxShape3D_2qjlg")
 
-[connection signal="area_entered" from="EventTrigger" to="EventTrigger" method="_on_area_entered"]
+[connection signal="area_entered" from="EventTrigger" to="." method="_on_event_trigger_area_entered"]

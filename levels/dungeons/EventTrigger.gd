@@ -1,7 +1,4 @@
-extends Area3D
+extends Node
 
-@onready var world = get_parent().get_parent()
-signal level_switch
-	
-func _on_area_entered(area):
-	emit_signal("level_switch")
+func _on_event_trigger_area_entered(area):
+	get_tree().current_scene.get_node("SceneTransition").change_level_no_transition(self, "res://levels/dungeons/spiral.tscn")

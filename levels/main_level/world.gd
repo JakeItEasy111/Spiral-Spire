@@ -7,9 +7,6 @@ var level : Node
 
 func _ready():
 	_on_player_hp_change()
-	level = $FloorOne
-	level.change_level.connect(_on_floor_one_change_level)
-	
 	
 func _physics_process(delta):
 	if(player != null):
@@ -39,10 +36,3 @@ func _on_player_player_healed():
 	var tween2 = get_tree().create_tween()
 	await tween2.tween_property(flash, "modulate:a", 0.0, 0.25).finished
 	flash.visible = false; 
-
-func _on_floor_one_change_level():
-	$SceneTransition.change_level_scene(level, "res://levels/dungeons/floor_two.tscn")
-	
-func _on_floor_two_level_switch(): 
-	$SceneTransition.change_level_no_transition(level, "res://levels/dungeons/spiral.tscn")
-	

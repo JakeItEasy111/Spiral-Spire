@@ -1,6 +1,4 @@
 extends Node
 
-signal change_level
-	
 func _on_area_3d_area_entered(area):
-	emit_signal("change_level")
+	get_tree().current_scene.get_node("SceneTransition").change_level_scene(self, "res://levels/dungeons/floor_two.tscn")
