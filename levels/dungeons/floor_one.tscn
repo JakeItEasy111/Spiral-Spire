@@ -147,7 +147,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 24.6, 6, -15.2)
 
 [node name="NoteObject" parent="." instance=ExtResource("9_cd5vq")]
 transform = Transform3D(1.44889, 0, -0.388229, 0, 1.5, 0, 0.388229, 0, 1.44889, -0.194, 7.05, -30.716)
-note_text = "I’ve decided to leave notes as breadcrumbs while I ascend. This place is meant to break the mind and push one to his limits, so I don’t want to get lost in the madness. It will be difficult, but I hope this journey yields a revelation that lets me return home with haste and newfound confidence! -Will Winchester "
+note_text = "I’ve decided to leave notes as breadcrumbs while I climb. After all, this place is meant to break the mind and push one to his limits. Recording my findings and marking my progress will help me keep my head. This journey will be difficult, but I hope it helps me come to a revelation that rejuvenates me with haste and newfound confidence! -Will Winchester "
 
 [node name="Area3D" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 11, 3)
