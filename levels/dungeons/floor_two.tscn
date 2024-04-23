@@ -214,7 +214,7 @@ transform = Transform3D(0.972667, 0, 0.232206, 0, 1, 0, -0.232206, 0, 0.972667, 
 shape = SubResource("BoxShape3D_nhum7")
 
 [node name="EventTrigger" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.1628, 36.62, -19.735)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.1628, 36.62, -21.0513)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="EventTrigger"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.84714, -1.15549, -2.3507)
