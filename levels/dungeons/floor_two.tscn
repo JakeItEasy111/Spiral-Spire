@@ -186,7 +186,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -46.1666, 4.8, 0.638184)
 
 [node name="NoteObject" parent="." instance=ExtResource("9_b4wc1")]
 transform = Transform3D(0.464372, 0, 1.42631, 0, 1.5, 0, -1.42631, 0, 0.464372, -6.75092, 1.05029, 5.57751)
-note_text = "I’ve been in this tower for days now. No sign of egress. As I ascend, the floors have only gotten wider and more labyrinthine. I can only hope that if I persevere I’ll eventually find an exit, but I haven’t seen a window for eons. Who knows if I’m even going up. "
+note_text = "I’ve been in this tower for days now. No sign of egress. As I ascend, the floors have only gotten wider and more labyrinthine. I can only hope that if I persevere I’ll eventually find an exit, but I haven’t seen a window for eons. Who knows if I’m even going up. -Will Winchester "
 
 [node name="Label3D" type="Label3D" parent="."]
 transform = Transform3D(1.00647, 0, 0, 0, 1.15749, 0, 0, 0, 1.00647, -55.2693, 35, -25.1984)
