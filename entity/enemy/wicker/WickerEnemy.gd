@@ -1,6 +1,7 @@
 extends "res://entity/enemy/enemy_base.gd"
 
 const ATTACK_RANGE = 2.5
+const ATTACK_DAMAGE = 15
 
 @onready var anim_tree = $MeshInstance3D/AnimationTree
 @onready var anim_player = $MeshInstance3D/AnimationPlayer
@@ -41,7 +42,7 @@ func _target_in_atk_range():
 func _hit_finished():
 	if global_position.distance_to(player.global_position) < ATTACK_RANGE + 1.0:
 		var dir = player.global_transform.origin - global_transform.origin
-		player.hit(dir, 20)
+		player.hit(dir, ATTACK_DAMAGE)
 
 func _play_attack_sfx():
 	attack_sfx.pitch_scale = randf_range(0.8, 1.2)

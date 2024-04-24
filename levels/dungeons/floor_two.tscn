@@ -31,7 +31,6 @@ navigation_mesh = SubResource("NavigationMesh_uua1q")
 
 [node name="GridMap" type="GridMap" parent="NavigationRegion3D"]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
-visible = false
 mesh_library = ExtResource("1_57rxm")
 cell_size = Vector3(1, 1, 1)
 cell_center_y = false
@@ -76,9 +75,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.6964, 4.5, 0.648132)
 
 [node name="WickerEnemy10" parent="." instance=ExtResource("3_jwkfd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -44.2964, 4.5, 5.64813)
-
-[node name="WickerEnemy11" parent="." instance=ExtResource("3_jwkfd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -45.2964, 4.5, -3.35187)
 
 [node name="WickerEnemy12" parent="." instance=ExtResource("3_jwkfd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60.2964, 4.5, -5.35187)
