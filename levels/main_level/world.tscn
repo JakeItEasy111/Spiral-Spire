@@ -200,7 +200,6 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_cphdl")
 text = "Quit"
 
 [node name="Player" parent="." instance=ExtResource("5_a0c0x")]
-hp = 1000
 
 [node name="FloorOne" parent="." instance=ExtResource("10_nlrvs")]
 
