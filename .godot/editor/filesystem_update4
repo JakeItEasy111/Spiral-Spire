@@ -1,12 +1,10 @@
-res://levels/dungeons/floor_two.tscn
+res://levels/dungeons/spiral_two.tscn
 res://entity/player/SoundManager.gd
-res://objects/notes/pickup_note.gd
 res://entity/player/pixelation.tres
 res://assets/tilesets/tileset-new.tres
 res://assets/tilesets/props/prop_library.tres
 res://assets/models/Wicker/wick_mat.tres
-res://levels/dungeons/floor_one.tscn
-res://levels/dungeons/spiral_two.tscn
+res://objects/notes/pickup_note.gd
 res://levels/main_level/world.tscn
 res://UI/scene_transition.tscn
 res://objects/pickups/hp_cheese.tscn
