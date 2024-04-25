@@ -1,6 +1,8 @@
+Sprite3D
+CollisionShape3D
+RigidBody3D
 Node3D
 Node
-CollisionShape3D
 Area3D
 AudioStreamPlayer
 AudioStreamPlayer2D
@@ -15,7 +17,6 @@ ColorRect
 AnimationPlayer
 CanvasLayer
 MeshInstance3D
-Sprite3D
 AudioStreamPlayer3D
 HBoxContainer
 AnimatedSprite3D
@@ -29,4 +30,3 @@ Button
 VBoxContainer
 PanelContainer
 Panel
-MenuBar
