@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://wc4kqwt22is6"]
+[gd_scene load_steps=10 format=3 uid="uid://wc4kqwt22is6"]
 
+[ext_resource type="Script" path="res://objects/webbed_body.gd" id="1_4reqr"]
 [ext_resource type="Texture2D" uid="uid://ckbnyqff73pgn" path="res://assets/sprites/web-4.png" id="1_jalxv"]
+[ext_resource type="AudioStream" uid="uid://do3hdckfdsfkp" path="res://assets/sounds/sfx/horror/game_break.mp3" id="2_5rsqu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mrj1w"]
 albedo_color = Color(0.788235, 0.788235, 0.788235, 1)
@@ -100,12 +102,76 @@ bind/23/name = &"heel.02.R"
 bind/23/bone = -1
 bind/23/pose = Transform3D(-0.999999, -4.17232e-07, -7.64025e-08, -7.81528e-08, -1.06145e-08, 1, -4.47035e-07, 1, 8.36257e-09, -0.0459004, -0.03, 1)
 
-[node name="psx_male_base_mesh" type="Node3D"]
+[sub_resource type="Animation" id="Animation_u6gw7"]
+resource_name = "fall"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 0.63728, 0.63728, 0.63728),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0.75, -2, 0), Vector3(0.75, -1.95, 0), Vector3(0.75, -2, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 0.63728, 0.63728, 0.63728),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-0.116937, 0, -1.5708), Vector3(0.115192, 0, -1.39626), Vector3(0, 0, -1.6057)]
+}
+
+[sub_resource type="Animation" id="Animation_rcjvl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nij2l"]
+_data = {
+"RESET": SubResource("Animation_rcjvl"),
+"fall": SubResource("Animation_u6gw7")
+}
+
+[node name="WebbedBody" type="RigidBody3D" groups=["destructible"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_4reqr")
 
 [node name="metarig" type="Node3D" parent="."]
 transform = Transform3D(5.96046e-08, 0, 1, 0, 1, 0, -1, 0, 5.96046e-08, 0, -1, 0)
 
 [node name="Skeleton3D" type="Skeleton3D" parent="metarig"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00494385, -6.10352e-05, -0.00183106)
 bones/0/name = "spine"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, -5.63407e-09, 2.44445e-07, 2.20389e-08, 0.997742, -0.0671628, -2.43514e-07, 0.0671628, 0.997742, 5.28485e-09, 0.9199, 0.0148)
@@ -278,3 +344,11 @@ bones/23/scale = Vector3(1, 1, 1)
 [node name="mesh" type="MeshInstance3D" parent="metarig/Skeleton3D"]
 mesh = SubResource("ArrayMesh_lpxph")
 skin = SubResource("Skin_2u4pa")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_5rsqu")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_nij2l")
+}

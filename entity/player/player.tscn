@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bpm05pdgfeeja"]
+[gd_scene load_steps=30 format=3 uid="uid://bpm05pdgfeeja"]
 
 [ext_resource type="PackedScene" uid="uid://bnyly0xy2l6ft" path="res://entity/entity_base.tscn" id="1_5030y"]
 [ext_resource type="Script" path="res://entity/player/Player.gd" id="2_objnu"]
@@ -19,6 +19,7 @@
 [ext_resource type="AudioStream" uid="uid://d08v7d8qj0q" path="res://assets/sounds/sfx/sword/hit.mp3" id="18_4qkq0"]
 [ext_resource type="AudioStream" uid="uid://dq126ud31dipu" path="res://assets/sounds/sfx/footsteps/fall_1.mp3" id="18_qwg8d"]
 [ext_resource type="AudioStream" uid="uid://2qjpoxl7lsw8" path="res://assets/sounds/sfx/footsteps/fall_2.mp3" id="19_mj3ah"]
+[ext_resource type="AudioStream" uid="uid://d33u6x5tqs1fy" path="res://assets/sounds/sfx/sword/break.mp3" id="20_e6sw8"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_o8nu8"]
 
@@ -376,6 +377,7 @@ sword_sounds = Array[AudioStreamMP3]([ExtResource("3_rosfm"), ExtResource("4_mu3
 hurt_sounds = Array[AudioStreamMP3]([ExtResource("17_4xi4n")])
 hit_sound = Array[AudioStreamMP3]([ExtResource("18_4qkq0")])
 fall_sounds = Array[AudioStreamMP3]([ExtResource("18_qwg8d"), ExtResource("19_mj3ah")])
+break_sound = ExtResource("20_e6sw8")
 ground_pos = NodePath("../GroundPosition")
 player = NodePath("..")
 

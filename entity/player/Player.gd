@@ -139,12 +139,15 @@ func melee():
 
 func meleeHit():
 	for body in hitbox.get_overlapping_bodies():
+		var hit_pos = body
 		if body.is_in_group("enemies"):
 			body.take_damage(MELEE_DAMAGE)
 			body.hitflash() 
 			body.apply_knockback(body.global_transform.origin - global_transform.origin)
-			var hit_pos = body
 			sound_manager.play_hit(hit_pos)
+		if body.is_in_group("destructible"):
+			body.destroy()
+			sound_manager.play_break(hit_pos)
 
 func tryInteract():
 	if interact_ray.is_colliding():

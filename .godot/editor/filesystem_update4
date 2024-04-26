@@ -5,9 +5,8 @@ res://entity/player/pixelation.tres
 res://assets/tilesets/tileset-new.tres
 res://assets/tilesets/props/prop_library.tres
 res://assets/models/Wicker/wick_mat.tres
-res://levels/main_level/world.tscn
-res://UI/scene_transition.tscn
-res://objects/pickups/hp_cheese.tscn
-res://levels/dungeons/spiral.tscn
+res://levels/dungeons/Web.gd
 res://entity/player/player.tscn
+res://entity/player/Player.gd
 res://objects/webbed_body.tscn
+res://objects/webbed_body.gd

@@ -1,11 +1,15 @@
-[gd_scene load_steps=12 format=3 uid="uid://p5aiw3tacw5w"]
+[gd_scene load_steps=16 format=3 uid="uid://p5aiw3tacw5w"]
 
 [ext_resource type="Script" path="res://levels/dungeons/spiral_two.gd" id="1_aiude"]
 [ext_resource type="MeshLibrary" uid="uid://us1ixi1tpfp8" path="res://assets/tilesets/tileset-new.tres" id="2_5k3ay"]
 [ext_resource type="MeshLibrary" uid="uid://cyaw2a0rl3vw" path="res://assets/tilesets/props/prop_library.tres" id="3_hvefc"]
 [ext_resource type="PackedScene" uid="uid://ql0l8j2ni6xb" path="res://objects/torch/torch.tscn" id="3_rd35l"]
 [ext_resource type="PackedScene" uid="uid://xfak30c1l3em" path="res://objects/notes/note_object.tscn" id="3_sfu0m"]
+[ext_resource type="Script" path="res://levels/dungeons/Web.gd" id="6_24grk"]
 [ext_resource type="Texture2D" uid="uid://cq8mhgt8ssvwc" path="res://assets/sprites/web-1.png" id="6_d6qc3"]
+[ext_resource type="Texture2D" uid="uid://c0xqcwdvfkf7" path="res://assets/sprites/web-2.png" id="7_6dmkr"]
+[ext_resource type="Texture2D" uid="uid://ckbnyqff73pgn" path="res://assets/sprites/web-4.png" id="8_kqd7s"]
+[ext_resource type="Texture2D" uid="uid://doskn0tpyxvwx" path="res://assets/sprites/web-3.png" id="9_okbcw"]
 [ext_resource type="AudioStream" uid="uid://0pg2eti8sx56" path="res://assets/sounds/music/JD_Dungeon_Game_-_Tortured_v1.00.wav" id="13_vkl0g"]
 [ext_resource type="PackedScene" uid="uid://b8kxtpqpyap6m" path="res://objects/door/door.tscn" id="14_s8j4f"]
 
@@ -17,6 +21,7 @@ agent_radius = 0.25
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_vbgg0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hk0eg"]
+size = Vector3(7, 7, 0.5)
 
 [node name="Spiral" type="Node"]
 script = ExtResource("1_aiude")
@@ -157,16 +162,59 @@ transform = Transform3D(7, 0, 0, 0, 7, 0, 0, 0, 7, -17.4557, -42.2224, 60.2287)
 shape = SubResource("WorldBoundaryShape3D_vbgg0")
 
 [node name="Web" type="RigidBody3D" parent="NavigationRegion3D/GridMap"]
-transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 0, 0, 0)
+transform = Transform3D(3.5, 3.485e-08, 4.07454e-10, -3.485e-08, 3.5, 2.6077e-08, -4.07454e-10, -2.6077e-08, 3.5, 0, 0, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/GridMap/Web"]
+transform = Transform3D(1, 1.13141e-09, 1.86265e-09, -2.53567e-09, 1, 0, 1.16415e-10, -3.72529e-09, 1, -4.19293, -1.00478, 21.7401)
 shape = SubResource("BoxShape3D_hk0eg")
 
 [node name="Sprite3D" type="Sprite3D" parent="NavigationRegion3D/GridMap/Web"]
-transform = Transform3D(1, 1.17507e-09, -1.16415e-10, -9.56898e-08, 0.999999, 0, 1.74623e-09, 2.98023e-08, 1, -4.04212, -1.64413, 21.7776)
+transform = Transform3D(1, 1.13869e-09, 1.16415e-10, -9.57225e-08, 0.999999, 3.72529e-09, 1.39698e-09, 1.86265e-08, 1, -4.04212, -1.64413, 21.7776)
 shaded = true
 texture_filter = 0
 texture = ExtResource("6_d6qc3")
+
+[node name="Web2" type="RigidBody3D" parent="NavigationRegion3D/GridMap" groups=["destructible"]]
+transform = Transform3D(3.5, 6.55709e-08, 0, -9.08331e-08, 3.5, 1.49012e-08, -1.39698e-09, -2.23517e-08, 3.5, 1.86265e-09, -2.23517e-08, -2.15153)
+script = ExtResource("6_24grk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/GridMap/Web2"]
+transform = Transform3D(1, 1.14596e-09, 0, -5.84914e-08, 1, 3.72529e-09, 1.16415e-10, 0, 1, -4.17144, -0.999999, 21.8369)
+shape = SubResource("BoxShape3D_hk0eg")
+
+[node name="Sprite3D" type="Sprite3D" parent="NavigationRegion3D/GridMap/Web2"]
+transform = Transform3D(2, 2.40791e-07, -3.95812e-09, -3.03313e-07, 2, -6.70552e-08, 4.42378e-09, 6.70552e-08, 2, -4.18428, -3.18427, 21.7825)
+shaded = true
+texture_filter = 0
+texture = ExtResource("7_6dmkr")
+
+[node name="Web3" type="RigidBody3D" parent="NavigationRegion3D/GridMap" groups=["destructible"]]
+transform = Transform3D(3.5, 8.04721e-08, 0, -1.05749e-07, 3.5, 1.49012e-08, -1.86265e-09, -2.23517e-08, 3.5, 1.86265e-09, -2.98023e-08, -2.25709)
+script = ExtResource("6_24grk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/GridMap/Web3"]
+transform = Transform3D(1, -2.58296e-09, 1.16415e-09, -2.1173e-08, 1, 3.72529e-09, 1.39698e-09, 0, 1, -4.2, -0.999999, 21.3297)
+shape = SubResource("BoxShape3D_hk0eg")
+
+[node name="Sprite3D" type="Sprite3D" parent="NavigationRegion3D/GridMap/Web3"]
+transform = Transform3D(2, 2.40791e-07, -3.95812e-09, -3.48075e-07, 2, -6.70552e-08, 4.65661e-09, 6.70552e-08, 2, -4.20851, -3.18427, 21.3213)
+shaded = true
+texture_filter = 0
+texture = ExtResource("8_kqd7s")
+
+[node name="Web4" type="RigidBody3D" parent="NavigationRegion3D/GridMap" groups=["destructible"]]
+transform = Transform3D(3.5, 8.04721e-08, 0, -1.05749e-07, 3.5, 1.49012e-08, -1.86265e-09, -2.23517e-08, 3.5, 1.86265e-09, -4.47035e-08, -4.10609)
+script = ExtResource("6_24grk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/GridMap/Web4"]
+transform = Transform3D(1, -2.58296e-09, 3.0268e-09, -2.11076e-08, 1, 3.72529e-09, 3.25963e-09, 0, 1, -4.17952, -0.999999, 21.2957)
+shape = SubResource("BoxShape3D_hk0eg")
+
+[node name="Sprite3D" type="Sprite3D" parent="NavigationRegion3D/GridMap/Web4"]
+transform = Transform3D(2, 2.40783e-07, -3.0268e-09, -3.48089e-07, 2, -6.70552e-08, 5.82077e-09, 6.70552e-08, 2, -4.19864, -3.18765, 21.3217)
+shaded = true
+texture_filter = 0
+texture = ExtResource("9_okbcw")
 
 [node name="PropMap" type="GridMap" parent="NavigationRegion3D"]
 transform = Transform3D(1.49909, -0.0523492, 0, 0.0523174, 1.49817, -0.0523492, 0.00182696, 0.0523174, 1.49909, 0, 0, 0)
