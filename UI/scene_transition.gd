@@ -4,8 +4,6 @@ extends CanvasLayer
 @onready var world = get_parent()
 var in_transition = false 
 
-signal connect_level(level)
-
 func change_level_scene(level, path):
 	get_tree().paused = true 
 	$"../UILayer".visible = false

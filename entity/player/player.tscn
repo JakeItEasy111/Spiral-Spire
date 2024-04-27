@@ -377,7 +377,7 @@ sword_sounds = Array[AudioStreamMP3]([ExtResource("3_rosfm"), ExtResource("4_mu3
 hurt_sounds = Array[AudioStreamMP3]([ExtResource("17_4xi4n")])
 hit_sound = Array[AudioStreamMP3]([ExtResource("18_4qkq0")])
 fall_sounds = Array[AudioStreamMP3]([ExtResource("18_qwg8d"), ExtResource("19_mj3ah")])
-break_sound = ExtResource("20_e6sw8")
+break_sound = Array[AudioStreamMP3]([ExtResource("20_e6sw8")])
 ground_pos = NodePath("../GroundPosition")
 player = NodePath("..")
 

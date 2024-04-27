@@ -5,7 +5,7 @@ extends Node3D
 @export var hurt_sounds : Array[AudioStreamMP3]
 @export var hit_sound : Array[AudioStreamMP3]
 @export var fall_sounds : Array[AudioStreamMP3]
-@export var break_sound : AudioStreamMP3
+@export var break_sound : Array[AudioStreamMP3]
 @export var camera : Node3D
 @export var ground_pos : Marker3D
 @export var player : CharacterBody3D = get_parent() 
@@ -41,5 +41,5 @@ func play_hit(hit_pos):
 func play_fall():
 	play_sound(fall_sounds, ground_pos)
 	
-func play_break(hit_pos):
-	play_sound(break_sound, hit_pos)
+func play_break():
+	play_sound(break_sound, camera)

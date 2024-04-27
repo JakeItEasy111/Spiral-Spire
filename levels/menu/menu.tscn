@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://c6qsjprnjeljn"]
+[gd_scene load_steps=8 format=3 uid="uid://c6qsjprnjeljn"]
 
 [ext_resource type="FontFile" uid="uid://cjyopdofstljf" path="res://assets/fonts/rubber-biscuit/RUBBBB__.TTF" id="1_d6bds"]
 [ext_resource type="Texture2D" uid="uid://but7gwcbbyp3s" path="res://assets/sprites/Menu_Bg.png" id="1_iof71"]
 [ext_resource type="Script" path="res://levels/menu/menu.gd" id="3_gponr"]
+[ext_resource type="AudioStream" uid="uid://dey33dp51n7ud" path="res://assets/sounds/music/JD_Spiral_Spire_-_Menu_v1.00.ogg" id="5_6jtdl"]
 [ext_resource type="FontFile" uid="uid://0mhojjt0rey0" path="res://assets/fonts/alagard/alagard.ttf" id="5_akfk1"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qyscw"]
@@ -83,6 +84,10 @@ theme_override_font_sizes/normal_font_size = 220
 bbcode_enabled = true
 text = "[wave amp=50.0 freq=5.0 connected=1] Spiral
 Spire [/wave]"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_6jtdl")
+autoplay = true
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]

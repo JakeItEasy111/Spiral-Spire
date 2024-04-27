@@ -1,7 +1,4 @@
 extends Node
-
-func _ready():
-	$AudioStreamPlayer.play()
 	
 func _on_timer_timeout():
 	$NavigationRegion3D/GridMap.visible = false

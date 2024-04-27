@@ -25,7 +25,7 @@ material = SubResource("StandardMaterial3D_2fghu")
 size = Vector2(3, 4)
 orientation = 0
 
-[node name="devroom" type="Node"]
+[node name="devroom" type="Node" groups=["level"]]
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_uua1q")

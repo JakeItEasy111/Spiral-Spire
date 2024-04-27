@@ -146,8 +146,8 @@ func meleeHit():
 			body.apply_knockback(body.global_transform.origin - global_transform.origin)
 			sound_manager.play_hit(hit_pos)
 		if body.is_in_group("destructible"):
+			sound_manager.play_break()
 			body.destroy()
-			sound_manager.play_break(hit_pos)
 
 func tryInteract():
 	if interact_ray.is_colliding():
