@@ -1,3 +1,4 @@
+res://
 res://assets/fonts/rubber-biscuit
 res://objects
 res://assets/tilesets/props
@@ -9,7 +10,6 @@ res://assets/sprites
 res://assets/models/Clothman
 res://entity/enemy/clothman
 res://entity/enemy
-res://
 res://objects/notes
 res://assets/models/Doors
 res://entity/enemy/wicker
