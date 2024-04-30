@@ -11,3 +11,5 @@ res://levels/dungeons/floor_one.tscn
 res://levels/dungeons/floor_two.tscn
 res://entity/player/player.tscn
 res://levels/dungeons/spiral_two.tscn
+res://entity/enemy/wicker/wicker_enemy.tscn
+res://entity/enemy/wicker/WickerEnemy.gd

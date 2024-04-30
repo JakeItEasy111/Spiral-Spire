@@ -1,7 +1,7 @@
 extends "res://entity/enemy/enemy_base.gd"
 
 const ATTACK_RANGE = 2.5
-const ATTACK_DAMAGE = 15
+const ATTACK_DAMAGE = 10
 
 @onready var anim_tree = $MeshInstance3D/AnimationTree
 @onready var anim_player = $MeshInstance3D/AnimationPlayer
