@@ -8,7 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://bbniqovmumiaa" path="res://assets/sounds/sfx/sword/swoosh_3.mp3" id="5_pqbkd"]
 [ext_resource type="Shader" uid="uid://b1ydtksksvlja" path="res://entity/player/pixelation.tres" id="6_2xjnj"]
 [ext_resource type="Script" path="res://entity/player/SoundManager.gd" id="7_8vmrd"]
-[ext_resource type="Texture2D" uid="uid://b7v47oi3pw6yg" path="res://icon.svg" id="7_i6el5"]
+[ext_resource type="Texture2D" uid="uid://bbvy2nxqehx2d" path="res://icon.svg" id="7_i6el5"]
 [ext_resource type="AudioStream" uid="uid://c716fycad42od" path="res://assets/sounds/sfx/footsteps/footstep_1.mp3" id="8_vshi7"]
 [ext_resource type="AudioStream" uid="uid://012336lw68p1" path="res://assets/sounds/sfx/footsteps/footstep_2.mp3" id="9_osqyc"]
 [ext_resource type="AudioStream" uid="uid://bi3inbpfpgjs6" path="res://assets/sounds/sfx/footsteps/footstep_3.mp3" id="10_bjqbn"]

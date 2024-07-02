@@ -173,11 +173,8 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 10, 0, 7.97146)
 [node name="Cheese3" parent="." instance=ExtResource("8_eb0ql")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 12.0334, 0, 5.63818)
 
-[node name="Cheese4" parent="." instance=ExtResource("8_eb0ql")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -32.1666, 4.6, 24.6382)
-
 [node name="Cheese5" parent="." instance=ExtResource("8_eb0ql")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -38.1666, 4.4, 34.6382)
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -38.1666, 4.82365, 34.6382)
 
 [node name="Cheese6" parent="." instance=ExtResource("8_eb0ql")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -66.1666, 4.8, -1.3618)

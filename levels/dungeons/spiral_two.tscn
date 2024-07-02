@@ -43,7 +43,7 @@ metadata/_editor_floor_ = Vector3(0, -23, 0)
 
 [node name="NoteObject" parent="NavigationRegion3D/GridMap" instance=ExtResource("3_sfu0m")]
 transform = Transform3D(1.33333, 0, 0, 0, -5.82819e-08, 1.33333, 0, -1.33333, -5.82819e-08, -0.0390857, -25.8594, 12.9757)
-note_text = "I’ll have to revisit this scene later. I don’t like the ending. It’s too depressing of a fate for Winchester after everything I put him through in the game. Maybe a lighter ending? "
+note_text = "I need to revisit this map later. I don’t like the ending. It’s too depressing of a fate for Winchester after everything I put him through in the game. Maybe a lighter ending? "
 
 [node name="NoteObject2" parent="NavigationRegion3D/GridMap" instance=ExtResource("3_sfu0m")]
 transform = Transform3D(-5.82819e-08, 1.33333, 5.82819e-08, 0, -5.82819e-08, 1.33333, 1.33333, 5.82819e-08, 2.54758e-15, -31.9185, -26.1015, 14.3677)
@@ -55,15 +55,15 @@ note_text = " I can hardly focus. I can hardly sleep. I can't tell you how bad i
 
 [node name="NoteObject4" parent="NavigationRegion3D/GridMap" instance=ExtResource("3_sfu0m")]
 transform = Transform3D(1.33333, 0, 0, 0, -5.82819e-08, 1.33333, 0, -1.33333, -5.82819e-08, -28.6359, -26.0575, 62.9581)
-note_text = "Do I do this to myself on purpose? Do I not feel guilty enough? Do I think ruminating will fix the past? That I’ll be better for sabotaging myself? "
+note_text = "Do I do this to myself on purpose? Do I not feel guilty enough? Do I think I’ll be better for sabotaging myself? "
 
 [node name="NoteObject5" parent="NavigationRegion3D/GridMap" instance=ExtResource("3_sfu0m")]
 transform = Transform3D(-5.82819e-08, -1.33333, -5.82819e-08, 0, -5.82819e-08, 1.33333, -1.33333, 5.82819e-08, 2.54758e-15, -6.073, -25.9333, 64.9121)
-note_text = "I’ve lost touch with myself and those around me. I’m trapped within my own walls. I’ve fallen in a hole of my own making and it keeps getting deeper. Worse, there’s no light at the end of this tunnel, no view at the end of the peer, or summit to this spire. I just keep descending. "
+note_text = "I’ve lost touch. I’m trapped within my own walls. I’ve fallen in a hole I can't see and it keeps getting deeper. There’s no light at the end of this tunnel, no view at the end of the peer, or summit to this spire. I just keep descending. "
 
 [node name="NoteObject6" parent="NavigationRegion3D/GridMap" instance=ExtResource("3_sfu0m")]
 transform = Transform3D(-1.33333, 1.16564e-07, 5.09516e-15, 0, -5.82819e-08, 1.33333, 1.16564e-07, 1.33333, 5.82819e-08, -4.53849, -21.7444, 32.0039)
-note_text = "I started working on this game to escape. But I can’t escape it. Winchester was a a character, but I projected myself, my fears, my loathing onto him. Now I have nightmares about being in this place. I mistake my own walls for stone brick. I put too much of myself into it, and now it has taken too much of me.  "
+note_text = "I started working on this game to escape. Now I can’t escape it. I've projected myself into it.  I have nightmares about being in this place. I mistake my own walls for stone brick. I put too much of myself into this project, and now it has taken too much of me.  "
 
 [node name="Door3" parent="NavigationRegion3D/GridMap" instance=ExtResource("14_s8j4f")]
 transform = Transform3D(9.93411e-09, 0, 0.666667, 0, 0.666667, 0, -0.666667, 0, 9.93411e-09, -31, -27, 23.006)
