@@ -9,7 +9,7 @@ extends CharacterBody3D
 
 signal hp_change 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	move_and_slide() 
 
 func set_hp(new_hp):

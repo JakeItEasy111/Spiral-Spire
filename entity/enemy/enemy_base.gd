@@ -7,7 +7,7 @@ extends "res://entity/entity_base.gd"
 @export var detect_range : int 
 @onready var dead = false 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if not dead: 
 		velocity = Vector3.ZERO
 		knockback_force *= 0.95

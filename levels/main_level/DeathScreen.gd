@@ -3,7 +3,7 @@ extends Control
 @onready var health_label = $"../UI/Health"
 @onready var death_sound = $AudioStreamPlayer2D
 
-func _process(delta):
+func _process(_delta):
 	if visible and Input.is_action_just_pressed("space"):
 		visible = false 
 		health_label.visible = true 

@@ -19,7 +19,7 @@ func _ready():
 	ambient_sfx.play() 
 	state_machine = anim_tree.get("parameters/playback")
 
-func _process(delta):
+func _process(_delta):
 	match state_machine.get_current_node():
 		"wicker_walk":
 			SPEED = 3
@@ -40,8 +40,8 @@ func _target_in_atk_range():
 	return global_position.distance_to(player.global_position) < ATTACK_RANGE
 	
 func _hit_finished():
-	if global_position.distance_to(player.global_position) < ATTACK_RANGE + 1.0:
-		var dir = player.global_transform.origin - global_transform.origin
+	if global_position.distance_to(player.global_position) < ATTACK_RANGE + 0.75:
+		var dir = player.global_transform.origin - global_transform.origin 
 		player.hit(dir, ATTACK_DAMAGE)
 
 func _play_attack_sfx():
@@ -60,7 +60,7 @@ func die():
 		dead = true 
 		anim_tree.set("parameters/conditions/die", true)
 		await get_tree().create_timer(1.0).timeout
-		$OmniLight3D.visible = false 
+		$OmniLight3D.queue_free() 
 		fire_anim.queue_free()
 		await get_tree().create_timer(2.0).timeout 
 		queue_free()

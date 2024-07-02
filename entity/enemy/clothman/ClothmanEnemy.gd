@@ -12,7 +12,7 @@ signal shoot
 func _ready(): 
 	state_machine = anim_tree.get("parameters/playback")
 	
-func _process(delta):
+func _process(_delta):
 	match state_machine.get_current_node():
 		"Fly":
 			SPEED = 1

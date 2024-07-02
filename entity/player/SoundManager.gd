@@ -12,9 +12,6 @@ extends Node3D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	player.step.connect(play_footstep)
-	player.player_hit.connect(play_hurt)
-	player.fall.connect(play_fall)
 	camera = %Player_camera
 	
 func play_sound(source_sounds, play_pos):

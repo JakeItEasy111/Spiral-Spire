@@ -44,7 +44,7 @@ func _unhandled_input(event): #mouse rotation
 		camera.rotate_x(-event.relative.y * SENSITIVITY) #rotates around x axis
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(80)) #limits camera 
 		
-func _process(delta):
+func _process(_delta):
 	if dead:
 		return
 		

@@ -16,7 +16,7 @@ func use():
 		interact_sfx.play()
 		cooldownTimer.start()
 	
-func _process(delta):
+func _process(_delta):
 	if note_UI.visible and cooldownTimer.is_stopped():
 		if Input.is_action_just_pressed("interact") or Input.is_action_just_pressed("fire"):
 			interact_sfx.play()

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0y4506sjblhl"
-path="res://.godot/imported/icon.png-3d134b96cce56facd5d7966be62f415f.ctex"
+uid="uid://ims4h0555a65"
+path="res://.godot/imported/deathScreen.png-3b32ac40e820fcfb3d62cf7d75f53e1a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/FloorArchitect/icon.png"
-dest_files=["res://.godot/imported/icon.png-3d134b96cce56facd5d7966be62f415f.ctex"]
+source_file="res://assets/sprites/deathScreen.png"
+dest_files=["res://.godot/imported/deathScreen.png-3b32ac40e820fcfb3d62cf7d75f53e1a.ctex"]
 
 [params]
 

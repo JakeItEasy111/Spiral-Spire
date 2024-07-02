@@ -1,6 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://bi6235vomq6iw"]
 
 [ext_resource type="MeshLibrary" uid="uid://us1ixi1tpfp8" path="res://assets/tilesets/tileset-new.tres" id="1_57rxm"]
+[ext_resource type="Script" path="res://objects/EventTrigger.gd" id="1_nlu6b"]
 [ext_resource type="MeshLibrary" uid="uid://cyaw2a0rl3vw" path="res://assets/tilesets/props/prop_library.tres" id="2_cultd"]
 [ext_resource type="PackedScene" uid="uid://88jssic5a3c2" path="res://entity/enemy/wicker/wicker_enemy.tscn" id="3_jwkfd"]
 [ext_resource type="PackedScene" uid="uid://7wfoajse50ld" path="res://entity/enemy/clothman/clothman_enemy.tscn" id="4_pope8"]
@@ -10,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://du1b3ig34anc" path="res://objects/pickups/hp_cheese.tscn" id="8_eb0ql"]
 [ext_resource type="PackedScene" uid="uid://xfak30c1l3em" path="res://objects/notes/note_object.tscn" id="9_b4wc1"]
 [ext_resource type="FontFile" uid="uid://dapwaattyuyd4" path="res://assets/fonts/rubber-biscuit/RUBBBI__.TTF" id="10_pxlsm"]
-[ext_resource type="Script" path="res://levels/dungeons/EventTrigger.gd" id="11_cfl8b"]
 [ext_resource type="AudioStream" uid="uid://om4128v8jas5" path="res://assets/sounds/music/JD_Spiral_Spire_-_Chipper_v6.01.ogg" id="12_7ddc7"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_uua1q"]
@@ -25,7 +25,7 @@ size = Vector3(5, 4, 0.25)
 size = Vector3(10, 5, 2.5)
 
 [node name="FloorTwo" type="Node" groups=["level"]]
-script = ExtResource("11_cfl8b")
+script = ExtResource("1_nlu6b")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_uua1q")

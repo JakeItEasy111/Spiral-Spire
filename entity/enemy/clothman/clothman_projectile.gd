@@ -1,6 +1,5 @@
 extends Area3D
 
-var dir = Vector3()
 var kill = false 
 @onready var proj_anim = $ProjectileSprite
 @onready var proj_kill_anim = $BurstEffect

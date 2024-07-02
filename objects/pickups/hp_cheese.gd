@@ -4,7 +4,7 @@ extends Node3D
 @onready var eat_sfx = $EatSFX
 const HEAL_AMOUNT = 20
 
-func _process(delta):
+func _process(_delta):
 	for body in pickup_area.get_overlapping_bodies():
 		if body.is_in_group("player") and body.hp < body.hp_max:
 			if (body.hp + HEAL_AMOUNT >= body.hp_max):

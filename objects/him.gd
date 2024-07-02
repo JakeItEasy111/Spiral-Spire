@@ -6,6 +6,7 @@ extends StaticBody3D
 func destroy():
 	visible = false
 	break_sound.play()
-	await break_sound.finished
+	await get_tree().create_timer(3.0).timeout
+	break_sound.stop()
 	get_tree().change_scene_to_file("res://levels/credits/credits.tscn")
 	

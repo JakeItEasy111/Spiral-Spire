@@ -50,7 +50,7 @@ func open(dir : int):
 			return
 		if door_state == DOOR_STATES.opened:
 			door_state = DOOR_STATES.closed
-			open_direction = dir 
+			open_direction = dir
 			close_sfx.play()
 			return
 	elif(player.hasKey(key)):

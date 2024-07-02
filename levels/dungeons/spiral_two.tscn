@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://ql0l8j2ni6xb" path="res://objects/torch/torch.tscn" id="3_rd35l"]
 [ext_resource type="PackedScene" uid="uid://xfak30c1l3em" path="res://objects/notes/note_object.tscn" id="3_sfu0m"]
 [ext_resource type="Texture2D" uid="uid://cq8mhgt8ssvwc" path="res://assets/sprites/web-1.png" id="6_d6qc3"]
+[ext_resource type="Script" path="res://objects/DestructibleWeb.gd" id="7_5ktvp"]
 [ext_resource type="Texture2D" uid="uid://c0xqcwdvfkf7" path="res://assets/sprites/web-2.png" id="7_6dmkr"]
-[ext_resource type="Script" path="res://levels/dungeons/DestructibleWeb.gd" id="7_g7aop"]
 [ext_resource type="Texture2D" uid="uid://ckbnyqff73pgn" path="res://assets/sprites/web-4.png" id="8_kqd7s"]
 [ext_resource type="Texture2D" uid="uid://doskn0tpyxvwx" path="res://assets/sprites/web-3.png" id="9_okbcw"]
 [ext_resource type="PackedScene" uid="uid://dov6cuyxb8c55" path="res://objects/him.tscn" id="11_ohiaw"]
@@ -165,7 +165,7 @@ shape = SubResource("BoxShape3D_3ycit")
 
 [node name="DestructibleWeb2" type="StaticBody3D" parent="NavigationRegion3D/GridMap" groups=["destructible"]]
 transform = Transform3D(3.5, 2.49565e-09, 4.65661e-09, 3.23926e-08, 3.5, -7.45058e-09, -6.0536e-09, -1.93715e-07, 3.5, -14.4345, -5.22601, 73.9142)
-script = ExtResource("7_g7aop")
+script = ExtResource("7_5ktvp")
 
 [node name="Sprite3D" type="Sprite3D" parent="NavigationRegion3D/GridMap/DestructibleWeb2"]
 transform = Transform3D(2, 2.33558e-09, 1.39698e-09, 2.74304e-09, 2, -7.45058e-09, 0, -4.09782e-08, 2, 4.76837e-07, -0.646821, 1.90735e-06)
@@ -178,7 +178,7 @@ shape = SubResource("BoxShape3D_3ycit")
 
 [node name="DestructibleWeb3" type="StaticBody3D" parent="NavigationRegion3D/GridMap" groups=["destructible"]]
 transform = Transform3D(3.5, -1.25219e-08, 5.58794e-09, 1.78406e-08, 3.5, -7.45058e-09, -5.82077e-09, -2.16067e-07, 3.5, -14.4345, -5.22601, 71.8258)
-script = ExtResource("7_g7aop")
+script = ExtResource("7_5ktvp")
 
 [node name="Sprite3D" type="Sprite3D" parent="NavigationRegion3D/GridMap/DestructibleWeb3"]
 transform = Transform3D(2, 2.33922e-09, 3.49246e-10, 2.7394e-09, 2, -7.45058e-09, 1.16415e-10, -7.45058e-09, 2, 0, -0.667737, 0)
@@ -191,7 +191,7 @@ shape = SubResource("BoxShape3D_3ycit")
 
 [node name="DestructibleWeb4" type="StaticBody3D" parent="NavigationRegion3D/GridMap" groups=["destructible"]]
 transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, -14.4345, -5.22601, 69.7641)
-script = ExtResource("7_g7aop")
+script = ExtResource("7_5ktvp")
 
 [node name="Sprite3D" type="Sprite3D" parent="NavigationRegion3D/GridMap/DestructibleWeb4"]
 transform = Transform3D(-2, 1.79967e-07, 0, -1.74103e-07, -2, 0, 0, 0, 2, -4.76837e-07, -0.644052, 0)

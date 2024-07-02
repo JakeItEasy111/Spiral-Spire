@@ -8,7 +8,7 @@ var level : Node
 func _ready():
 	_on_player_hp_change()
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	if(player != null):
 		get_tree().call_group("enemies", "set_target_position", player.global_transform.origin)
 

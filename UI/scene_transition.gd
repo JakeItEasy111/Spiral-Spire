@@ -24,7 +24,7 @@ func change_level_no_transition(level, path):
 	add_child(level)
 	player.position = Vector3.ZERO
 	
-func _process(delta):
+func _process(_delta):
 	if(in_transition):
 		$TextureRect.modulate = Color(1, 1, 1, 1)
 		if Input.is_action_just_pressed("space"):

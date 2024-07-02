@@ -381,6 +381,6 @@ break_sound = Array[AudioStreamMP3]([ExtResource("20_e6sw8")])
 ground_pos = NodePath("../GroundPosition")
 player = NodePath("..")
 
-[connection signal="fall" from="." to="SoundManager" method="_ready"]
-[connection signal="player_hit" from="." to="SoundManager" method="_ready"]
-[connection signal="step" from="." to="SoundManager" method="_ready"]
+[connection signal="fall" from="." to="SoundManager" method="play_fall"]
+[connection signal="player_hit" from="." to="SoundManager" method="play_hurt"]
+[connection signal="step" from="." to="SoundManager" method="play_footstep"]
