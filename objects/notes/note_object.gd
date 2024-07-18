@@ -1,6 +1,6 @@
 extends Node3D
 
-@export var note_text : String
+@export_multiline var note_text : String
 @onready var text_label = $NoteLayer/NoteUI/RichTextLabel
 
 # Called when the node enters the scene tree for the first time.

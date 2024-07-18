@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bqsxtwiigm17h"]
+[gd_scene load_steps=19 format=3 uid="uid://5464fyak1rsi"]
 
 [ext_resource type="Script" path="res://levels/main_level/world.gd" id="1_ox0py"]
 [ext_resource type="PackedScene" uid="uid://b6ypnk1rqyd2v" path="res://UI/scene_transition.tscn" id="2_7dbj7"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bpm05pdgfeeja" path="res://entity/player/player.tscn" id="5_a0c0x"]
 [ext_resource type="Script" path="res://levels/main_level/DeathScreen.gd" id="5_vyd1k"]
 [ext_resource type="AudioStream" uid="uid://b263l3tyqtetu" path="res://assets/sounds/sfx/fire/wicker_die.wav" id="5_xkbsj"]
+[ext_resource type="Script" path="res://assets/sounds/sfx/UI/UI.gd" id="7_c4e7c"]
 [ext_resource type="FontFile" uid="uid://0mhojjt0rey0" path="res://assets/fonts/alagard/alagard.ttf" id="8_frgwi"]
 [ext_resource type="PackedScene" uid="uid://bxtldkplrbs5l" path="res://levels/dungeons/floor_one.tscn" id="10_nlrvs"]
 
@@ -16,20 +17,20 @@ sky_top_color = Color(0.384314, 0.454902, 0.54902, 1)
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 
-[sub_resource type="Sky" id="Sky_g3308"]
+[sub_resource type="Sky" id="Sky_qgn3k"]
 sky_material = SubResource("ProceduralSkyMaterial_gp45i")
 
 [sub_resource type="Environment" id="Environment_7m8yv"]
 background_mode = 2
-sky = SubResource("Sky_g3308")
+sky = SubResource("Sky_qgn3k")
 ambient_light_color = Color(0.0117647, 0.0156863, 0.054902, 1)
 reflected_light_source = 1
 tonemap_mode = 2
 ssil_enabled = true
 fog_enabled = true
-fog_light_color = Color(0.0313726, 0.0313726, 0.054902, 1)
-fog_density = 0.2
-fog_height_density = 1.1095
+fog_light_color = Color(0.0196078, 0.0196078, 0.0392157, 1)
+fog_density = 0.225
+fog_height = -45.0
 volumetric_fog_density = 0.3
 volumetric_fog_albedo = Color(0.101961, 0.101961, 0.101961, 1)
 volumetric_fog_ambient_inject = 0.65
@@ -126,8 +127,9 @@ z_as_relative = false
 texture_filter = 1
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("7_c4e7c")
 
-[node name="ColorRect" type="ColorRect" parent="UILayer/UI"]
+[node name="ScreenTint" type="ColorRect" parent="UILayer/UI"]
 visible = false
 top_level = true
 layout_mode = 0
@@ -205,11 +207,12 @@ text = "Quit"
 
 [node name="FloorOne" parent="." instance=ExtResource("10_nlrvs")]
 
+[connection signal="reset_player" from="SceneTransition" to="Player" method="_on_scene_transition_reset_player"]
 [connection signal="pressed" from="UILayer/PauseMenu/PanelContainer/HBoxContainer/VBoxContainer/Resume" to="UILayer/PauseMenu" method="_on_resume_pressed"]
 [connection signal="pressed" from="UILayer/PauseMenu/PanelContainer/HBoxContainer/VBoxContainer/Restart" to="UILayer/PauseMenu" method="_on_restart_pressed"]
 [connection signal="toggled" from="UILayer/PauseMenu/PanelContainer/HBoxContainer/VBoxContainer/Restart" to="UILayer/PauseMenu" method="_on_restart_toggled"]
 [connection signal="pressed" from="UILayer/PauseMenu/PanelContainer/HBoxContainer/VBoxContainer/Quit" to="UILayer/PauseMenu" method="_on_quit_pressed"]
-[connection signal="hp_change" from="Player" to="." method="_on_player_hp_change"]
+[connection signal="hp_change" from="Player" to="UILayer/UI" method="_on_player_hp_change"]
 [connection signal="player_dead" from="Player" to="UILayer/DeathScreen" method="_on_player_player_dead"]
-[connection signal="player_healed" from="Player" to="." method="_on_player_player_healed"]
-[connection signal="player_hit" from="Player" to="." method="_on_player_player_hit"]
+[connection signal="player_healed" from="Player" to="UILayer/UI" method="_on_player_player_healed"]
+[connection signal="player_hit" from="Player" to="UILayer/UI" method="_on_player_player_hit"]

@@ -3,7 +3,7 @@ extends "res://entity/entity_base.gd"
 #constants
 const BOB_FREQ = 2.0
 const BOB_AMP = 0.06
-const JUMP_VELOCITY = 5
+const JUMP_VELOCITY = 4
 const SENSITIVITY = 0.003
 const MELEE_DAMAGE = 25 
 
@@ -11,7 +11,7 @@ const MELEE_DAMAGE = 25
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var old_vel : float = 0.0
 var t_bob = 0.0
-var can_play : bool = true
+var can_play : bool = true #relates to sounds 
 var dead = false 
 var key_inventory : Array[Node3D]
 
@@ -83,7 +83,7 @@ func _physics_process(delta):
 	tryInteract()
 	
 	var diff = velocity.y - old_vel
-	if diff > 4:
+	if diff > 3:
 		emit_signal("fall")
 	old_vel = velocity.y
 
@@ -103,9 +103,11 @@ func _headbob(time) -> Vector3:
 		
 	return pos 
 
+
 #stair handling
 var _was_on_floor_last_frame = false
 var _snapped_to_stairs_last_frame = false 
+
 func _snap_down_to_stairs_check():
 	var did_snap = false 
 	if not is_on_floor() and velocity.y <= 0 and (_was_on_floor_last_frame or _snapped_to_stairs_last_frame) and $StairsBelowRayCast3D.is_colliding():
@@ -123,7 +125,9 @@ func _snap_down_to_stairs_check():
 	_was_on_floor_last_frame = is_on_floor() 
 	_snapped_to_stairs_last_frame = did_snap
 
+
 @onready var _initial_separation_ray_dist = abs($StepUpSeparationRay_F.position.z)
+
 func _rotate_step_up_separation_ray():
 	var xz_vel = velocity * Vector3(1, 0, 1)
 	var xz_f_ray_pos = xz_vel.normalized() * _initial_separation_ray_dist
@@ -148,16 +152,20 @@ func meleeHit():
 		if body.is_in_group("destructible"):
 			sound_manager.play_break()
 			body.destroy()
+		if body.is_in_group("environment"):
+			sound_manager.play_wall_hit(hit_pos) 
+			
 
 func tryInteract():
 	if interact_ray.is_colliding():
 		var collider = interact_ray.get_collider()
-		if Input.is_action_just_pressed("interact"):
-			if collider.is_in_group("interactable"):
-				collider.use()
-			if collider.is_in_group("key"):
-				key_inventory.append(collider.get_parent_node_3d())
-				collider.get_parent_node_3d().pickup()
+		if collider.is_in_group("interactable"):
+			if Input.is_action_just_pressed("interact"):
+				if collider.is_in_group("key"):
+					key_inventory.append(collider.get_parent_node_3d())
+					collider.get_parent_node_3d().pickup()
+				else:
+					collider.use()
 
 func hit(dir, dmg):
 	take_damage(dmg)
@@ -167,14 +175,21 @@ func hit(dir, dmg):
 func heal_to(new_hp):
 	set_hp(new_hp)
 	emit_signal("player_healed")
-		
-func die():
-	dead = true 
-	$SwordOverlay.visible = false 
-	emit_signal("player_dead")
 
 func hasKey(key):
 	if(key_inventory.has(key)):
 		return true
 	else:
 		return false
+
+func die():
+	await get_tree().create_timer(0.25).timeout
+	dead = true 
+	emit_signal("player_dead")
+		
+func _on_scene_transition_reset_player():
+	hp = hp_max 
+	key_inventory.clear() 
+	dead = false 
+	velocity = Vector3(0,0,0)
+	$SwordOverlay.visible = true

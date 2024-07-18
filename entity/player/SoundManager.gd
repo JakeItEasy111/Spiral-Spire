@@ -2,6 +2,7 @@ extends Node3D
 
 @export var footstep_sounds : Array[AudioStreamMP3]
 @export var sword_sounds : Array[AudioStreamMP3]
+@export var wall_hit_sounds : Array[AudioStreamOggVorbis]
 @export var hurt_sounds : Array[AudioStreamMP3]
 @export var hit_sound : Array[AudioStreamMP3]
 @export var fall_sounds : Array[AudioStreamMP3]
@@ -40,3 +41,6 @@ func play_fall():
 	
 func play_break():
 	play_sound(break_sound, camera)
+
+func play_wall_hit(hit_pos):
+	play_sound(wall_hit_sounds, hit_pos)

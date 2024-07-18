@@ -40,7 +40,7 @@ func _target_in_atk_range():
 	return global_position.distance_to(player.global_position) < ATTACK_RANGE
 	
 func _hit_finished():
-	if global_position.distance_to(player.global_position) < ATTACK_RANGE + 0.75:
+	if global_position.distance_to(player.global_position) < ATTACK_RANGE + 0.9:
 		var dir = player.global_transform.origin - global_transform.origin 
 		player.hit(dir, ATTACK_DAMAGE)
 

@@ -463,4 +463,5 @@ light_energy = 2.0
 [node name="BurningSFX" type="AudioStreamPlayer3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, -0.1)
 stream = ExtResource("4_m4a5e")
-volume_db = -25.0
+unit_size = 2.0
+autoplay = true

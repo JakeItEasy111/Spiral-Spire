@@ -1,0 +1,124 @@
+[gd_scene load_steps=17 format=3 uid="uid://m72sq8a7yxkm"]
+
+[ext_resource type="Texture2D" uid="uid://t4lkdtx4uhbx" path="res://assets/tilesets/tileset_new_tileset_atlas.png" id="1_loght"]
+[ext_resource type="Texture2D" uid="uid://dfn1e2w1bvhuf" path="res://assets/tilesets/tileset_new_tileset_atlas_n.png" id="2_8srb3"]
+[ext_resource type="Texture2D" uid="uid://di1rcdojnmn2o" path="res://assets/sprites/cracks.png" id="3_6y2b1"]
+[ext_resource type="Script" path="res://objects/breakable/breakablewall.gd" id="3_wyocg"]
+[ext_resource type="AudioStream" uid="uid://dp1m3ybc2ubj1" path="res://assets/sounds/sfx/sword/wall_break.ogg" id="5_llulu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fdwh7"]
+resource_name = "Material.001"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_loght")
+normal_enabled = true
+normal_texture = ExtResource("2_8srb3")
+texture_filter = 2
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_cn6ir"]
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1.00001, 3.00001, 1.00136e-05),
+"format": 4097,
+"index_count": 18,
+"index_data": PackedByteArray(6, 0, 0, 0, 7, 0, 6, 0, 1, 0, 0, 0, 2, 0, 5, 0, 3, 0, 2, 0, 4, 0, 5, 0, 4, 0, 7, 0, 5, 0, 4, 0, 6, 0, 7, 0),
+"name": "Material.001",
+"primitive": 3,
+"vertex_count": 8,
+"vertex_data": PackedByteArray(0, 0, 0, 63, 0, 0, 64, 64, 0, 0, 0, 191, 0, 0, 0, 191, 0, 0, 64, 64, 0, 0, 0, 191, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 191, 0, 0, 0, 191, 0, 0, 128, 63, 0, 0, 0, 191, 0, 0, 0, 63, 0, 0, 128, 63, 0, 0, 0, 191, 0, 0, 0, 191, 0, 0, 0, 64, 0, 0, 0, 191, 0, 0, 0, 63, 0, 0, 0, 64, 0, 0, 0, 191)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_bcjh8"]
+resource_name = "tileset_new_Plane_008"
+_surfaces = [{
+"aabb": AABB(-0.5, 0, -0.5, 1.00001, 3.00001, 1.00136e-05),
+"attribute_data": PackedByteArray(0, 0, 0, 63, 0, 0, 128, 51, 0, 0, 0, 0, 0, 0, 128, 51, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 128, 51, 0, 0, 0, 0, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 128, 51, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 128, 51, 0, 0, 0, 63, 0, 0, 128, 51, 0, 0, 0, 63, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 63),
+"format": 4119,
+"index_count": 18,
+"index_data": PackedByteArray(11, 0, 0, 0, 10, 0, 11, 0, 1, 0, 0, 0, 2, 0, 6, 0, 3, 0, 2, 0, 4, 0, 6, 0, 5, 0, 9, 0, 7, 0, 5, 0, 8, 0, 9, 0),
+"material": SubResource("StandardMaterial3D_fdwh7"),
+"name": "Material.001",
+"primitive": 3,
+"vertex_count": 12,
+"vertex_data": PackedByteArray(0, 0, 0, 63, 0, 0, 64, 64, 0, 0, 0, 191, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 64, 64, 0, 0, 0, 191, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 0, 0, 0, 0, 0, 191, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 0, 0, 0, 0, 0, 191, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 128, 63, 0, 0, 0, 191, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 128, 63, 0, 0, 0, 191, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 128, 63, 0, 0, 0, 191, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 128, 63, 0, 0, 0, 191, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 0, 64, 0, 0, 0, 191, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 0, 64, 0, 0, 0, 191, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 63, 0, 0, 0, 64, 0, 0, 0, 191, 255, 127, 255, 127, 255, 255, 255, 191, 0, 0, 0, 191, 0, 0, 0, 64, 0, 0, 0, 191, 255, 127, 255, 127, 255, 255, 255, 191)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_cn6ir")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_234vu"]
+data = PackedVector3Array(-0.5, 2, -0.5, 0.5, 3, -0.5, 0.5, 2, -0.5, -0.5, 2, -0.5, -0.5, 3, -0.5, 0.5, 3, -0.5, -0.5, 0, -0.5, 0.5, 1, -0.5, 0.5, 0, -0.5, -0.5, 0, -0.5, -0.5, 1, -0.5, 0.5, 1, -0.5, -0.5, 1, -0.5, 0.5, 2, -0.5, 0.5, 1, -0.5, -0.5, 1, -0.5, -0.5, 2, -0.5, 0.5, 2, -0.5)
+
+[sub_resource type="Gradient" id="Gradient_kv536"]
+colors = PackedColorArray(0.351563, 0.351563, 0.351563, 1, 0.0768359, 0.0768358, 0.0768358, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_3i0rd"]
+gradient = SubResource("Gradient_kv536")
+
+[sub_resource type="Curve" id="Curve_akf1u"]
+min_value = 0.1
+max_value = 1.25
+_data = [Vector2(0, 1.25), 0.0, 0.436437, 0, 0, Vector2(0.551948, 0.934211), -1.87434, -1.87434, 0, 0, Vector2(1, 0.148421), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_xrdy0"]
+curve = SubResource("Curve_akf1u")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_gnbph"]
+emission_shape = 3
+emission_box_extents = Vector3(0.5, 1, 0.25)
+particle_flag_align_y = true
+spread = 35.0
+radial_accel_max = 5.0
+scale_min = 0.5
+scale_max = 1.1
+scale_curve = SubResource("CurveTexture_xrdy0")
+color_ramp = SubResource("GradientTexture1D_3i0rd")
+collision_mode = 1
+collision_friction = 0.0
+collision_bounce = 0.25
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rkdpq"]
+vertex_color_use_as_albedo = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_663r3"]
+material = SubResource("StandardMaterial3D_rkdpq")
+size = Vector3(0.25, 0.25, 0.25)
+
+[node name="BreakableWall" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0480723, 0, 0.5)
+mesh = SubResource("ArrayMesh_bcjh8")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" groups=["destructible"]]
+script = ExtResource("3_wyocg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_234vu")
+
+[node name="Sprite3D" type="Sprite3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.000801601, 1.09647, -0.499023)
+shaded = true
+texture_filter = 0
+texture = ExtResource("3_6y2b1")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_llulu")
+volume_db = 1.0
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.08417, 0)
+emitting = false
+amount = 32
+one_shot = true
+explosiveness = 0.94
+interpolate = false
+visibility_aabb = AABB(-2, -2, -2, 4, 4, 4)
+local_coords = true
+process_material = SubResource("ParticleProcessMaterial_gnbph")
+draw_pass_1 = SubResource("BoxMesh_663r3")
+
+[node name="GPUParticlesCollisionBox3D" type="GPUParticlesCollisionBox3D" parent="GPUParticles3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.99873, 0.19685)
+size = Vector3(3, 0.2, 3)

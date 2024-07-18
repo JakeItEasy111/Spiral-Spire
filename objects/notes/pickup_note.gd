@@ -4,6 +4,7 @@ extends Area3D
 @onready var note_UI = $"../NoteLayer"
 @onready var cooldownTimer = $"../InteractCooldown"
 
+
 func pickup(state):
 	if state:
 		note_UI.visible = true

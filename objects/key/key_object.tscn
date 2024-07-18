@@ -16,7 +16,7 @@ billboard = 1
 texture_filter = 0
 texture = ExtResource("1_nhwin")
 
-[node name="PickupKey" type="Area3D" parent="." groups=["key"]]
+[node name="PickupKey" type="Area3D" parent="." groups=["interactable", "key"]]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PickupKey"]
 shape = SubResource("SphereShape3D_lg24t")

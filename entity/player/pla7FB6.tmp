@@ -1,0 +1,388 @@
+[gd_scene load_steps=31 format=3 uid="uid://bpm05pdgfeeja"]
+
+[ext_resource type="PackedScene" uid="uid://bnyly0xy2l6ft" path="res://entity/entity_base.tscn" id="1_5030y"]
+[ext_resource type="Script" path="res://entity/player/Player.gd" id="2_objnu"]
+[ext_resource type="PackedScene" uid="uid://b2j84cqc0nvhe" path="res://assets/models/[EXECUTIONER SWORD]/executionersword.tscn" id="3_rluav"]
+[ext_resource type="AudioStream" uid="uid://c2fnfciivxmcb" path="res://assets/sounds/sfx/sword/swoosh_1.mp3" id="3_rosfm"]
+[ext_resource type="AudioStream" uid="uid://3gqdqfaq3aw6" path="res://assets/sounds/sfx/sword/swoosh_2.mp3" id="4_mu30q"]
+[ext_resource type="Script" path="res://entity/player/SwordOverlay.gd" id="4_qgx8l"]
+[ext_resource type="AudioStream" uid="uid://bbniqovmumiaa" path="res://assets/sounds/sfx/sword/swoosh_3.mp3" id="5_pqbkd"]
+[ext_resource type="Shader" uid="uid://b1ydtksksvlja" path="res://entity/player/pixelation.tres" id="6_2xjnj"]
+[ext_resource type="Script" path="res://entity/player/SoundManager.gd" id="7_8vmrd"]
+[ext_resource type="Texture2D" uid="uid://bbvy2nxqehx2d" path="res://icon.svg" id="7_i6el5"]
+[ext_resource type="AudioStream" uid="uid://c716fycad42od" path="res://assets/sounds/sfx/footsteps/footstep_1.mp3" id="8_vshi7"]
+[ext_resource type="AudioStream" uid="uid://012336lw68p1" path="res://assets/sounds/sfx/footsteps/footstep_2.mp3" id="9_osqyc"]
+[ext_resource type="AudioStream" uid="uid://bi3inbpfpgjs6" path="res://assets/sounds/sfx/footsteps/footstep_3.mp3" id="10_bjqbn"]
+[ext_resource type="AudioStream" uid="uid://ddjn0lqwtgpea" path="res://assets/sounds/sfx/footsteps/footstep_4.mp3" id="11_8w0hm"]
+[ext_resource type="AudioStream" uid="uid://ynsm3dbjxnpa" path="res://assets/sounds/sfx/footsteps/footstep_5.mp3" id="12_2qvne"]
+[ext_resource type="AudioStream" uid="uid://bt3p48aknuy6r" path="res://assets/sounds/sfx/footsteps/footstep_6.mp3" id="13_ls3c8"]
+[ext_resource type="AudioStream" uid="uid://lboho6hadop2" path="res://assets/sounds/sfx/fire/fire_hurt.mp3" id="17_4xi4n"]
+[ext_resource type="AudioStream" uid="uid://d08v7d8qj0q" path="res://assets/sounds/sfx/sword/hit.mp3" id="18_4qkq0"]
+[ext_resource type="AudioStream" uid="uid://dq126ud31dipu" path="res://assets/sounds/sfx/footsteps/fall_1.mp3" id="18_qwg8d"]
+[ext_resource type="AudioStream" uid="uid://2qjpoxl7lsw8" path="res://assets/sounds/sfx/footsteps/fall_2.mp3" id="19_mj3ah"]
+[ext_resource type="AudioStream" uid="uid://d33u6x5tqs1fy" path="res://assets/sounds/sfx/sword/break.mp3" id="20_e6sw8"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_o8nu8"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vql4k"]
+radius = 0.4
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aeup4"]
+size = Vector3(1, 1, 2)
+
+[sub_resource type="Animation" id="Animation_blv54"]
+resource_name = "Attack"
+length = 0.3
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/executionersword:rotation:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-0.174533, -0.25, 0, 0.25, 0, -0.610865, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/executionersword:rotation:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.523599, -0.25, 0, 0.25, 0, 2.44346, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Head/executionersword:rotation:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-0.523599, -0.25, 0, 0.25, 0, -1.74533, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Head/executionersword:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0.895, -0.25, 0, 0.25, 0, -0.5, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Head/executionersword:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-0.045, -0.25, 0, 0.25, 0, -0.6, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Head/executionersword:position:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-1, -0.25, 0, 0.25, 0, -1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"meleeHit"
+}]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("SoundManager")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"sword_swoosh"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_8jv5x"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/executionersword:rotation:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.174533, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/executionersword:rotation:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.523599, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Head/executionersword:rotation:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-0.523599, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Head/executionersword:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0.895, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Head/executionersword:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-0.045, -0.25, 0, 0.25, 0, -0.045, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.0001)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Head/executionersword:position:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_t7e50"]
+resource_name = "Return"
+length = 0.7
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Head/executionersword:rotation:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-0.610865, -0.25, 0, 0.25, 0, -0.174533, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Head/executionersword:rotation:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(2.44346, -0.25, 0, 0.25, 0, 0.523599, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Head/executionersword:rotation:z")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-1.74533, -0.25, 0, 0.25, 0, -0.523599, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Head/executionersword:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-0.5, -0.25, 0, 0.25, 0, 0.895, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Head/executionersword:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-0.6, -0.25, 0, 0.25, 0, 0.045, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Head/executionersword:position:z")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-1, -0.25, 0, 0.25, 0, -1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.7)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1t14b"]
+_data = {
+"Attack": SubResource("Animation_blv54"),
+"RESET": SubResource("Animation_8jv5x"),
+"Return": SubResource("Animation_t7e50")
+}
+
+[sub_resource type="SeparationRayShape3D" id="SeparationRayShape3D_woocj"]
+length = 0.5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bxykc"]
+shader = ExtResource("6_2xjnj")
+shader_parameter/Pixelisation = 256.0
+
+[node name="Player" groups=["player"] instance=ExtResource("1_5030y")]
+script = ExtResource("2_objnu")
+hp = 100
+
+[node name="MeshInstance3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+visible = false
+mesh = SubResource("CapsuleMesh_o8nu8")
+
+[node name="CollisionShape3D" parent="." index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_vql4k")
+
+[node name="Head" type="Node3D" parent="." index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00387621, 1.59382, -0.00417328)
+
+[node name="executionersword" parent="Head" index="0" instance=ExtResource("3_rluav")]
+transform = Transform3D(0.0793412, 0.0357821, 0.0492404, -0.0492404, 0.0852869, 0.0173648, -0.0357821, -0.0380237, 0.0852868, 0.895, -0.045, -1)
+layers = 512
+
+[node name="Player_camera" type="Camera3D" parent="Head" index="1"]
+unique_name_in_owner = true
+cull_mask = 1048063
+
+[node name="Hitbox" type="Area3D" parent="Head/Player_camera" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Head/Player_camera/Hitbox" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+shape = SubResource("BoxShape3D_aeup4")
+
+[node name="InteractRay" type="RayCast3D" parent="Head/Player_camera/Hitbox" index="1"]
+target_position = Vector3(0, 0, -2)
+collide_with_areas = true
+collide_with_bodies = false
+debug_shape_custom_color = Color(0.929412, 0, 0, 1)
+debug_shape_thickness = 4
+
+[node name="SwordOverlay" type="CanvasLayer" parent="." index="3"]
+follow_viewport_enabled = true
+script = ExtResource("4_qgx8l")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="SwordOverlay" index="0"]
+z_index = 1
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stretch = true
+stretch_shrink = 6
+metadata/_edit_use_anchors_ = true
+
+[node name="SubViewport" type="SubViewport" parent="SwordOverlay/SubViewportContainer" index="0"]
+transparent_bg = true
+handle_input_locally = false
+positional_shadow_atlas_size = 4096
+canvas_cull_mask = 4293919743
+size = Vector2i(320, 180)
+render_target_update_mode = 4
+
+[node name="Subviewport_camera" type="Camera3D" parent="SwordOverlay/SubViewportContainer/SubViewport" index="0"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+cull_mask = 512
+
+[node name="SwordAnimPlayer" type="AnimationPlayer" parent="." index="4"]
+libraries = {
+"": SubResource("AnimationLibrary_1t14b")
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SwordAnimPlayer" index="0"]
+libraries = {
+"": SubResource("AnimationLibrary_1t14b")
+}
+
+[node name="StairsBelowRayCast3D" type="RayCast3D" parent="." index="5"]
+target_position = Vector3(0, -0.5, 0)
+
+[node name="StepUpSeparationRay_F" type="CollisionShape3D" parent="." index="6"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.5, -0.55)
+shape = SubResource("SeparationRayShape3D_woocj")
+
+[node name="PixelShader" type="Sprite2D" parent="." index="7"]
+material = SubResource("ShaderMaterial_bxykc")
+scale = Vector2(15, 8.4375)
+texture = ExtResource("7_i6el5")
+centered = false
+
+[node name="GroundPosition" type="Marker3D" parent="." index="8"]
+
+[node name="SoundManager" type="Node3D" parent="." index="9" node_paths=PackedStringArray("ground_pos", "player")]
+script = ExtResource("7_8vmrd")
+footstep_sounds = Array[AudioStreamMP3]([ExtResource("8_vshi7"), ExtResource("9_osqyc"), ExtResource("10_bjqbn"), ExtResource("11_8w0hm"), ExtResource("12_2qvne"), ExtResource("13_ls3c8")])
+sword_sounds = Array[AudioStreamMP3]([ExtResource("3_rosfm"), ExtResource("4_mu30q"), ExtResource("5_pqbkd")])
+hurt_sounds = Array[AudioStreamMP3]([ExtResource("17_4xi4n")])
+hit_sound = Array[AudioStreamMP3]([ExtResource("18_4qkq0")])
+fall_sounds = Array[AudioStreamMP3]([ExtResource("18_qwg8d"), ExtResource("19_mj3ah")])
+break_sound = Array[AudioStreamMP3]([ExtResource("20_e6sw8")])
+ground_pos = NodePath("../GroundPosition")
+player = NodePath("..")
+
+[connection signal="fall" from="." to="SoundManager" method="play_fall"]
+[connection signal="player_hit" from="." to="SoundManager" method="play_hurt"]
+[connection signal="step" from="." to="SoundManager" method="play_footstep"]

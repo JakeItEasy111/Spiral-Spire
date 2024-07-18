@@ -1,12 +1,13 @@
+res://objects/breakable
+res://UI
+res://assets/fonts/rubber-biscuit
 C:/Users/MM24JHoffmann/Desktop/Multimedia/Senior Project Assets/Spiral Spire
 res://
 C:/Users/MM24JHoffmann/Documents/Senior Project Game/MMSeniorProject
-res://assets/fonts/rubber-biscuit
 res://objects
 res://assets/tilesets/props
 res://assets/tilesets
 res://assets/fonts/alagard
-res://UI
 res://levels/main_level
 res://assets/sprites
 res://assets/models/Clothman
@@ -19,4 +20,3 @@ res://assets/models/Wicker
 res://assets/models/[EXECUTIONER SWORD]
 C:/Program Files/Blender Foundation/Blender 3.6
 res://entity/enemy/test_enemy
-res://entity
